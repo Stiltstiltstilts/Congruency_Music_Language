@@ -8,12 +8,12 @@ instImport is a function for importing instruction text to be used in the experi
                     outputName: the variable with the preprocessed text
 
 """
-def instImport(path, outputName):
+def instImport(path):
     # probably also write checks that the path points to a .txt and the outputName is a string
 
     with open(path, 'r') as f: #open file as object 
-        outputName = f.readlines()
-    return outputName
+        processed_text = f.readlines()
+    return processed_text
 
 """
 stimPreProcess is a function for importing sentences from a text file, and then 1) making each sentence a list containing strings for each word, 
@@ -26,7 +26,7 @@ and 2) converting underscores, which code for double words, into a space charact
 
 """
 
-def stimPreProcess(path, outputName):
+def stimPreProcess(path):
     temp2 = []
     with open(path, 'r') as f: #open stimuli file as object 
         rawText = f.readlines()
@@ -39,7 +39,6 @@ def stimPreProcess(path, outputName):
     for sentence in range(0, len(temp2)):
         for word in range(0, len(temp2[sentence][:])):
             temp.append(temp2[sentence][word].replace('_', ' '))
-        temp3.append([temp])
+        temp3.append(temp)
         temp = []
-    outputName = temp3
-    return outputName
+    return temp3

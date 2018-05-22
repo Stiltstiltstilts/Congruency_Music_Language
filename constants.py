@@ -6,7 +6,7 @@
 #####################
 
 import csv, os
-import textPreProcess as txt
+import textPreProcess as txt # my own function for preprocessing the text
 
 #############################
 #####==BASIC VARIABLES==#####
@@ -33,14 +33,13 @@ eye_duration = 2 #duration for prompt to close eyes
 #####################
 
 ###===INSTRUCTIONS===###
-# Part 1
-with open('Stimuli/Instructions/Part1.txt', 'r') as f: #open stimuli file as object 
-    part1Intro = f.readlines()
-# Part 2
-with open('Stimuli/Instructions/Part2.txt', 'r') as f: #open stimuli file as object 
-    part2Intro = f.readlines()   
+part1Intro = txt.instImport('Stimuli/Instructions/Part1.txt')
+part2Intro = txt.instImport('Stimuli/Instructions/Part2.txt')
 
 ###===EXPERIMENTAL WORDS===###
+sub_ext_cong2 = txt.stimPreProcess('Stimuli/Subj_extracted_cong2.txt') # 
+
+"""
 # Subject extracted congruent binary
 sub_ext_cong2 = []
 with open('Stimuli/Subj_extracted_cong2.txt', 'r') as f: #open stimuli file as object 
@@ -81,5 +80,5 @@ for n in range(0,len(d)):
     sen = d[n][0].split(' ') #going one line at a time spliting the sentence into seperate words
     TernaryWords.append(sen)
 
-
+"""
 
