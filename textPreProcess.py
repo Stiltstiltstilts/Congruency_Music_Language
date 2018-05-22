@@ -3,9 +3,8 @@
 instImport is a function for importing instruction text to be used in the experiment and does the required processing
     required inputs:
                     path: path of input file (as .txt)
-                    outputName: the name of your variable (as a string)
     outputs: 
-                    outputName: the variable with the preprocessed text
+                    Variable with processed data as a list
 
 """
 def instImport(path):
@@ -20,9 +19,8 @@ stimPreProcess is a function for importing sentences from a text file, and then 
 and 2) converting underscores, which code for double words, into a space character within the string
     required inputs:
                     path: path of input file (as .txt)
-                    outputName: the name of your variable (as a string)
     outputs: 
-                    outputName: the variable with the preprocessed text
+                    Variable with processed data as a list
 
 """
 

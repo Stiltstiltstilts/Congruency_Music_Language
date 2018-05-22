@@ -36,8 +36,14 @@ eye_duration = 2 #duration for prompt to close eyes
 part1Intro = txt.instImport('Stimuli/Instructions/Part1.txt')
 part2Intro = txt.instImport('Stimuli/Instructions/Part2.txt')
 
-###===EXPERIMENTAL WORDS===###
+###===SENTENCES===###
 sub_ext_cong2 = txt.stimPreProcess('Stimuli/Subj_extracted_cong2.txt') # 
+
+
+###===PROBES===###
+
+
+###===ANSWERS===###
 
 """
 # Subject extracted congruent binary
