@@ -37,54 +37,22 @@ part1Intro = txt.instImport('Stimuli/Instructions/Part1.txt')
 part2Intro = txt.instImport('Stimuli/Instructions/Part2.txt')
 
 ###===SENTENCES===###
-sub_ext_cong2 = txt.stimPreProcess('Stimuli/Subj_extracted_cong2.txt') # 
+sub_ext_cong2 = txt.stimPreProcess('Stimuli/Sentences/Subj_extracted_cong2.txt') 
+sub_ext_cong3 = txt.stimPreProcess('Stimuli/Sentences/Subj_extracted_cong3.txt')
+sub_ext_incong2 = txt.stimPreProcess('Stimuli/Sentences/Subj_extracted_incong2.txt')
+sub_ext_incong3 = txt.stimPreProcess('Stimuli/Sentences/Subj_extracted_incong3.txt')
 
+obj_ext_cong2 = txt.stimPreProcess('Stimuli/Sentences/Obj_extracted_cong2.txt') 
+obj_ext_cong3 = txt.stimPreProcess('Stimuli/Sentences/Obj_extracted_cong3.txt')
+obj_ext_incong2 = txt.stimPreProcess('Stimuli/Sentences/Obj_extracted_incong2.txt')
+obj_ext_incong3 = txt.stimPreProcess('Stimuli/Sentences/Obj_extracted_incong3.txt')
+
+assorted_cong2 = txt.stimPreProcess('Stimuli/Sentences/Assorted_cong2.txt')
 
 ###===PROBES===###
-
-
-###===ANSWERS===###
-
-"""
-# Subject extracted congruent binary
-sub_ext_cong2 = []
-with open('Stimuli/Subj_extracted_cong2.txt', 'r') as f: #open stimuli file as object 
-    rawText = f.readlines()
-# seperate the individual words and then turn underscore into spaces
-for n in range(0, len(rawText)):
-    temp = rawText[n][:].split(' ')
-    sub_ext_cong2.append(temp)
-temp = []
-temp2 = []
-for k in range(0, len(sub_ext_cong2)):
-    for m in range(0, len(sub_ext_cong2[k][:])):
-        temp.append(sub_ext_cong2[k][m].replace('_', ' '))
-    temp2.append([temp])
-    temp = []
-sub_ext_cong2 = temp2
-
-ControlWords = [] #create empty list for processed words
-for n in range(0,len(d)):
-    sen = d[n][0].split(' ') #going one line at a time spliting the sentence into seperate words
-    ControlWords.append(sen)
-###===BINARY===###
-with open('WordList_Binary.txt', 'r') as f: #open stimuli file as object
-    reader = csv.reader(f, delimiter='\t')
-    d = list(reader)
-
-BinaryWords = [] #create empty list for processed words
-for n in range(0,len(d)):
-    sen = d[n][0].split(' ') #going one line at a time spliting the sentence into seperate words
-    BinaryWords.append(sen)
-###===TERNARY===###
-with open('WordList_Ternary.txt', 'r') as f: #open stimuli file as object
-    reader = csv.reader(f, delimiter='\t')
-    d = list(reader)
-
-TernaryWords = [] #create empty list for processed words
-for n in range(0,len(d)):
-    sen = d[n][0].split(' ') #going one line at a time spliting the sentence into seperate words
-    TernaryWords.append(sen)
-
-"""
-
+probe_mc_pos = txt.instImport('Stimuli/Probes/MC_positive_probes.txt')
+probe_mc_neg = txt.instImport('Stimuli/Probes/MC_negative_probes.txt')
+probe_rc_subpos_objneg = txt.instImport('Stimuli/Probes/RC_subpos_objneg_probes.txt')
+probe_rc_subneg_objpos = txt.instImport('Stimuli/Probes/RC_subneg_objpos_probes.txt')
+probe_ass_pos = txt.instImport('Stimuli/Probes/Assorted_positive_probes.txt')
+probe_ass_neg = txt.instImport('Stimuli/Probes/Assorted_negative_probes.txt')
