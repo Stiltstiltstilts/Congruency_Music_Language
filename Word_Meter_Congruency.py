@@ -65,7 +65,7 @@ win = visual.Window(fullscr=True,
 
 ################################################
 ########## Trial list construction #############
-##############ra##################################
+##############ra################################
 main_conditions = [sub_ext_cong2, sub_ext_cong3, sub_ext_incong2, sub_ext_incong3, obj_ext_cong2, obj_ext_cong3, obj_ext_incong2, obj_ext_incong3] # not including assorted sentences
 nSentences = (len(sub_ext_cong2))
 sentence_index = list(range(0, nSentences))
@@ -73,12 +73,18 @@ shuffle(sentence_index) # shuffle indexes
 
 chunk_size = int(nSentences / len(main_conditions)) # I should create an error thing here for when this doesn't yield a whole number 
 
-trialList = []
+trial_list = []
 
-for i in range(0, chunk_size):
-    trialList.append(main_conditions[i]    [ [sentence_index[i:i + chunk_size] for i in range(0, len(sentence_index), chunk_size)][i] ])
+for i in range(0, len(main_conditions)): 
+    x = [sentence_index[i:i + chunk_size] for i in range(0, len(sentence_index), chunk_size)][i]
+    for k in range(0, len(x)):
+        trial_list.append( main_conditions[i][x[k]] )
 
-print(trialList)  
+"""
+for k in range(0, len(main_conditions)):
+    trialList.append(main_conditions[k][ [sentence_index[i:i + chunk_size] for i in range(0, len(sentence_index), chunk_size)][k] ])
+"""
+print(trial_list)  
 # randomise this list of numbers
 # take 1/n of variants for each trial list (4)
 # take half of this list for each obj vs sub extracted type
