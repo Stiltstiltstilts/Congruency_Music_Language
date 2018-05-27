@@ -6,7 +6,7 @@
 #####################
 
 import csv, os
-import textPreProcess as txt # my own function for preprocessing the text
+import customFunctions as fun # my own function for preprocessing the text
 
 #############################
 #####==BASIC VARIABLES==#####
@@ -33,26 +33,26 @@ eye_duration = 2 #duration for prompt to close eyes
 #####################
 
 ###===INSTRUCTIONS===###
-part1Intro = txt.instImport('Stimuli/Instructions/Part1.txt')
-part2Intro = txt.instImport('Stimuli/Instructions/Part2.txt')
+part1Intro = fun.instImport('Stimuli/Instructions/Part1.txt')
+part2Intro = fun.instImport('Stimuli/Instructions/Part2.txt')
 
 ###===SENTENCES===###
-sub_ext_cong2 = txt.sentencePreProcess('Stimuli/Sentences/Subj_extracted_cong2.txt') 
-sub_ext_cong3 = txt.sentencePreProcess('Stimuli/Sentences/Subj_extracted_cong3.txt')
-sub_ext_incong2 = txt.sentencePreProcess('Stimuli/Sentences/Subj_extracted_incong2.txt')
-sub_ext_incong3 = txt.sentencePreProcess('Stimuli/Sentences/Subj_extracted_incong3.txt')
+sub_ext_cong2 = fun.sentencePreProcess('Stimuli/Sentences/Subj_extracted_cong2.txt') 
+sub_ext_cong3 = fun.sentencePreProcess('Stimuli/Sentences/Subj_extracted_cong3.txt')
+sub_ext_incong2 = fun.sentencePreProcess('Stimuli/Sentences/Subj_extracted_incong2.txt')
+sub_ext_incong3 = fun.sentencePreProcess('Stimuli/Sentences/Subj_extracted_incong3.txt')
 
-obj_ext_cong2 = txt.sentencePreProcess('Stimuli/Sentences/Obj_extracted_cong2.txt') 
-obj_ext_cong3 = txt.sentencePreProcess('Stimuli/Sentences/Obj_extracted_cong3.txt')
-obj_ext_incong2 = txt.sentencePreProcess('Stimuli/Sentences/Obj_extracted_incong2.txt')
-obj_ext_incong3 = txt.sentencePreProcess('Stimuli/Sentences/Obj_extracted_incong3.txt')
+obj_ext_cong2 = fun.sentencePreProcess('Stimuli/Sentences/Obj_extracted_cong2.txt') 
+obj_ext_cong3 = fun.sentencePreProcess('Stimuli/Sentences/Obj_extracted_cong3.txt')
+obj_ext_incong2 = fun.sentencePreProcess('Stimuli/Sentences/Obj_extracted_incong2.txt')
+obj_ext_incong3 = fun.sentencePreProcess('Stimuli/Sentences/Obj_extracted_incong3.txt')
 
-assorted_cong2 = txt.sentencePreProcess('Stimuli/Sentences/Assorted_cong2.txt')
+assorted_cong2 = fun.sentencePreProcess('Stimuli/Sentences/Assorted_cong2.txt')
 
 ###===PROBES===###
-probe_mc_pos = txt.probePreProcess('Stimuli/Probes/MC_positive_probes.txt')
-probe_mc_neg = txt.probePreProcess('Stimuli/Probes/MC_negative_probes.txt')
-probe_rc_subpos_objneg = txt.probePreProcess('Stimuli/Probes/RC_subpos_objneg_probes.txt')
-probe_rc_subneg_objpos = txt.probePreProcess('Stimuli/Probes/RC_subneg_objpos_probes.txt')
-probe_ass_pos = txt.probePreProcess('Stimuli/Probes/Assorted_positive_probes.txt')
-probe_ass_neg = txt.probePreProcess('Stimuli/Probes/Assorted_negative_probes.txt')
+probe_mc_pos = fun.probePreProcess('Stimuli/Probes/MC_positive_probes.txt')
+probe_mc_neg = fun.probePreProcess('Stimuli/Probes/MC_negative_probes.txt')
+probe_rc_subpos_objneg = fun.probePreProcess('Stimuli/Probes/RC_subpos_objneg_probes.txt')
+probe_rc_subneg_objpos = fun.probePreProcess('Stimuli/Probes/RC_subneg_objpos_probes.txt')
+probe_ass_pos = fun.probePreProcess('Stimuli/Probes/Assorted_positive_probes.txt')
+probe_ass_neg = fun.probePreProcess('Stimuli/Probes/Assorted_negative_probes.txt')

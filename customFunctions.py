@@ -4,6 +4,7 @@
 #####################
 
 import os
+import numpy as np
 
 def instImport(path):
     """
@@ -109,5 +110,21 @@ def probePreProcess(path):
 
 
 def takeSecond(elem):
-    """ this is a function to pass as a key argument for sorting shit"""
+    """ 
+    this is a function to pass as a key argument for sorting shit
+    """
     return elem[0]
+
+
+
+def customHanning(M, floor):
+    """ 
+    this is a function to create a custom hanning window with a non-zero floor, specified by the variable 'floor'
+    for example M = 0.2 means creating a hanning window with values between .2 and 1
+    """
+    a = 0.5 + 0.5*floor
+    b = 0.5 - 0.5*floor
+    M = int(M)
+    custom_hanning_window = [a - b*np.cos(2 * x * np.pi /(M-1)) for x in range(M)]
+
+    return custom_hanning_window
