@@ -16,18 +16,14 @@ FGC = (1, 1, 1) #white
 BGC = (0, 0, 0) #grey
 TEXTSIZE = 42 #text size for stim (not instructions)
 TEXTCORDS = (0, 0) #Centre of screen
-TRIALREPEATS = 1 # each trial last for approx 35seeconds 
 beat_freq = 0.417 #2.4Hz
 frameInterval = 0.0166667 #framerate.... CHECK THIS
 sound_delay = .08 # 0.003 for processing command + .102 for soundcard/driver processing and sound coming out of earphones
-trial_duration = 10
+trial_duration = 10 # seconds
+probe_duration = 3 # seconds
 
 _thisDir = os.path.abspath(os.path.dirname(__file__)) #change to local directory
 os.chdir(_thisDir)
-
-#Instruction durations
-condition_duration = 3 #duration for condition instructions prior to each trial
-eye_duration = 2 #duration for prompt to close eyes
 
 #####################
 #####==STIMULI==#####

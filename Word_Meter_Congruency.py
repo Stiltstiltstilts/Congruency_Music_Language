@@ -54,15 +54,12 @@ logging.console.setLevel(logging.WARNING)
 ################################################
 
 ####====Auditory Stimuli====####
-#tone_unaccented, sd.default.samplerate = sf.read('tone_nonaccent.wav')
-#tone_accented, sd.default.samplerate = sf.read('tone_accented.wav')
-#tone_binary, sd.default.samplerate = sf.read('binary_beat.wav')
 binary_beat = sound.Sound('binary_beat.wav', secs=-1)
 binary_beat.setVolume(1)
 ternary_beat = sound.Sound('ternary_beat.wav', secs=-1)
 ternary_beat.setVolume(1)
-# setup window
 
+# setup window
 win = visual.Window(fullscr=True,
                 monitor='Laptop',  
                 units='deg',
@@ -76,11 +73,6 @@ if expInfo['frameRate'] != None:
     frameDur = 1.0 / round(expInfo['frameRate'])
 else:
     frameDur = 1.0 / 60.0  # could not measure, so guess
-
-
-# setup and load instructions text stimuli
-# setup and load experimental text stimuli
-
 
 ################################################
 ########## Trial list construction #############
@@ -133,18 +125,19 @@ if thisTrial != None:
 ############## Run experiment ##################
 ################################################
 try: 
-    #Set up variables
+    # Set up variables and trial objects etc
     message1 = visual.TextStim(win, pos=[0,+3], color=FGC, alignHoriz='center', name='topMsg', text="placeholder") 
     message2 = visual.TextStim(win, pos=[0,-3], color=FGC, alignHoriz='center', name='bottomMsg', text="placeholder") 
     fixation = visual.TextStim(win,  pos=[0,0], color=FGC, alignHoriz='center', text="+")
     endMessage = visual.TextStim(win,  pos=[0,0], color=FGC, alignHoriz='center', text="The end!")
-    wordStim = visual.TextStim(win, pos=[0,0], color=FGC, text="placeholder")
-    spaceCont = visual.TextStim(win, pos=[0,0], color=FGC, text="Press space to continue")
+    space_cont = visual.TextStim(win, pos=[0,0], color=FGC, text="Press space to continue")
     introText = visual.TextStim(win, pos=[0,0], color=FGC, text="Placeholder")
     word_stim_list = []
     for i in range(15): # setting up text_stimuli objects... 15 is the most words in the sent_stims
             exec( '{} = visual.TextStim(win, pos=[0,0], color=FGC, text="placeholder")'.format('word' + '_' + str(i+1)) ) # create text objects
             exec( 'word_stim_list.extend([{}])'.format(str('word' + '_' + str(i+1))) ) # putting them in word_stim_list
+    probe_text = visual.TextStim(win, pos=[0,+3], color=FGC, alignHoriz='center', name='top_probe', text="placeholder")
+    probe_text_lower = visual.TextStim(win, pos=[0,-3], color=FGC, alignHoriz='center', name='bottom_probe', text="yes or no?")
     clock = core.Clock()
     routineTimer = core.CountdownTimer()  # to track time remaining of each (non-slip) routine 
     endExpNow = False  # flag for 'escape' or other condition => quit the exp
@@ -189,42 +182,42 @@ try:
             for paramName in thisTrial:
                 exec('{} = thisTrial[paramName]'.format(paramName))
         
+        probe_resp = event.BuilderKeyResponse()
+        probe_cont_resp = event.BuilderKeyResponse()
+
         # initialize trial components list
         trialComponents = []
 
         # add auditory stimuli component
-        if trial['beat_type'] == 'binary_beat':
+        if beat_type == 'binary_beat':
             beat_stim = binary_beat
-        elif trial['beat_type'] == 'ternary_beat':
+        elif beat_type == 'ternary_beat':
             beat_stim = ternary_beat
         trialComponents.extend([beat_stim]) # add beat stim to trialComponents list
 
         # add text stimuli components
-        for i in range(len(trial['sent_stim'])):
+        for i in range(len(sent_stim)): # for i in range(len(trial['sent_stim'])):
             exec('trialComponents.extend([{}])'.format('word' + '_' + str(i+1)))
-            word_stim_list[i].setText(trial['sent_stim'][i])
+            word_stim_list[i].setText(sent_stim[i])
             
         # ------Prepare to start Routine "trial"-------
-        t = 0
-        trialClock.reset()  # clock
-        frameN = -1
         continueRoutine = True
-        routineTimer.add(trial_duration) # need to add the amount of time for the trial
+        #routineTimer.add(trial_duration) # need to add the amount of time for the trial
         # update component parameters for each repeat
         # keep track of which components have finished
-        #trialComponents = [binary_beat, text, text_2, text_3, text_4, text_5, text_6]
         for thisComponent in trialComponents:
             if hasattr(thisComponent, 'status'):
                 thisComponent.status = NOT_STARTED
-        
+        t = 0
+        trialClock.reset()  # clock
+        frameN = -1
         # -------Start Routine "trial"-------
-        while continueRoutine and routineTimer.getTime() > 0:
+        while continueRoutine: # and routineTimer.getTime() > 0
             # get current time
             t = trialClock.getTime()
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-            # update/draw components on each frame
-            # start/stop beat_stim
-                
+            
+            # start/stop beat_stim   
             if t >= 0.0 + sound_delay and beat_stim.status == NOT_STARTED:
                 # keep track of start time/frame for later
                 beat_stim.tStart = t
@@ -234,8 +227,8 @@ try:
             if beat_stim.status == STARTED and t >= frameRemains:
                 beat_stim.stop()  # stop the sound (if longer than duration)
             
-            # *text* updates      
-            for word_index in range(len(trial['sent_stim'])):
+            # iterate through sentence text stimuli     
+            for word_index in range(len(sent_stim)):
                 if t >= word_index * beat_freq and word_stim_list[word_index].status == NOT_STARTED:
                     # keep track of start time/frame for later
                     word_stim_list[word_index].tStart = t
@@ -244,6 +237,56 @@ try:
                 frameRemains = (beat_freq * word_index) + beat_freq - win.monitorFramePeriod * 0.75  # most of one frame period left
                 if word_stim_list[word_index].status == STARTED and t >= frameRemains:
                     word_stim_list[word_index].setAutoDraw(False)
+
+            # display probe text
+            if t >= len(sent_stim) * beat_freq and probe_text.status == NOT_STARTED:
+                # keep track of start time/frame for later
+                probe_text.tStart = t
+                probe_text.frameNStart = frameN  # exact frame index
+                probe_text.setAutoDraw(True)
+            frameRemains = (beat_freq * len(trial['sent_stim'])) + probe_duration - win.monitorFramePeriod * 0.75  # most of one frame period left
+            if probe_text.status == STARTED and t >= frameRemains:
+                probe_text.setAutoDraw(False)
+
+            # check for response keys for probe
+            if t >= (len(sent_stim) * beat_freq) and probe_resp.status == NOT_STARTED:
+                # keep track of start time/frame for later
+                probe_resp.tStart = t
+                probe_resp.frameNStart = frameN  # exact frame index
+                probe_resp.status = STARTED
+                # keyboard checking is just starting
+                win.callOnFlip(probe_resp.clock.reset)  # t=0 on next screen flip
+                event.clearEvents(eventType='keyboard')
+            frameRemains = (len(sent_stim) * beat_freq) + probe_duration - win.monitorFramePeriod * 0.75  # most of one frame period left
+            if probe_resp.status == STARTED and t >= frameRemains:
+                probe_resp.status = STOPPED
+            if probe_resp.status == STARTED:
+                theseKeys = event.getKeys(keyList=['y', 'n'])
+                
+                # log response etc:
+                if len(theseKeys) > 0:  # at least one key was pressed
+                    probe_resp.keys = theseKeys[-1]  # just the last key pressed
+                    probe_resp.rt = probe_resp.clock.getTime()
+                    # was this 'correct'?
+                    if (probe_resp.keys == "y") and ( (pos_neg == 'positive') or (pos_neg == 'subneg_objpos' and clause == 'relative_clause' and extraction == 'object extracted') ):
+                        probe_resp.corr = 1
+                    else:
+                        probe_resp.corr = 0
+
+            # display "press space to continue text"
+            if t >= (len(sent_stim) * beat_freq) + probe_duration and space_cont.status == NOT_STARTED:
+                # keep track of start time/frame for later
+                space_cont.tStart = t
+                space_cont.frameNStart = frameN  # exact frame index
+                space_cont.setAutoDraw(True)
+                # keyboard checking is just starting
+                win.callOnFlip(probe_cont_resp.clock.reset)  # t=0 on next screen flip
+                event.clearEvents(eventType='keyboard')
+                if probe_cont_resp.status == STARTED:
+                    theseKeys = event.getKeys(keyList=['space'])
+                    if "space" in theseKeys:
+                        space_cont.setAutoDraw(False)
+                        continueRoutine = False
 
             # check if all components have finished
             if not continueRoutine:  # a component has requested a forced-end of Routine
@@ -268,10 +311,8 @@ try:
                 thisComponent.setAutoDraw(False)
         beat_stim.stop()  # ensure sound has stopped at end of routine
         #thisExp.nextEntry()
-        message1.setText(trial['probe'])
-        message1.draw()
-        win.flip()
-        core.wait(2) 
+        core.wait(1)
+
 finally:
     win.close()
     

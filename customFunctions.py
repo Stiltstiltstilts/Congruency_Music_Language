@@ -90,10 +90,10 @@ def probePreProcess(path):
     elif "neg" and not "subneg" in os.path.basename(path):
         pos_neg = 'negative'
     elif "subneg" in os.path.basename(path): # relative clauses change which statement is correct based on obj or sub extracted
-        pos_neg = "subneg_objpos"
+        pos_neg = 'subneg_objpos'
     elif "subpos" in os.path.basename(path):
-        pos_neg = "subpos_objneg"
-    # main or relative claus
+        pos_neg = 'subpos_objneg'
+    # main or relative clause
     if "MC" in os.path.basename(path):
         clause = 'main_clause'
     elif "RC" in os.path.basename(path):
@@ -103,7 +103,7 @@ def probePreProcess(path):
 
     final_output = []
     for n in range(len(processed_text)):
-        temp = {'probe':processed_text[n],
+        temp = {'probe':processed_text[n].replace('\n', ''),
                         'pos_neg': pos_neg,
                         'clause': clause,
                         'probe_n': n,}
