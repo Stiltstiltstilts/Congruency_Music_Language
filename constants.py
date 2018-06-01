@@ -12,14 +12,14 @@ import customFunctions as fun # my own function for preprocessing the text
 #####==BASIC VARIABLES==#####
 #############################
 
-FGC = (-1, -1, -1) #black
+FGC = (1, 1, 1) #white
 BGC = (0, 0, 0) #grey
 TEXTSIZE = 42 #text size for stim (not instructions)
 TEXTCORDS = (0, 0) #Centre of screen
 TRIALREPEATS = 1 # each trial last for approx 35seeconds 
-beatFreq = 0.417 #2.4Hz
+beat_freq = 0.417 #2.4Hz
 frameInterval = 0.0166667 #framerate.... CHECK THIS
-soundDelay = .105 # 0.003 for processing command + .102 for soundcard/driver processing and sound coming out of earphones
+sound_delay = .8 # 0.003 for processing command + .102 for soundcard/driver processing and sound coming out of earphones
 
 _thisDir = os.path.abspath(os.path.dirname(__file__)) #change to local directory
 os.chdir(_thisDir)
@@ -35,6 +35,7 @@ eye_duration = 2 #duration for prompt to close eyes
 ###===INSTRUCTIONS===###
 part1Intro = fun.instImport('Stimuli/Instructions/Part1.txt')
 part2Intro = fun.instImport('Stimuli/Instructions/Part2.txt')
+bottom_text = fun.instImport('Stimuli/Instructions/bottom_text.txt')
 
 ###===SENTENCES===###
 sub_ext_cong2 = fun.sentencePreProcess('Stimuli/Sentences/Subj_extracted_cong2.txt') 

@@ -1,0 +1,334 @@
+5.2140 	WARNING 	psychopy.parallel has been imported on a Mac (which doesn't have a parallel port?)
+6.3714 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+11.2881 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+10.9196 	WARNING 	psychopy.parallel has been imported on a Mac (which doesn't have a parallel port?)
+12.0650 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+14.8743 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+25.6846 	DATA 	Keypress: space
+5.4562 	WARNING 	psychopy.parallel has been imported on a Mac (which doesn't have a parallel port?)
+6.6196 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+8.6764 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+10.6246 	DATA 	Keypress: space
+18.3017 	DATA 	Keypress: space
+22.7651 	DATA 	Keypress: space
+26.2318 	DATA 	Keypress: space
+40.0000 	DATA 	Keypress: space
+43.8876 	DATA 	Keypress: backspace
+44.6093 	DATA 	Keypress: space
+46.9974 	DATA 	Keypress: space
+50.2158 	DATA 	Keypress: space
+54.3460 	DATA 	Keypress: space
+57.5485 	DATA 	Keypress: space
+67.6966 	DATA 	Keypress: space
+74.3918 	DATA 	Keypress: space
+79.0589 	DATA 	Keypress: space
+85.2818 	DATA 	Keypress: space
+6.5694 	WARNING 	psychopy.parallel has been imported on a Mac (which doesn't have a parallel port?)
+7.8767 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+11.5853 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+14.5354 	DATA 	Keypress: space
+14.8828 	DATA 	Keypress: space
+15.3087 	DATA 	Keypress: space
+15.7118 	DATA 	Keypress: space
+16.3288 	DATA 	Keypress: space
+16.6304 	DATA 	Keypress: space
+16.9779 	DATA 	Keypress: space
+17.3207 	DATA 	Keypress: space
+17.9956 	DATA 	Keypress: space
+18.3565 	DATA 	Keypress: space
+18.6796 	DATA 	Keypress: space
+19.0684 	DATA 	Keypress: space
+19.9316 	DATA 	Keypress: space
+6.1938 	WARNING 	psychopy.parallel has been imported on a Mac (which doesn't have a parallel port?)
+7.3855 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+10.9070 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+13.3410 	DATA 	Keypress: space
+13.6240 	DATA 	Keypress: space
+13.7341 	DATA 	Keypress: space
+14.0270 	DATA 	Keypress: space
+14.1636 	DATA 	Keypress: space
+14.2977 	DATA 	Keypress: space
+14.4438 	DATA 	Keypress: space
+14.5779 	DATA 	Keypress: space
+14.7227 	DATA 	Keypress: space
+14.9234 	DATA 	Keypress: space
+15.1806 	DATA 	Keypress: space
+15.5256 	DATA 	Keypress: space
+15.7975 	DATA 	Keypress: space
+5.6822 	WARNING 	psychopy.parallel has been imported on a Mac (which doesn't have a parallel port?)
+6.8470 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+8.3776 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+9.7241 	DATA 	Keypress: space
+9.9146 	DATA 	Keypress: space
+10.3034 	DATA 	Keypress: space
+10.5405 	DATA 	Keypress: space
+10.7555 	DATA 	Keypress: space
+10.9495 	DATA 	Keypress: space
+11.1575 	DATA 	Keypress: space
+11.3714 	DATA 	Keypress: space
+11.5917 	DATA 	Keypress: space
+11.8021 	DATA 	Keypress: space
+12.0213 	DATA 	Keypress: space
+12.2597 	DATA 	Keypress: space
+12.6822 	DATA 	Keypress: space
+5.1388 	WARNING 	psychopy.parallel has been imported on a Mac (which doesn't have a parallel port?)
+6.3256 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+9.9098 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+11.1605 	DATA 	Keypress: space
+11.5541 	DATA 	Keypress: space
+11.7862 	DATA 	Keypress: space
+12.0248 	DATA 	Keypress: space
+12.2601 	DATA 	Keypress: space
+12.4948 	DATA 	Keypress: space
+12.7280 	DATA 	Keypress: space
+13.0678 	DATA 	Keypress: space
+13.3677 	DATA 	Keypress: space
+13.8056 	DATA 	Keypress: space
+14.2011 	DATA 	Keypress: space
+15.0408 	DATA 	Keypress: space
+19.1851 	DATA 	Keypress: space
+5.6948 	WARNING 	psychopy.parallel has been imported on a Mac (which doesn't have a parallel port?)
+6.8527 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+8.7064 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+10.5076 	DATA 	Keypress: space
+10.7390 	DATA 	Keypress: space
+10.9746 	DATA 	Keypress: space
+11.1603 	DATA 	Keypress: space
+11.3514 	DATA 	Keypress: space
+11.5642 	DATA 	Keypress: space
+11.8533 	DATA 	Keypress: space
+12.2595 	DATA 	Keypress: space
+12.6534 	DATA 	Keypress: space
+13.2743 	DATA 	Keypress: space
+13.6033 	DATA 	Keypress: space
+14.0561 	DATA 	Keypress: space
+14.6351 	DATA 	Keypress: space
+7.1558 	WARNING 	psychopy.parallel has been imported on a Mac (which doesn't have a parallel port?)
+8.4938 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+5.7158 	WARNING 	psychopy.parallel has been imported on a Mac (which doesn't have a parallel port?)
+7.0353 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+5.1532 	WARNING 	psychopy.parallel has been imported on a Mac (which doesn't have a parallel port?)
+7.1282 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+5.1456 	WARNING 	psychopy.parallel has been imported on a Mac (which doesn't have a parallel port?)
+6.2982 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+5.9190 	WARNING 	psychopy.parallel has been imported on a Mac (which doesn't have a parallel port?)
+6.9536 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+9.5700 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1440, 900]. Using actual size
+12.1128 	DATA 	Keypress: space
+13.1847 	DATA 	Keypress: space
+13.4500 	DATA 	Keypress: space
+13.6742 	DATA 	Keypress: space
+13.8816 	DATA 	Keypress: space
+14.0694 	DATA 	Keypress: space
+14.2515 	DATA 	Keypress: space
+14.4522 	DATA 	Keypress: space
+14.7151 	DATA 	Keypress: space
+15.0643 	DATA 	Keypress: space
+15.4002 	DATA 	Keypress: space
+15.8121 	DATA 	Keypress: space
+16.3079 	DATA 	Keypress: space
+5.8438 	WARNING 	psychopy.parallel has been imported on a Mac (which doesn't have a parallel port?)
+6.9874 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+10.0610 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1440, 900]. Using actual size
+11.6107 	DATA 	Keypress: space
+11.7553 	DATA 	Keypress: space
+11.9018 	DATA 	Keypress: space
+12.0490 	DATA 	Keypress: space
+12.1989 	DATA 	Keypress: space
+12.3388 	DATA 	Keypress: space
+12.4826 	DATA 	Keypress: space
+12.6777 	DATA 	Keypress: space
+12.8816 	DATA 	Keypress: space
+13.2564 	DATA 	Keypress: space
+13.6260 	DATA 	Keypress: space
+14.2229 	DATA 	Keypress: space
+14.8255 	DATA 	Keypress: space
+5.5555 	WARNING 	psychopy.parallel has been imported on a Mac (which doesn't have a parallel port?)
+6.9657 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+12.0819 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1440, 900]. Using actual size
+14.6921 	DATA 	Keypress: space
+14.9119 	DATA 	Keypress: space
+15.0741 	DATA 	Keypress: space
+15.2448 	DATA 	Keypress: space
+15.4147 	DATA 	Keypress: space
+15.5967 	DATA 	Keypress: space
+15.7848 	DATA 	Keypress: space
+15.9627 	DATA 	Keypress: space
+16.1429 	DATA 	Keypress: space
+16.5286 	DATA 	Keypress: space
+16.9066 	DATA 	Keypress: space
+17.2306 	DATA 	Keypress: space
+17.6554 	DATA 	Keypress: space
+5.7339 	WARNING 	psychopy.parallel has been imported on a Mac (which doesn't have a parallel port?)
+6.8503 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+10.2614 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1440, 900]. Using actual size
+12.0026 	DATA 	Keypress: space
+12.1160 	DATA 	Keypress: space
+12.2582 	DATA 	Keypress: space
+12.4139 	DATA 	Keypress: space
+12.5453 	DATA 	Keypress: space
+12.6832 	DATA 	Keypress: space
+12.8335 	DATA 	Keypress: space
+12.9750 	DATA 	Keypress: space
+13.0989 	DATA 	Keypress: space
+13.2482 	DATA 	Keypress: space
+13.5979 	DATA 	Keypress: space
+13.7589 	DATA 	Keypress: space
+13.9088 	DATA 	Keypress: space
+6.4764 	WARNING 	psychopy.parallel has been imported on a Mac (which doesn't have a parallel port?)
+7.6579 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+11.5176 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1440, 900]. Using actual size
+13.4349 	DATA 	Keypress: space
+13.6278 	DATA 	Keypress: space
+13.9685 	DATA 	Keypress: space
+14.1665 	DATA 	Keypress: space
+14.3267 	DATA 	Keypress: space
+14.5157 	DATA 	Keypress: space
+14.6756 	DATA 	Keypress: space
+14.8658 	DATA 	Keypress: space
+15.0474 	DATA 	Keypress: space
+15.2409 	DATA 	Keypress: space
+15.5763 	DATA 	Keypress: space
+15.8946 	DATA 	Keypress: space
+16.3656 	DATA 	Keypress: space
+6.0200 	WARNING 	psychopy.parallel has been imported on a Mac (which doesn't have a parallel port?)
+7.1848 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+9.8077 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1440, 900]. Using actual size
+11.2829 	DATA 	Keypress: space
+11.6412 	DATA 	Keypress: v
+11.9951 	DATA 	Keypress: v
+12.2023 	DATA 	Keypress: v
+12.3783 	DATA 	Keypress: v
+12.5562 	DATA 	Keypress: v
+12.7241 	DATA 	Keypress: v
+12.9179 	DATA 	Keypress: v
+13.1120 	DATA 	Keypress: v
+13.2961 	DATA 	Keypress: v
+13.4929 	DATA 	Keypress: v
+13.7169 	DATA 	Keypress: v
+14.3510 	DATA 	Keypress: v
+10.5366 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+17.4424 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+11.7172 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+13.5201 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+19.5295 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+14.1413 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+10.2759 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+17.1134 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+9.9581 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+7.3916 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+17.6164 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+23.2464 	DATA 	Keypress: space
+25.9139 	DATA 	Keypress: space
+26.7535 	DATA 	Keypress: space
+27.5538 	DATA 	Keypress: space
+28.9139 	DATA 	Keypress: space
+29.9696 	DATA 	Keypress: space
+30.3539 	DATA 	Keypress: space
+30.7135 	DATA 	Keypress: space
+31.2425 	DATA 	Keypress: space
+31.6738 	DATA 	Keypress: space
+32.1538 	DATA 	Keypress: space
+32.5309 	DATA 	Keypress: space
+33.5057 	DATA 	Keypress: space
+13.1263 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+20.0798 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+23.6961 	DATA 	Keypress: space
+24.6075 	DATA 	Keypress: space
+25.1491 	DATA 	Keypress: space
+25.6048 	DATA 	Keypress: space
+26.0777 	DATA 	Keypress: space
+27.4134 	DATA 	Keypress: space
+27.6851 	DATA 	Keypress: space
+27.8689 	DATA 	Keypress: space
+28.0208 	DATA 	Keypress: space
+28.1728 	DATA 	Keypress: space
+28.3329 	DATA 	Keypress: space
+28.6914 	DATA 	Keypress: space
+29.6946 	DATA 	Keypress: space
+11.2668 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+16.8749 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+20.1508 	DATA 	Keypress: space
+20.2622 	DATA 	Keypress: space
+20.5344 	DATA 	Keypress: space
+20.7350 	DATA 	Keypress: space
+20.8859 	DATA 	Keypress: space
+21.0302 	DATA 	Keypress: space
+21.1829 	DATA 	Keypress: space
+21.3213 	DATA 	Keypress: space
+21.4889 	DATA 	Keypress: space
+21.8486 	DATA 	Keypress: space
+22.1820 	DATA 	Keypress: space
+22.5021 	DATA 	Keypress: space
+23.4699 	DATA 	Keypress: space
+8.1861 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+12.8902 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+15.3254 	DATA 	Keypress: space
+15.4449 	DATA 	Keypress: space
+15.5975 	DATA 	Keypress: space
+15.7324 	DATA 	Keypress: space
+15.9008 	DATA 	Keypress: space
+16.0607 	DATA 	Keypress: space
+16.2369 	DATA 	Keypress: space
+16.3887 	DATA 	Keypress: space
+16.5567 	DATA 	Keypress: space
+16.9007 	DATA 	Keypress: space
+17.2369 	DATA 	Keypress: space
+17.5969 	DATA 	Keypress: space
+18.1015 	DATA 	Keypress: space
+8.1683 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+7.2824 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+11.5585 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+14.4990 	DATA 	Keypress: space
+14.7961 	DATA 	Keypress: space
+15.0841 	DATA 	Keypress: space
+15.2926 	DATA 	Keypress: space
+15.4699 	DATA 	Keypress: space
+15.6442 	DATA 	Keypress: space
+15.8042 	DATA 	Keypress: space
+15.9658 	DATA 	Keypress: space
+16.2364 	DATA 	Keypress: space
+16.6923 	DATA 	Keypress: space
+17.1166 	DATA 	Keypress: space
+17.5159 	DATA 	Keypress: space
+18.4439 	DATA 	Keypress: space
+7.5231 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+12.3242 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+14.8824 	DATA 	Keypress: space
+15.0403 	DATA 	Keypress: space
+15.2552 	DATA 	Keypress: space
+15.4710 	DATA 	Keypress: space
+15.6472 	DATA 	Keypress: space
+15.8151 	DATA 	Keypress: space
+15.9756 	DATA 	Keypress: space
+16.3199 	DATA 	Keypress: space
+16.5430 	DATA 	Keypress: space
+16.8983 	DATA 	Keypress: space
+17.2636 	DATA 	Keypress: space
+17.7030 	DATA 	Keypress: space
+18.6878 	DATA 	Keypress: space
+7.2902 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+14.1485 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+21.9140 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+26.0177 	DATA 	Keypress: space
+26.0362 	DATA 	Keypress: space
+26.7889 	DATA 	Keypress: space
+27.1329 	DATA 	Keypress: space
+27.3165 	DATA 	Keypress: space
+27.4605 	DATA 	Keypress: space
+27.6047 	DATA 	Keypress: space
+27.7244 	DATA 	Keypress: space
+27.8615 	DATA 	Keypress: space
+27.9963 	DATA 	Keypress: space
+28.3414 	DATA 	Keypress: space
+28.5728 	DATA 	Keypress: space
+28.9566 	DATA 	Keypress: space
+29.5807 	DATA 	Keypress: space
+13.6536 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+11.3509 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+13.0621 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+10.8109 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+10.1015 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+12.4075 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+11.2152 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+9.1433 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']

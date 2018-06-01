@@ -3,26 +3,24 @@
 ################################################
 ################# Imports ######################
 ################################################
-from psychopy import core, visual, logging, gui, event, parallel, prefs, data
-import soundfile as sf
-import sounddevice as sd
-prefs.general['audioLib'] = ['sounddevice']
-from numpy.random import random, randint, normal, shuffle
+from psychopy import core, visual, logging, gui, event, prefs, data
+import pyo
+prefs.general['audioLib'] = ['pyo']
 from psychopy import sound
+from numpy.random import random, randint, normal, shuffle
+from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED,
+                                STOPPED, FINISHED, PRESSED, RELEASED, FOREVER)
 import os
 import sys
-import itertools
+#import itertools
+import numpy as np
 from constants import *
 
 GlobalClock = core.Clock()  # Track time since experiment starts
 
-"""
 ################################################
 ############### Basic checks ###################
 ################################################
-# Setting of sound driver stuff?
-sd.default.device = 12 # Audigy ASIO driver for 16bit 48000HZ
-sd.default.latency = ('low','low')
 # check relative paths correct
 _thisDir = os.path.abspath(os.path.dirname(__file__))
 os.chdir(_thisDir)
@@ -35,10 +33,10 @@ expName = 'MeterSyntax'
 # Define experiment info
 expInfo = {'session':'001', 'participant':'001',
     'order':1, 'handedness':'', 'gender':''}
-dlg = gui.DlgFromDict(dictionary=expInfo, title=expName,
-                      date=data.getDateStr(),)
+dlg = gui.DlgFromDict(dictionary=expInfo, title=expName,)
 if dlg.OK == False:
-    core.quit()  # user pressed cancel
+    core.quit()  # user pressed cancele
+expInfo['date'] = data.getDateStr()
 
 # Create filename for data file (absolute path + name)
 filename = _thisDir + os.sep + 'data/{0}'.format(expInfo['participant'])
@@ -56,21 +54,38 @@ logging.console.setLevel(logging.WARNING)
 ################################################
 
 ####====Auditory Stimuli====####
-beat_stim, sd.default.samplerate = sf.read('pure_tone3.wav')
-beat_inter, sd.default.samplerate = sf.read('tone_interruption.wav')
+#tone_unaccented, sd.default.samplerate = sf.read('tone_nonaccent.wav')
+#tone_accented, sd.default.samplerate = sf.read('tone_accented.wav')
+#tone_binary, sd.default.samplerate = sf.read('binary_beat.wav')
+binary_beat = sound.Sound('binary_beat.wav', secs=-1)
+binary_beat.setVolume(1)
+ternary_beat = sound.Sound('ternary_beat.wav', secs=-1)
+ternary_beat.setVolume(1)
 # setup window
 
 win = visual.Window(fullscr=True,
-                monitor='Laptop',  ### can I set this up in the constants file?
+                monitor='Laptop',  
                 units='deg',
                 allowGUI=False)
+
+trialClock = core.Clock()
+
+# store frame rate of monitor if we can measure it
+expInfo['frameRate'] = win.getActualFrameRate()
+if expInfo['frameRate'] != None:
+    frameDur = 1.0 / round(expInfo['frameRate'])
+else:
+    frameDur = 1.0 / 60.0  # could not measure, so guess
+
+
 # setup and load instructions text stimuli
 # setup and load experimental text stimuli
-"""
+
 
 ################################################
 ########## Trial list construction #############
 ################################################
+
 ############ main sentences ############
 main_conditions = [sub_ext_cong2, sub_ext_incong2, obj_ext_cong2, obj_ext_incong2,
                  sub_ext_cong3, sub_ext_incong3, obj_ext_cong3,  obj_ext_incong3]  # first half binary second half ternary
@@ -107,8 +122,156 @@ main_trials = [ {**main_condition_list[i][1], **main_probe_list[i][1]} for i in 
 assorted_trials = [ {**assorted_condition_list[i][1], **assorted_probe_list[i][1]} for i in range(len(assorted_condition_list)) ]
 all_trials = main_trials
 all_trials.extend(assorted_trials)
-shuffle(all_trials)
+all_trials = data.TrialHandler(trialList = all_trials, nReps = 1, method = 'random', extraInfo = expInfo, name = 'all_trials') 
+thisTrial = all_trials.trialList[0]  # so we can initialise stimuli with some values
+# abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
+if thisTrial != None:
+    for paramName in thisTrial:
+        exec('{} = thisTrial[paramName]'.format(paramName))
 
 ################################################
 ############## Run experiment ##################
 ################################################
+try: 
+    #Set up variables
+    message1 = visual.TextStim(win, pos=[0,+3], color=FGC, alignHoriz='center', name='topMsg', text="placeholder") 
+    message2 = visual.TextStim(win, pos=[0,-3], color=FGC, alignHoriz='center', name='bottomMsg', text="placeholder") 
+    fixation = visual.TextStim(win,  pos=[0,0], color=FGC, alignHoriz='center', text="+")
+    endMessage = visual.TextStim(win,  pos=[0,0], color=FGC, alignHoriz='center', text="The end!")
+    wordStim = visual.TextStim(win, pos=[0,0], color=FGC, text="placeholder")
+    spaceCont = visual.TextStim(win, pos=[0,0], color=FGC, text="Press space to continue")
+    introText = visual.TextStim(win, pos=[0,0], color=FGC, text="Placeholder")
+    word_stim_list = []
+    for i in range(15): # setting up text_stimuli objects... 15 is the most words in the sent_stims
+            exec( '{} = visual.TextStim(win, pos=[0,0], color=FGC, text="placeholder")'.format('word' + '_' + str(i+1)) ) # create text objects
+            exec( 'word_stim_list.extend([{}])'.format(str('word' + '_' + str(i+1))) ) # putting them in word_stim_list
+    clock = core.Clock()
+    routineTimer = core.CountdownTimer()  # to track time remaining of each (non-slip) routine 
+    endExpNow = False  # flag for 'escape' or other condition => quit the exp
+
+    # ========================== #
+    # === EXPERIMENTAL BLOCK === #
+    # ========================== #
+
+    # ===== INSTRUCTIONS ====== #
+    counter = 0
+    while counter < len(part1Intro):
+        if part1Intro[counter] == "sound":
+            #sd.play(beat_inter)
+            core.wait(5)
+            #sd.stop()
+        else:
+            message1.setText(part1Intro[counter])
+            if counter == 0:
+                message2.setText(bottom_text[0])
+            elif counter in range(1, (len(part1Intro) - 1)):
+                message2.setText(bottom_text[1])
+            else: 
+                message2.setText(bottom_text[2])
+        #display instructions and wait
+        message1.draw()
+        message2.draw() 
+        win.logOnFlip(level=logging.EXP, msg='Display Instructions%d'%(counter+1))
+        win.flip()
+        #check for a keypress
+        thisKey = event.waitKeys()
+        if thisKey[0] in ['q','escape']:
+            core.quit()
+        elif thisKey[0] == 'backspace':
+            counter -= 1
+        else:
+            counter += 1
+
+    # ===== TRIALS ====== #
+    for trial in all_trials:  
+        # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
+        if thisTrial != None:
+            for paramName in thisTrial:
+                exec('{} = thisTrial[paramName]'.format(paramName))
+        
+        # initialize trial components list
+        trialComponents = []
+
+        # add auditory stimuli component
+        if trial['beat_type'] == 'binary_beat':
+            beat_stim = binary_beat
+        elif trial['beat_type'] == 'ternary_beat':
+            beat_stim = ternary_beat
+        trialComponents.extend([beat_stim]) # add beat stim to trialComponents list
+
+        # add text stimuli components
+        for i in range(len(trial['sent_stim'])):
+            exec('trialComponents.extend([{}])'.format('word' + '_' + str(i+1)))
+            word_stim_list[i].setText(trial['sent_stim'][i])
+            
+        # ------Prepare to start Routine "trial"-------
+        t = 0
+        trialClock.reset()  # clock
+        frameN = -1
+        continueRoutine = True
+        routineTimer.add(10.000000) # need to add the amount of time for the trial
+        # update component parameters for each repeat
+        # keep track of which components have finished
+        #trialComponents = [binary_beat, text, text_2, text_3, text_4, text_5, text_6]
+        for thisComponent in trialComponents:
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        
+        # -------Start Routine "trial"-------
+        while continueRoutine and routineTimer.getTime() > 0:
+            # get current time
+            t = trialClock.getTime()
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            # start/stop beat_stim
+                
+            if t >= 0.0 + sound_delay and beat_stim.status == NOT_STARTED:
+                # keep track of start time/frame for later
+                beat_stim.tStart = t
+                beat_stim.frameNStart = frameN  # exact frame index
+                beat_stim.play()  # start the sound (it finishes automatically)
+            frameRemains = 0.08 + 10- win.monitorFramePeriod * 0.75  # most of one frame period left
+            if beat_stim.status == STARTED and t >= frameRemains:
+                beat_stim.stop()  # stop the sound (if longer than duration)
+            
+            # *text* updates      
+            for word_index in range(len(trial['sent_stim'])):
+                if t >= word_index * beat_freq and word_stim_list[word_index].status == NOT_STARTED:
+                    # keep track of start time/frame for later
+                    word_stim_list[word_index].tStart = t
+                    word_stim_list[word_index].frameNStart = frameN  # exact frame index
+                    word_stim_list[word_index].setAutoDraw(True)
+                frameRemains = (beat_freq * word_index) + beat_freq - win.monitorFramePeriod * 0.75  # most of one frame period left
+                if word_stim_list[word_index].status == STARTED and t >= frameRemains:
+                    word_stim_list[word_index].setAutoDraw(False)
+
+            # check if all components have finished
+            if not continueRoutine:  # a component has requested a forced-end of Routine
+                break
+            continueRoutine = False  # will revert to True if at least one component still running
+            for thisComponent in trialComponents:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # check for quit (the Esc key)
+            if endExpNow or event.getKeys(keyList=["escape"]):
+                core.quit()
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # -------Ending Routine "trial"-------
+        for thisComponent in trialComponents:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        beat_stim.stop()  # ensure sound has stopped at end of routine
+        #thisExp.nextEntry()
+        message1.setText(trial['probe'])
+        message1.draw()
+        win.flip()
+        core.wait(2) 
+finally:
+    win.close()
+    

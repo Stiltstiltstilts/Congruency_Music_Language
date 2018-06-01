@@ -247,8 +247,6 @@ try:
     #Set up variables
     message1 = visual.TextStim(win, pos=[0,+3], color=FGC, alignHoriz='center', name='topMsg', text="placeholder") 
     message2 = visual.TextStim(win, pos=[0,-3], color=FGC, alignHoriz='center', name='bottomMsg', text="placeholder") 
-    ratingCont = visual.RatingScale(win=win, name='ratingCont', marker=u'triangle', size=1.0, pos=[0.0, -0.4], choices=[u'No', u'Yes'], tickHeight=-1) #Rating for interruption control condition
-    ratingCont_question = visual.TextStim(win, pos=[0,+3], color=FGC, alignHoriz='center', text="Was there a salmon or interruption?")
     fixation = visual.TextStim(win,  pos=[0,0], color=FGC, alignHoriz='center', text="+")
     endMessage = visual.TextStim(win,  pos=[0,0], color=FGC, alignHoriz='center', text="The end!")
     wordStim = visual.TextStim(win=win, pos=[0,0], color=FGC, text="placeholder")
