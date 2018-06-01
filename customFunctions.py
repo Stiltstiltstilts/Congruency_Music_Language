@@ -60,7 +60,9 @@ def sentencePreProcess(path):
     temp3 = []
     for sentence in range(0, len(temp2)): # iterate sentences
         for word in range(0, len(temp2[sentence][:])): # iterate words
-            temp.append(temp2[sentence][word].replace('_', ' '))
+            word_stim = temp2[sentence][word].replace('\n', '') # cleaning off the \n
+            word_stim = word_stim.replace('_', ' ') # cleaning off the underscore and turning it into space
+            temp.append(word_stim) 
         stim_data = {'sent_stim':temp, 'beat_type':beat_type, 
                     'congruency':congruency, 'extraction': extraction, 'sent_number': sentence,}
         temp3.append(stim_data)

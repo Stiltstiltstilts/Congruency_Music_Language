@@ -150,7 +150,7 @@ try:
     endExpNow = False  # flag for 'escape' or other condition => quit the exp
 
     # ========================== #
-    # === EXPERIMENTAL BLOCK === #
+    # ==== START EXPERIMENT ==== #
     # ========================== #
 
     # ===== INSTRUCTIONS ====== #
@@ -209,7 +209,7 @@ try:
         trialClock.reset()  # clock
         frameN = -1
         continueRoutine = True
-        routineTimer.add(10.000000) # need to add the amount of time for the trial
+        routineTimer.add(trial_duration) # need to add the amount of time for the trial
         # update component parameters for each repeat
         # keep track of which components have finished
         #trialComponents = [binary_beat, text, text_2, text_3, text_4, text_5, text_6]
@@ -230,7 +230,7 @@ try:
                 beat_stim.tStart = t
                 beat_stim.frameNStart = frameN  # exact frame index
                 beat_stim.play()  # start the sound (it finishes automatically)
-            frameRemains = 0.08 + 10- win.monitorFramePeriod * 0.75  # most of one frame period left
+            frameRemains = 0.0 + sound_delay + trial_duration - win.monitorFramePeriod * 0.75  # most of one frame period left
             if beat_stim.status == STARTED and t >= frameRemains:
                 beat_stim.stop()  # stop the sound (if longer than duration)
             

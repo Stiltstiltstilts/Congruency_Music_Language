@@ -332,3 +332,8 @@
 12.4075 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
 11.2152 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
 9.1433 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+14.6182 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+13.9877 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+11.2607 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+15.3891 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+13.7499 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']

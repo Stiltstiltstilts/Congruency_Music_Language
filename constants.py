@@ -19,7 +19,8 @@ TEXTCORDS = (0, 0) #Centre of screen
 TRIALREPEATS = 1 # each trial last for approx 35seeconds 
 beat_freq = 0.417 #2.4Hz
 frameInterval = 0.0166667 #framerate.... CHECK THIS
-sound_delay = .8 # 0.003 for processing command + .102 for soundcard/driver processing and sound coming out of earphones
+sound_delay = .08 # 0.003 for processing command + .102 for soundcard/driver processing and sound coming out of earphones
+trial_duration = 10
 
 _thisDir = os.path.abspath(os.path.dirname(__file__)) #change to local directory
 os.chdir(_thisDir)
