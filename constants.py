@@ -20,7 +20,7 @@ beat_freq = 0.417 #2.4Hz
 frameInterval = 0.0166667 #framerate.... CHECK THIS
 sound_delay = .08 # 0.003 for processing command + .102 for soundcard/driver processing and sound coming out of earphones
 trial_duration = 10 # seconds
-probe_duration = 3 # seconds
+probe_duration = 5 # seconds
 
 _thisDir = os.path.abspath(os.path.dirname(__file__)) #change to local directory
 os.chdir(_thisDir)
