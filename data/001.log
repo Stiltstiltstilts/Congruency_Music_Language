@@ -49,3 +49,260 @@
 162.8246 	DATA 	Keypress: space
 174.4496 	DATA 	Keypress: n
 176.6236 	DATA 	Keypress: space
+13.7493 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+20.5227 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+23.8490 	DATA 	Keypress: space
+23.9513 	DATA 	Keypress: space
+24.1793 	DATA 	Keypress: space
+24.3843 	DATA 	Keypress: space
+24.5996 	DATA 	Keypress: space
+24.7784 	DATA 	Keypress: space
+24.9633 	DATA 	Keypress: space
+25.1252 	DATA 	Keypress: space
+25.3592 	DATA 	Keypress: space
+25.5384 	DATA 	Keypress: space
+25.8206 	DATA 	Keypress: space
+26.0922 	DATA 	Keypress: space
+26.5959 	DATA 	Keypress: space
+36.6824 	DATA 	Keypress: y
+9.2572 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+14.8569 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+21.7910 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+26.4555 	DATA 	Keypress: space
+26.8366 	DATA 	Keypress: space
+27.1905 	DATA 	Keypress: space
+27.4175 	DATA 	Keypress: space
+27.5933 	DATA 	Keypress: space
+27.7768 	DATA 	Keypress: space
+27.9763 	DATA 	Keypress: space
+28.2393 	DATA 	Keypress: space
+28.4491 	DATA 	Keypress: space
+28.8072 	DATA 	Keypress: space
+29.1261 	DATA 	Keypress: space
+29.5703 	DATA 	Keypress: space
+30.2249 	DATA 	Keypress: space
+40.3923 	DATA 	Keypress: n
+44.5328 	DATA 	Keypress: space
+58.0422 	DATA 	Keypress: y
+61.5658 	DATA 	Keypress: space
+76.5256 	DATA 	Keypress: n
+80.8285 	DATA 	Keypress: space
+99.0336 	DATA 	Keypress: space
+110.6075 	DATA 	Keypress: n
+115.0506 	DATA 	Keypress: space
+127.2673 	DATA 	Keypress: y
+134.3533 	DATA 	Keypress: space
+145.3752 	DATA 	Keypress: y
+148.3261 	DATA 	Keypress: space
+161.0572 	DATA 	Keypress: n
+167.6961 	DATA 	Keypress: space
+177.7823 	DATA 	Keypress: y
+181.2152 	DATA 	Keypress: space
+194.3480 	DATA 	Keypress: n
+197.6670 	DATA 	Keypress: space
+12.7737 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+11.1044 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+11.5261 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+7.2803 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+6.6318 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+7.7309 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+11.4871 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+14.3414 	DATA 	Keypress: space
+14.6398 	DATA 	Keypress: space
+14.8326 	DATA 	Keypress: space
+15.0186 	DATA 	Keypress: space
+15.1766 	DATA 	Keypress: space
+15.3256 	DATA 	Keypress: space
+15.4856 	DATA 	Keypress: space
+15.6123 	DATA 	Keypress: space
+15.7659 	DATA 	Keypress: space
+16.1136 	DATA 	Keypress: space
+16.3735 	DATA 	Keypress: space
+16.6974 	DATA 	Keypress: space
+17.0797 	DATA 	Keypress: space
+14.4926 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+15.5288 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+12.2922 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+11.0272 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+9.9916 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+7.7960 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+6.6166 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+7.6155 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+10.2429 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+11.5812 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+9.1164 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+11.1765 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+8.4493 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+11.4226 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+8.2527 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+8.5888 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+7.6066 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+12.2209 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+15.5232 	DATA 	Keypress: space
+15.6139 	DATA 	Keypress: space
+15.7768 	DATA 	Keypress: space
+15.9409 	DATA 	Keypress: space
+16.0975 	DATA 	Keypress: space
+16.2446 	DATA 	Keypress: space
+16.3946 	DATA 	Keypress: space
+16.5513 	DATA 	Keypress: space
+16.7321 	DATA 	Keypress: space
+17.0565 	DATA 	Keypress: space
+17.4787 	DATA 	Keypress: space
+17.9736 	DATA 	Keypress: space
+18.9483 	DATA 	Keypress: space
+17.3327 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+24.1691 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+28.1137 	DATA 	Keypress: space
+28.4934 	DATA 	Keypress: space
+28.7656 	DATA 	Keypress: space
+28.9363 	DATA 	Keypress: space
+29.0876 	DATA 	Keypress: space
+29.2457 	DATA 	Keypress: space
+29.3922 	DATA 	Keypress: space
+29.5416 	DATA 	Keypress: space
+29.6987 	DATA 	Keypress: space
+29.8467 	DATA 	Keypress: space
+30.0098 	DATA 	Keypress: space
+30.2782 	DATA 	Keypress: space
+30.5095 	DATA 	Keypress: space
+14.7723 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+20.7546 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+23.8275 	DATA 	Keypress: space
+24.1656 	DATA 	Keypress: space
+24.4500 	DATA 	Keypress: space
+24.6854 	DATA 	Keypress: space
+24.9042 	DATA 	Keypress: space
+25.1060 	DATA 	Keypress: space
+25.3276 	DATA 	Keypress: space
+25.6471 	DATA 	Keypress: space
+25.9452 	DATA 	Keypress: space
+26.3832 	DATA 	Keypress: space
+26.7787 	DATA 	Keypress: space
+27.1770 	DATA 	Keypress: space
+27.9688 	DATA 	Keypress: space
+16.7154 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+24.4303 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+28.6596 	DATA 	Keypress: space
+28.6701 	DATA 	Keypress: space
+28.9978 	DATA 	Keypress: space
+29.1969 	DATA 	Keypress: space
+29.3422 	DATA 	Keypress: space
+29.4821 	DATA 	Keypress: space
+29.6191 	DATA 	Keypress: space
+29.7616 	DATA 	Keypress: space
+29.9172 	DATA 	Keypress: space
+30.0580 	DATA 	Keypress: space
+30.2063 	DATA 	Keypress: space
+30.3568 	DATA 	Keypress: space
+30.5209 	DATA 	Keypress: space
+30.8297 	DATA 	Keypress: space
+11.5356 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+17.4829 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+20.2873 	DATA 	Keypress: space
+20.3336 	DATA 	Keypress: space
+20.4612 	DATA 	Keypress: space
+20.7067 	DATA 	Keypress: space
+20.8549 	DATA 	Keypress: space
+21.0182 	DATA 	Keypress: space
+21.1895 	DATA 	Keypress: space
+21.4558 	DATA 	Keypress: space
+21.6146 	DATA 	Keypress: space
+21.7804 	DATA 	Keypress: space
+22.1467 	DATA 	Keypress: space
+22.3432 	DATA 	Keypress: space
+22.5386 	DATA 	Keypress: space
+22.9810 	DATA 	Keypress: space
+11.0112 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+16.9450 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+20.3097 	DATA 	Keypress: space
+20.7498 	DATA 	Keypress: space
+20.9495 	DATA 	Keypress: space
+21.1119 	DATA 	Keypress: space
+21.2639 	DATA 	Keypress: space
+21.4305 	DATA 	Keypress: space
+21.5868 	DATA 	Keypress: space
+21.8118 	DATA 	Keypress: space
+22.1895 	DATA 	Keypress: space
+22.6287 	DATA 	Keypress: space
+22.9706 	DATA 	Keypress: space
+23.3497 	DATA 	Keypress: space
+24.2089 	DATA 	Keypress: space
+38.8780 	DATA 	Keypress: y
+6.4408 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+7.4630 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+12.7010 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+17.0074 	DATA 	Keypress: space
+17.0912 	DATA 	Keypress: space
+17.3493 	DATA 	Keypress: space
+17.6304 	DATA 	Keypress: space
+17.9707 	DATA 	Keypress: space
+18.4841 	DATA 	Keypress: space
+18.9658 	DATA 	Keypress: space
+19.1962 	DATA 	Keypress: space
+19.4059 	DATA 	Keypress: space
+19.6122 	DATA 	Keypress: space
+19.8056 	DATA 	Keypress: space
+19.9980 	DATA 	Keypress: space
+20.2161 	DATA 	Keypress: space
+33.6361 	DATA 	Keypress: y
+8.6670 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+8.3980 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+13.1698 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+16.2097 	DATA 	Keypress: space
+16.2931 	DATA 	Keypress: space
+16.4701 	DATA 	Keypress: space
+16.8060 	DATA 	Keypress: space
+16.9674 	DATA 	Keypress: space
+17.1089 	DATA 	Keypress: space
+17.2548 	DATA 	Keypress: space
+17.3969 	DATA 	Keypress: space
+17.5593 	DATA 	Keypress: space
+17.9266 	DATA 	Keypress: space
+18.2807 	DATA 	Keypress: space
+18.6231 	DATA 	Keypress: space
+19.0691 	DATA 	Keypress: space
+34.7362 	DATA 	Keypress: y
+9.2728 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+10.2252 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+9.3900 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+7.8479 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+6.7425 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+7.5032 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+7.7168 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+8.1135 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+12.2226 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+14.7916 	DATA 	Keypress: space
+14.8528 	DATA 	Keypress: space
+15.0184 	DATA 	Keypress: space
+15.1493 	DATA 	Keypress: space
+15.2941 	DATA 	Keypress: space
+15.4403 	DATA 	Keypress: space
+15.5924 	DATA 	Keypress: space
+15.7301 	DATA 	Keypress: space
+15.8693 	DATA 	Keypress: space
+16.0312 	DATA 	Keypress: space
+16.2482 	DATA 	Keypress: space
+16.4574 	DATA 	Keypress: space
+16.8274 	DATA 	Keypress: space
+36.4227 	DATA 	Keypress: y
+41.2324 	DATA 	Keypress: space
+56.8176 	DATA 	Keypress: n
+61.6531 	DATA 	Keypress: space
+76.0238 	DATA 	Keypress: y
+85.0971 	DATA 	Keypress: space
+96.5273 	DATA 	Keypress: y
+101.7344 	DATA 	Keypress: space
+114.6624 	DATA 	Keypress: y
+116.4424 	DATA 	Keypress: space
+145.3241 	DATA 	Keypress: y
+148.1622 	DATA 	Keypress: space
+152.8989 	DATA 	Keypress: space
+165.8153 	DATA 	Keypress: y
+167.9995 	DATA 	Keypress: space
+179.7366 	DATA 	Keypress: n
+185.1898 	DATA 	Keypress: space
+199.2037 	DATA 	Keypress: y
+203.1149 	DATA 	Keypress: space
+217.6365 	DATA 	Keypress: y
+224.2638 	DATA 	Keypress: space

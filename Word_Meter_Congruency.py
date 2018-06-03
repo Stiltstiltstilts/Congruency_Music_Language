@@ -137,16 +137,17 @@ try:
     fixation = visual.TextStim(win,  pos=[0,0], color=FGC, alignHoriz='center', text="+")
     endMessage = visual.TextStim(win,  pos=[0,0], color=FGC, alignHoriz='center', text="The end!")
     space_cont = visual.TextStim(win, pos=[0,0], color=FGC, text="Press space to continue")
+    too_slow = visual.TextStim(win, pos=[0,0], color=FGC, text="Too slow: respond quicker next time")
+    feedback = visual.TextStim(win, pos=[0,0], color=FGC, text="placeholder")
     introText = visual.TextStim(win, pos=[0,0], color=FGC, text="Placeholder")
     word_stim_list = []
     for i in range(15): # setting up text_stimuli objects... 15 is the most words in the sent_stims
             exec( '{} = visual.TextStim(win, pos=[0,0], color=FGC, text="placeholder")'.format('word' + '_' + str(i+1)) ) # create text objects
             exec( 'word_stim_list.extend([{}])'.format(str('word' + '_' + str(i+1))) ) # putting them in word_stim_list
-    probe_text = visual.TextStim(win, pos=[0,+3], color=FGC, alignHoriz='center', name='top_probe', text="placeholder")
-    probe_text_lower = visual.TextStim(win, pos=[0,-3], color=FGC, alignHoriz='center', name='bottom_probe', text="yes or no?")
+    probe_text = visual.TextStim(win, pos=[0,0], color=FGC, alignHoriz='center', name='top_probe', text="placeholder")
     clock = core.Clock()
     endExpNow = False  # flag for 'escape' or other condition => quit the exp
-
+    routineTimer = core.CountdownTimer()
     # ========================== #
     # ==== START EXPERIMENT ==== #
     # ========================== #
@@ -204,11 +205,9 @@ try:
         for i in range(len(sent_stim)): # for i in range(len(trial['sent_stim'])):
             exec('trialComponents.extend([{}])'.format('word' + '_' + str(i+1)))
             word_stim_list[i].setText(sent_stim[i])
+        
         # add probe components
         probe_text.setText(probe)
-        #trialComponents.extend([space_cont])
-        trialComponents.extend([probe_text])
-
 
         # ------ Prepare to start Routine "trial" -------
         continueRoutine = True
@@ -221,10 +220,11 @@ try:
         t = 0
         trialClock.reset()  # clock
         frameN = -1
-        spaced = False # space to continue boolean
+        #routineTimer.add(len(sent_stim) * beat_freq + word_offset)
+        beatDuration = len(sent_stim)*beat_freq + word_offset
 
         # ------- Start main trial routine -------
-        while continueRoutine: # and routineTimer.getTime() > 0
+        while continueRoutine: #and routineTimer.getTime() > 0:
             # get current time
             t = trialClock.getTime()
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
@@ -236,10 +236,9 @@ try:
                 beat_stim.frameNStart = frameN  # exact frame index
                 beat_stim.play()  # start the sound (it finishes automatically)
                 fixation.setAutoDraw(True)
-            #frameRemains = 0.0 + sound_delay + trial_duration - win.monitorFramePeriod * 0.75  # most of one frame period left
-            #if beat_stim.status == STARTED and t >= frameRemains:
-                #beat_stim.stop()  # stop the sound (if longer than duration)
-            
+            if beat_stim.status == STARTED and t >= beatDuration:
+                beat_stim.stop()
+
             ##### 2.  iterate through sentence text stimuli #####   
             for word_index in range(len(sent_stim)):
                 if t >= word_index * beat_freq + word_offset and word_stim_list[word_index].status == NOT_STARTED:
@@ -252,44 +251,7 @@ try:
                 if word_stim_list[word_index].status == STARTED and t >= frameRemains:
                     word_stim_list[word_index].setAutoDraw(False)
 
-            ##### 3.  display probe text e.g. "The boy helped the girl?" #####
-            if t >= (len(sent_stim) * beat_freq) + word_offset and probe_text.status == NOT_STARTED:
-                beat_stim.stop()
-                # keep track of start time/frame for later
-                probe_text.tStart = t
-                probe_text.frameNStart = frameN  # exact frame index
-                probe_text.setAutoDraw(True)
-            frameRemains = (beat_freq * len(sent_stim)) + probe_duration + word_offset - win.monitorFramePeriod * 0.75  # most of one frame period left
-            if probe_text.status == STARTED and t >= frameRemains:
-                probe_text.setAutoDraw(False)
-
-            ##### 4. check for response keys for probe e.g. "y or n" #####
-            if t >= (len(sent_stim) * beat_freq) + word_offset and probe_resp.status == NOT_STARTED:
-                # keep track of start time/frame for later
-                probe_resp.tStart = t
-                probe_resp.frameNStart = frameN  # exact frame index
-                probe_resp.status = STARTED
-                # keyboard checking is just starting
-                win.callOnFlip(probe_resp.clock.reset)  # t=0 on next screen flip
-                event.clearEvents(eventType='keyboard')
-            frameRemains = (len(sent_stim) * beat_freq) + probe_duration + word_offset - win.monitorFramePeriod * 0.75  # most of one frame period left
-            if probe_resp.status == STARTED and t >= frameRemains:
-                probe_resp.status == STOPPED
-            if probe_resp.status == STARTED:
-                theseKeys = event.getKeys(keyList=['y', 'n'])
-                # log response etc:
-                if len(theseKeys) > 0:  # at least one key was pressed
-                    probe_resp.keys = theseKeys[-1]  # just the last key pressed
-                    probe_resp.rt = probe_resp.clock.getTime()
-                    # was this 'correct'?
-                    if (probe_resp.keys == 'y') and ( (pos_neg == 'positive') or (pos_neg == 'subneg_objpos' and clause == 'relative_clause' and extraction == 'object extracted') ):
-                        probe_resp.corr = 1
-                        print("right cunt")
-                    else:
-                        probe_resp.corr = 0
-                        print("wrong cunt")
-
-            ##### 5.  check if all components have finished #####
+            ##### 3.  check if all components have finished #####
             if not continueRoutine:  # a component has requested a forced-end of Routine
                 break
             continueRoutine = False  # will revert to True if at least one component still running
@@ -298,7 +260,7 @@ try:
                     continueRoutine = True
                     break  # at least one component has not yet finished
             
-            ##### 6.  refresh the screen #####
+            ##### 4.  refresh the screen #####
             if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
                 win.flip()
         
@@ -308,13 +270,54 @@ try:
                 thisComponent.setAutoDraw(False)
         beat_stim.stop()  # ensure sound has stopped at end of routine
 
-        #event.clearEvents(eventType='keyboard')
-        space_cont.setAutoDraw(True)
+        # ------- Probe -------
+        # 3.  display probe text e.g. "The boy helped the girl?" #####
+        probe_text.tStart = t
+        probe_text.setAutoDraw(True)
+
+        # check for response, i.e. "yes or no"
+        probe_resp.tStart = t
+        thing = True
+        # keyboard checking is just starting
+        win.callOnFlip(probe_resp.clock.reset)  # t=0 on next screen flip
+        event.clearEvents(eventType='keyboard')
+        #win.flip()
+        #theseKeys = event.getKeys(keyList=['y', 'n'])
+        while thing: 
+            win.flip()
+            theseKeys = event.getKeys(keyList=['y', 'n'])
+            if len(theseKeys) > 0:  # at least one key was pressed
+                probe_text.setAutoDraw(False)
+                probe_resp.keys = theseKeys[-1]  # just the last key pressed
+                probe_resp.rt = probe_resp.clock.getTime()
+                # was this 'correct'?
+                if (probe_resp.keys == 'y') and ( (pos_neg == 'positive') or (pos_neg == 'subneg_objpos' and clause == 'relative_clause' and extraction == 'object extracted') ):
+                    probe_resp.corr = 1
+                    print("right cunt")
+                    feedback.setText("correct")
+                    feedback.draw()
+                else:
+                    probe_resp.corr = 0
+                    print("wrong cunt")
+                    feedback.setText("incorrect")
+                    feedback.draw()
+                #probe_resp = STOPPED
+                probe_text.setAutoDraw(False)
+                thing = False
+        win.flip()
+        core.wait(1)
+
+        if probe_resp.rt > probe_duration:
+            too_slow.draw()
+            win.flip()
+            core.wait(2) 
+        
+        event.clearEvents(eventType='keyboard')
+        space_cont.draw()
         win.flip()
         thisKey = event.waitKeys(keyList=['space'])
         while not 'space' in thisKey:
-                    win.flip()
-        space_cont.setAutoDraw(False)
+            thisKey = event.waitKeys(keyList=['space'])
 
         thisExp.nextEntry()
         core.wait(1)
