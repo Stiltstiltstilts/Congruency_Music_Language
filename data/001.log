@@ -306,3 +306,201 @@
 203.1149 	DATA 	Keypress: space
 217.6365 	DATA 	Keypress: y
 224.2638 	DATA 	Keypress: space
+15.2029 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+14.8867 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+11.4774 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+13.4710 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+11.9198 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+7.2031 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+9.1876 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+14.0082 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+10.3306 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+10.6959 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+14.7952 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+12.0668 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+10.5540 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+10.5000 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+8.3302 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+10.5358 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+15.9549 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+19.0977 	DATA 	Keypress: space
+19.1935 	DATA 	Keypress: space
+19.3935 	DATA 	Keypress: space
+19.5855 	DATA 	Keypress: space
+19.7456 	DATA 	Keypress: space
+19.9137 	DATA 	Keypress: space
+20.0494 	DATA 	Keypress: space
+20.2256 	DATA 	Keypress: space
+20.3935 	DATA 	Keypress: space
+20.7694 	DATA 	Keypress: space
+21.1536 	DATA 	Keypress: space
+21.7536 	DATA 	Keypress: space
+22.7135 	DATA 	Keypress: space
+39.1266 	DATA 	Keypress: y
+47.8497 	DATA 	Keypress: space
+88.2670 	DATA 	Keypress: n
+91.9862 	DATA 	Keypress: space
+106.5656 	DATA 	Keypress: n
+110.1062 	DATA 	Keypress: space
+121.0950 	DATA 	Keypress: y
+123.2657 	DATA 	Keypress: space
+133.2546 	DATA 	Keypress: y
+135.3856 	DATA 	Keypress: space
+147.0664 	DATA 	Keypress: n
+149.5535 	DATA 	Keypress: space
+161.2107 	DATA 	Keypress: y
+163.5377 	DATA 	Keypress: space
+174.7064 	DATA 	Keypress: n
+176.3494 	DATA 	Keypress: space
+193.1376 	DATA 	Keypress: n
+201.3295 	DATA 	Keypress: space
+212.7549 	DATA 	Keypress: y
+213.5886 	DATA 	Keypress: space
+214.7860 	DATA 	Keypress: space
+12.8274 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+9.3684 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+13.3040 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+16.6087 	DATA 	Keypress: space
+17.0497 	DATA 	Keypress: space
+17.4085 	DATA 	Keypress: space
+17.5996 	DATA 	Keypress: space
+17.7652 	DATA 	Keypress: space
+17.9248 	DATA 	Keypress: space
+18.0876 	DATA 	Keypress: space
+18.2473 	DATA 	Keypress: space
+18.4323 	DATA 	Keypress: space
+18.6556 	DATA 	Keypress: space
+19.0994 	DATA 	Keypress: space
+19.2796 	DATA 	Keypress: space
+19.5122 	DATA 	Keypress: space
+38.7696 	DATA 	Keypress: y
+42.3751 	DATA 	Keypress: space
+56.2494 	DATA 	Keypress: n
+57.8233 	DATA 	Keypress: space
+67.1583 	DATA 	Keypress: n
+7.8338 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+8.1901 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+8.0494 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+12.2032 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+15.2423 	DATA 	Keypress: space
+15.7474 	DATA 	Keypress: space
+15.9963 	DATA 	Keypress: space
+16.1801 	DATA 	Keypress: space
+16.3404 	DATA 	Keypress: space
+16.5077 	DATA 	Keypress: space
+16.6605 	DATA 	Keypress: space
+16.8036 	DATA 	Keypress: space
+17.1796 	DATA 	Keypress: space
+17.6277 	DATA 	Keypress: space
+18.0203 	DATA 	Keypress: space
+18.3883 	DATA 	Keypress: space
+18.8843 	DATA 	Keypress: space
+30.6975 	DATA 	Keypress: n
+11.1604 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+7.3657 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+14.8940 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+14.6235 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+11.3163 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+8.5106 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+12.8108 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+9.1963 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+13.3730 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+8.7082 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+7.0726 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+7.4944 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+11.0998 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+8.1827 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+6.9589 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+13.3390 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+8.1165 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+13.0295 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+14.3526 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+19.8081 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+23.9634 	DATA 	Keypress: space
+24.7144 	DATA 	Keypress: space
+25.1198 	DATA 	Keypress: space
+25.5487 	DATA 	Keypress: space
+25.9375 	DATA 	Keypress: space
+26.2906 	DATA 	Keypress: space
+26.6295 	DATA 	Keypress: space
+26.9881 	DATA 	Keypress: space
+27.3617 	DATA 	Keypress: space
+27.8112 	DATA 	Keypress: space
+28.1549 	DATA 	Keypress: space
+28.3456 	DATA 	Keypress: space
+28.5073 	DATA 	Keypress: space
+37.1919 	DATA 	Keypress: y
+11.1954 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+7.8428 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+7.4309 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+11.5554 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+15.0276 	DATA 	Keypress: space
+15.6490 	DATA 	Keypress: space
+16.0329 	DATA 	Keypress: space
+16.3778 	DATA 	Keypress: space
+16.6598 	DATA 	Keypress: space
+16.9143 	DATA 	Keypress: space
+17.2173 	DATA 	Keypress: space
+17.5130 	DATA 	Keypress: space
+17.7334 	DATA 	Keypress: space
+17.9682 	DATA 	Keypress: space
+18.3077 	DATA 	Keypress: space
+18.6274 	DATA 	Keypress: space
+19.0159 	DATA 	Keypress: space
+28.7172 	DATA 	Keypress: y
+11.1279 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+10.3235 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+9.4511 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+7.1228 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+11.1003 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+13.9227 	DATA 	Keypress: space
+14.3125 	DATA 	Keypress: space
+14.5113 	DATA 	Keypress: space
+14.6952 	DATA 	Keypress: space
+14.8795 	DATA 	Keypress: space
+15.0461 	DATA 	Keypress: space
+15.1491 	DATA 	Keypress: space
+15.3864 	DATA 	Keypress: space
+15.5544 	DATA 	Keypress: space
+15.7298 	DATA 	Keypress: space
+15.9622 	DATA 	Keypress: space
+16.2162 	DATA 	Keypress: space
+16.5709 	DATA 	Keypress: space
+26.4753 	DATA 	Keypress: n
+8.6873 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+14.2396 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+17.3977 	DATA 	Keypress: space
+17.7375 	DATA 	Keypress: space
+17.9860 	DATA 	Keypress: space
+18.1578 	DATA 	Keypress: space
+18.4236 	DATA 	Keypress: space
+18.6302 	DATA 	Keypress: space
+18.8305 	DATA 	Keypress: space
+19.0293 	DATA 	Keypress: space
+19.2435 	DATA 	Keypress: space
+19.4461 	DATA 	Keypress: space
+19.6473 	DATA 	Keypress: space
+19.8562 	DATA 	Keypress: space
+20.0587 	DATA 	Keypress: space
+31.7562 	DATA 	Keypress: n
+8.5728 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+6.6941 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+9.1928 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+71.2028 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
+74.3408 	DATA 	Keypress: space
+74.4001 	DATA 	Keypress: space
+74.5629 	DATA 	Keypress: space
+74.7136 	DATA 	Keypress: space
+74.8376 	DATA 	Keypress: space
+74.9806 	DATA 	Keypress: space
+75.1296 	DATA 	Keypress: space
+75.2907 	DATA 	Keypress: space
+75.4322 	DATA 	Keypress: space
+75.6053 	DATA 	Keypress: space
+76.0675 	DATA 	Keypress: space
+76.4817 	DATA 	Keypress: space
+76.9105 	DATA 	Keypress: space
+77.5893 	DATA 	Keypress: space
+88.1198 	DATA 	Keypress: y
+9.3763 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+12.0650 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']

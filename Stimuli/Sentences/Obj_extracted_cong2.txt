@@ -1,7 +1,7 @@
 The boy that the girl helped got_an A on_the test
-The clerk that the boss liked had_a desk by_the window 
-The guest that the host kissed brought_a cake to_the party 
-The priest that the nun thanked left_the church in_a hurry 
+The clerk that the boss liked had_a desk by_the window
+The guest that the host kissed brought_a cake to_the party
+The priest that the nun thanked left_the church in_a hurry
 The thief that the guard saw had_a gun in_his holster
 The crook that the thief warned fled_the town the_next morning
 The knight that the king helped sent_a gift from_his castle
@@ -37,4 +37,4 @@ The dean that the boy called had_a voice full_of anger
 The thug that the man saw had_a hat on_his head
 The truck that the car bumped had_a man at_the wheel
 The prince that the girl helped had_a head of_blonde hair
-The bug that the ant attacked was_as big as_a coin 
+The bug that the ant attacked was_as big as_a coin

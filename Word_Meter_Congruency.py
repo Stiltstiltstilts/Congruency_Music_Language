@@ -32,7 +32,7 @@ os.chdir(_thisDir)
 expName = 'MeterSyntax'
 # Define experiment info
 expInfo = {'session':'001', 'participant':'001',
-    'order':1, 'handedness':'', 'gender':''}
+    'order':1, 'handedness':'', 'gender':'', 'native language': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, title=expName,)
 if dlg.OK == False:
     core.quit()  # user pressed cancele
@@ -127,6 +127,7 @@ thisTrial = all_trials.trialList[0]  # so we can initialise stimuli with some va
 if thisTrial != None:
     for paramName in thisTrial:
         exec('{} = thisTrial[paramName]'.format(paramName))
+
 ################################################
 ############## Run experiment ##################
 ################################################
@@ -146,20 +147,34 @@ try:
             exec( 'word_stim_list.extend([{}])'.format(str('word' + '_' + str(i+1))) ) # putting them in word_stim_list
     probe_text = visual.TextStim(win, pos=[0,0], color=FGC, alignHoriz='center', name='top_probe', text="placeholder")
     clock = core.Clock()
-    endExpNow = False  # flag for 'escape' or other condition => quit the exp
-    routineTimer = core.CountdownTimer()
-    # ========================== #
-    # ==== START EXPERIMENT ==== #
-    # ========================== #
+    trial_num = 0
 
-    # ===== INSTRUCTIONS ====== #
-    counter = 0
-    while counter < len(part1Intro):
-        if part1Intro[counter] == "sound":
-            #sd.play(beat_inter)
-            core.wait(5)
-            #sd.stop()
-        else:
+    ################################################
+    ############## START EXPERIMENT ################
+    ################################################
+    # ===== LOG FILE ====== #
+    
+    with open('log.txt', 'w') as log_file:
+        log_file.write('Trial\t' + 
+                       'Beat\t' + 
+                       'Sentence\t' + 
+                       'Sentence_extraction\t' + 
+                       'Congruency\t' + 
+                       'Probe\t' + 
+                       'Probe_clause\t' + 
+                       'Response\t' + 
+                       'Accuracy\t' + 
+                       'RT' + '\n')
+        """
+        with open('test_text.txt', 'w') as test_file:
+            test_file.write('test shit and stuff whatever/t' +
+                        'fuck/t' +
+                        'off/t' +
+                        'cunt/t' + '\n')
+        """
+        # ===== INSTRUCTIONS ====== #
+        counter = 0
+        while counter < len(part1Intro):
             message1.setText(part1Intro[counter])
             if counter == 0:
                 message2.setText(bottom_text[0])
@@ -167,165 +182,187 @@ try:
                 message2.setText(bottom_text[1])
             else: 
                 message2.setText(bottom_text[2])
-        #display instructions and wait
-        message1.draw()
-        message2.draw() 
-        win.logOnFlip(level=logging.EXP, msg='Display Instructions%d'%(counter+1))
-        win.flip()
-        #check for a keypress
-        thisKey = event.waitKeys()
-        if thisKey[0] in ['q','escape']:
-            core.quit()
-        elif thisKey[0] == 'backspace':
-            counter -= 1
-        else:
-            counter += 1
+            #display instructions and wait
+            message1.draw()
+            message2.draw() 
+            win.logOnFlip(level=logging.EXP, msg='Display Instructions%d'%(counter+1))
+            win.flip()
+            #check for a keypress
+            thisKey = event.waitKeys()
+            if thisKey[0] in ['q','escape']:
+                core.quit()
+            elif thisKey[0] == 'backspace':
+                counter -= 1
+            else:
+                counter += 1
 
-    # ===== TRIALS ====== #
-    for thisTrial in all_trials:  
-        # ------ Abbeviate parameter names -------
-        if thisTrial != None:
-            for paramName in thisTrial:
-                exec('{} = thisTrial[paramName]'.format(paramName))
-        
-        probe_resp = event.BuilderKeyResponse()
-
-        # ------Setup trialComponents list -------
-        # initialize trial components list
-        trialComponents = []
-        # add auditory stimuli component
-        if beat_type == 'binary_beat':
-            beat_stim = binary_beat
-            word_offset = 7 * beat_freq
-        elif beat_type == 'ternary_beat':
-            beat_stim = ternary_beat
-            word_offset = 8 * beat_freq
-        trialComponents.extend([beat_stim]) # add beat stim to trialComponents list
-        # add text stimuli components
-        for i in range(len(sent_stim)): # for i in range(len(trial['sent_stim'])):
-            exec('trialComponents.extend([{}])'.format('word' + '_' + str(i+1)))
-            word_stim_list[i].setText(sent_stim[i])
-        
-        # add probe components
-        probe_text.setText(probe)
-
-        # ------ Prepare to start Routine "trial" -------
-        continueRoutine = True
-        #routineTimer.add(trial_duration) # need to add the amount of time for the trial
-        # update component parameters for each repeat
-        # keep track of which components have finished
-        for thisComponent in trialComponents:
-            if hasattr(thisComponent, 'status'):
-                thisComponent.status = NOT_STARTED
-        t = 0
-        trialClock.reset()  # clock
-        frameN = -1
-        #routineTimer.add(len(sent_stim) * beat_freq + word_offset)
-        beatDuration = len(sent_stim)*beat_freq + word_offset
-
-        # ------- Start main trial routine -------
-        while continueRoutine: #and routineTimer.getTime() > 0:
-            # get current time
-            t = trialClock.getTime()
-            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # ===== TRIALS ====== #
+        for thisTrial in all_trials:  
+            trial_num += 1
+            ####====ABBREVIATE PARAMETER NAMES====####
+            if thisTrial != None:
+                for paramName in thisTrial:
+                    exec('{} = thisTrial[paramName]'.format(paramName))
             
-            ##### 1. start/stop beat_stim  #####
-            if t >= 0.0 + sound_delay and beat_stim.status == NOT_STARTED:
-                # keep track of start time/frame for later
-                beat_stim.tStart = t
-                beat_stim.frameNStart = frameN  # exact frame index
-                beat_stim.play()  # start the sound (it finishes automatically)
-                fixation.setAutoDraw(True)
-            if beat_stim.status == STARTED and t >= beatDuration:
-                beat_stim.stop()
+            probe_resp = event.BuilderKeyResponse()
 
-            ##### 2.  iterate through sentence text stimuli #####   
-            for word_index in range(len(sent_stim)):
-                if t >= word_index * beat_freq + word_offset and word_stim_list[word_index].status == NOT_STARTED:
-                    fixation.setAutoDraw(False)
-                    # keep track of start time/frame for later
-                    word_stim_list[word_index].tStart = t
-                    word_stim_list[word_index].frameNStart = frameN  # exact frame index
-                    word_stim_list[word_index].setAutoDraw(True)
-                frameRemains = (beat_freq * word_index) + beat_freq + word_offset - win.monitorFramePeriod * 0.75  # most of one frame period left
-                if word_stim_list[word_index].status == STARTED and t >= frameRemains:
-                    word_stim_list[word_index].setAutoDraw(False)
+            ####====SETUP TRIAL COMPONENTS LIST====####
+            # initialize trial components list
+            trialComponents = []
+            # add auditory stimuli component
+            if beat_type == 'binary_beat':
+                beat_stim = binary_beat
+                word_offset = 7 * beat_freq
+            elif beat_type == 'ternary_beat':
+                beat_stim = ternary_beat
+                word_offset = 8 * beat_freq
+            trialComponents.extend([beat_stim]) # add beat stim to trialComponents list
+            # add text stimuli components
+            for i in range(len(sent_stim)): # for i in range(len(trial['sent_stim'])):
+                exec('trialComponents.extend([{}])'.format('word' + '_' + str(i+1)))
+                word_stim_list[i].setText(sent_stim[i])
+            
+            # set probe text for the trial
+            probe_text.setText(probe)
 
-            ##### 3.  check if all components have finished #####
-            if not continueRoutine:  # a component has requested a forced-end of Routine
-                break
-            continueRoutine = False  # will revert to True if at least one component still running
+            ####====BASIC ROUTINE CHECKS====####
+            continueRoutine = True
+            # keep track of which components have finished
             for thisComponent in trialComponents:
-                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                    continueRoutine = True
-                    break  # at least one component has not yet finished
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            t = 0
+            trialClock.reset()  # clock
+            frameN = -1
+            beatDuration = len(sent_stim)*beat_freq + word_offset
+
+            ####====START MAIN TRIAL ROUTINE====####
+            while continueRoutine: 
+                # get current time
+                t = trialClock.getTime()
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                
+                ##### 1. start/stop beat_stim  #####
+                if t >= 0.0 + sound_delay and beat_stim.status == NOT_STARTED:
+                    # keep track of start time/frame for later
+                    beat_stim.tStart = t
+                    beat_stim.frameNStart = frameN  # exact frame index
+                    beat_stim.play()  # start the sound (it finishes automatically)
+                    fixation.setAutoDraw(True)
+                if beat_stim.status == STARTED and t >= beatDuration:
+                    beat_stim.stop()
+
+                ##### 2.  iterate through sentence text stimuli #####   
+                for word_index in range(len(sent_stim)):
+                    if t >= word_index * beat_freq + word_offset and word_stim_list[word_index].status == NOT_STARTED:
+                        fixation.setAutoDraw(False)
+                        # keep track of start time/frame for later
+                        word_stim_list[word_index].tStart = t
+                        word_stim_list[word_index].frameNStart = frameN  # exact frame index
+                        word_stim_list[word_index].setAutoDraw(True)
+                    frameRemains = (beat_freq * word_index) + beat_freq + word_offset - win.monitorFramePeriod * 0.75  # most of one frame period left
+                    if word_stim_list[word_index].status == STARTED and t >= frameRemains:
+                        word_stim_list[word_index].setAutoDraw(False)
+
+                ##### 3.  check if all components have finished #####
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in trialComponents:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                ##### 4.  refresh the screen #####
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
             
-            ##### 4.  refresh the screen #####
-            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            ####====Ending Trial Routine====####
+            for thisComponent in trialComponents:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            beat_stim.stop()  # ensure sound has stopped at end of routine
+
+            ####====Probe====####
+            # 3.  display probe text e.g. "The boy helped the girl?" #####
+            probe_text.tStart = t
+            probe_text.setAutoDraw(True)
+
+            ####====check for response====##### 
+            probe_resp.tStart = t
+            win.callOnFlip(probe_resp.clock.reset)  # t=0 on next screen flip
+            event.clearEvents(eventType='keyboard')
+            thing = True
+            while thing: 
                 win.flip()
-        
-        # -------Ending Routine "trial"-------
-        for thisComponent in trialComponents:
-            if hasattr(thisComponent, "setAutoDraw"):
-                thisComponent.setAutoDraw(False)
-        beat_stim.stop()  # ensure sound has stopped at end of routine
-
-        # ------- Probe -------
-        # 3.  display probe text e.g. "The boy helped the girl?" #####
-        probe_text.tStart = t
-        probe_text.setAutoDraw(True)
-
-        # check for response, i.e. "yes or no"
-        probe_resp.tStart = t
-        thing = True
-        # keyboard checking is just starting
-        win.callOnFlip(probe_resp.clock.reset)  # t=0 on next screen flip
-        event.clearEvents(eventType='keyboard')
-        #win.flip()
-        #theseKeys = event.getKeys(keyList=['y', 'n'])
-        while thing: 
+                theseKeys = event.getKeys(keyList=['y', 'n'])
+                if len(theseKeys) > 0:  # at least one key was pressed
+                    probe_text.setAutoDraw(False)
+                    probe_resp.keys = theseKeys[-1]  # just the last key pressed
+                    probe_resp.rt = probe_resp.clock.getTime()
+                    # was this 'correct'?
+                    if probe_resp.keys == 'y' and (\
+                                            pos_neg == 'positive' or \
+                                                ( \
+                                                (pos_neg == 'subneg_objpos' and clause == 'relative_clause' and extraction == 'object extracted') or \
+                                                (pos_neg == 'subpos_objneg' and clause == 'relative_clause' and extraction == 'subject extracted') \
+                                                )):
+                        probe_resp.corr = 1
+                        feedback.setText("correct")
+                        feedback.draw()
+                    elif probe_resp.keys == 'n' and (\
+                                                pos_neg == 'negative' or \
+                                                ( \
+                                                (pos_neg == 'subpos_objneg' and clause == 'relative_clause' and extraction == 'object extracted') or \
+                                                (pos_neg == 'subneg_objpos' and clause == 'relative_clause' and extraction == 'subject extracted') \
+                                                )):
+                        probe_resp.corr = 1
+                        feedback.setText("correct")
+                        feedback.draw()
+                    else:
+                        probe_resp.corr = 0
+                        feedback.setText("incorrect")
+                        feedback.draw()
+                    #======WRITE DATA TO FILE======#    
+                    log_file.write('\t'.join([str(trial_num),
+                                str(beat_type),
+                                str(sent_stim),
+                                str(extraction),
+                                str(congruency),
+                                str(probe),
+                                str(clause),
+                                str(probe_resp.keys),
+                                str(probe_resp.corr),
+                                str(probe_resp.rt)]) + '\n')
+                    
+                    log_file.flush()
+                    
+                    probe_text.setAutoDraw(False)
+                    thing = False
             win.flip()
-            theseKeys = event.getKeys(keyList=['y', 'n'])
-            if len(theseKeys) > 0:  # at least one key was pressed
-                probe_text.setAutoDraw(False)
-                probe_resp.keys = theseKeys[-1]  # just the last key pressed
-                probe_resp.rt = probe_resp.clock.getTime()
-                # was this 'correct'?
-                if (probe_resp.keys == 'y') and ( (pos_neg == 'positive') or (pos_neg == 'subneg_objpos' and clause == 'relative_clause' and extraction == 'object extracted') ):
-                    probe_resp.corr = 1
-                    print("right cunt")
-                    feedback.setText("correct")
-                    feedback.draw()
-                else:
-                    probe_resp.corr = 0
-                    print("wrong cunt")
-                    feedback.setText("incorrect")
-                    feedback.draw()
-                #probe_resp = STOPPED
-                probe_text.setAutoDraw(False)
-                thing = False
-        win.flip()
-        core.wait(1)
+            core.wait(1)
 
-        if probe_resp.rt > probe_duration:
-            too_slow.draw()
+            ####====Check if response is too slow====####
+            if probe_resp.rt > probe_duration:
+                too_slow.draw()
+                win.flip()
+                core.wait(2) 
+            
+            ####====Space to continue====####
+            event.clearEvents(eventType='keyboard')
+            space_cont.draw()
             win.flip()
-            core.wait(2) 
-        
-        event.clearEvents(eventType='keyboard')
-        space_cont.draw()
-        win.flip()
-        thisKey = event.waitKeys(keyList=['space'])
-        while not 'space' in thisKey:
             thisKey = event.waitKeys(keyList=['space'])
+            while not 'space' in thisKey:
+                thisKey = event.waitKeys(keyList=['space'])
 
-        thisExp.nextEntry()
-        core.wait(1)
+            thisExp.nextEntry()
+            core.wait(1)
 
-    # these shouldn't be strictly necessary (should auto-save)
-    thisExp.saveAsWideText(filename+'.csv')
-    thisExp.saveAsPickle(filename)
-    logging.flush()
+        # these shouldn't be strictly necessary (should auto-save)
+        thisExp.saveAsWideText(filename+'.csv')
+        thisExp.saveAsPickle(filename)
+        logging.flush()
 finally:
     win.close()
     core.quit()

@@ -36,7 +36,8 @@ def sentencePreProcess(path):
         rawText = f.readlines()
     # seperate the individual words and then turn underscore into spaces
     for n in range(0, len(rawText)):
-        temp = rawText[n][:].split(' ')
+        temp = rawText[n][:].replace('\n', '') # getting rid of the line break thing
+        temp = temp.split(' ') # splitting the sentence up by spaces
         temp2.append(temp)
     #Get other info  
     # beat   
@@ -60,8 +61,7 @@ def sentencePreProcess(path):
     temp3 = []
     for sentence in range(0, len(temp2)): # iterate sentences
         for word in range(0, len(temp2[sentence][:])): # iterate words
-            word_stim = temp2[sentence][word].replace('\n', '') # cleaning off the \n
-            word_stim = word_stim.replace('_', ' ') # cleaning off the underscore and turning it into space
+            word_stim = temp2[sentence][word].replace('_', ' ') # cleaning off the underscore and turning it into space
             temp.append(word_stim) 
         stim_data = {'sent_stim':temp, 'beat_type':beat_type, 
                     'congruency':congruency, 'extraction': extraction, 'sent_number': sentence,}
@@ -85,9 +85,9 @@ def probePreProcess(path):
         processed_text = f.readlines()
     #Get other info  
     # pos or neg   
-    if "pos" and not "objpos" in os.path.basename(path):
+    if "positive" in os.path.basename(path):
         pos_neg = 'positive'
-    elif "neg" and not "subneg" in os.path.basename(path):
+    elif "negative" in os.path.basename(path):
         pos_neg = 'negative'
     elif "subneg" in os.path.basename(path): # relative clauses change which statement is correct based on obj or sub extracted
         pos_neg = 'subneg_objpos'

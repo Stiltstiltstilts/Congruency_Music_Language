@@ -1,7 +1,7 @@
 The boy that the girl helped got_an A on the test
-The clerk that the boss liked had_a desk by the window 
-The guest that the host kissed brought_a cake to the party 
-The priest that the nun thanked left_the church in a hurry 
+The clerk that the boss liked had_a desk by the window
+The guest that the host kissed brought_a cake to the party
+The priest that the nun thanked left_the church in a hurry
 The thief that the guard saw had_a gun in his holster
 The crook that the thief warned fled_the town the next morning
 The knight that the king helped sent_a gift from his castle

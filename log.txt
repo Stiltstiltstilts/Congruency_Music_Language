@@ -1,0 +1,6 @@
+Trial	Beat	Sentence	Sentence_extraction	Congruency	Probe	Probe_clause	Response	Accuracy	RT
+1	ternary_beat	['The', 'boy', 'that', 'the', 'girl', 'helped', 'got an', 'A', 'on', 'the', 'test']	object extracted	incongruent	The boy got an A?	main_clause	y	1	1.5754705859581009
+2	ternary_beat	['The', 'nurse', 'that the', 'coach', 'blamed', 'checked', 'the', 'file', 'of', 'the', 'gymnast']	object extracted	congruent	The nurse blamed the coach?	relative_clause	y	0	16.64821432903409
+3	ternary_beat	['The', 'guest', 'that', 'kissed', 'the', 'host', 'brought a', 'cake', 'to', 'the', 'party']	subject extracted	incongruent	The guest kissed the host?	relative_clause	y	1	0.9360884070629254
+4	ternary_beat	['The', 'knight', 'that the', 'king', 'helped', 'sent', 'a', 'gift', 'from', 'his', 'castle']	object extracted	congruent	The knight helped the king?	relative_clause	n	1	5.615693797939457
+5	ternary_beat	['The', 'clerk', 'that the', 'boss', 'liked', 'had', 'a', 'desk', 'by', 'the', 'window', '']	object extracted	congruent	The boss liked the clerk?	relative_clause	y	1	2.0938694189535454
