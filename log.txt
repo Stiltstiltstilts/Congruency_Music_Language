@@ -1,0 +1,3 @@
+Trial	Beat	Sentence	Sentence_extraction	Congruency	Probe	Probe_clause	Response	Accuracy	RT
+1	ternary_beat	['The', 'boy', 'that', 'helped', 'the', 'girl', 'got an', 'A', 'on', 'the', 'test']	subject extracted	incongruent	The boy helped the girl?	relative_clause	y	1	3.3810831520240754
+2	ternary_beat	['The', 'cop', 'that', 'the', 'spy', 'met', 'wrote a', 'book', 'about', 'the', 'case']	object extracted	incongruent	The cop wrote a book?	main_clause	y	1	2.3904880828922614

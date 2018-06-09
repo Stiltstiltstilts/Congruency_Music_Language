@@ -5,6 +5,8 @@
 
 import os
 import numpy as np
+from psychopy import core, visual, event, data, logging
+from constants import *
 
 def instImport(path):
     """
@@ -36,7 +38,8 @@ def sentencePreProcess(path):
         rawText = f.readlines()
     # seperate the individual words and then turn underscore into spaces
     for n in range(0, len(rawText)):
-        temp = rawText[n][:].split(' ')
+        temp = rawText[n][:].replace('\n', '') # getting rid of the line break thing
+        temp = temp.split(' ') # splitting the sentence up by spaces
         temp2.append(temp)
     #Get other info  
     # beat   
@@ -44,11 +47,15 @@ def sentencePreProcess(path):
         beat_type = 'binary_beat'
     elif "3" in os.path.basename(path):
         beat_type = 'ternary_beat'
+    else:
+        beat_type = None
     # congruency
     if "cong" and not "incong" in os.path.basename(path):
         congruency = 'congruent'
     elif "incong" in os.path.basename(path):
         congruency = 'incongruent'
+    else:
+        congruency = None
     #obj/sub
     if "Obj" in os.path.basename(path):
         extraction = 'object extracted'
@@ -60,7 +67,8 @@ def sentencePreProcess(path):
     temp3 = []
     for sentence in range(0, len(temp2)): # iterate sentences
         for word in range(0, len(temp2[sentence][:])): # iterate words
-            temp.append(temp2[sentence][word].replace('_', ' '))
+            word_stim = temp2[sentence][word].replace('_', ' ') # cleaning off the underscore and turning it into space
+            temp.append(word_stim) 
         stim_data = {'sent_stim':temp, 'beat_type':beat_type, 
                     'congruency':congruency, 'extraction': extraction, 'sent_number': sentence,}
         temp3.append(stim_data)
@@ -83,15 +91,17 @@ def probePreProcess(path):
         processed_text = f.readlines()
     #Get other info  
     # pos or neg   
-    if "pos" and not "objpos" in os.path.basename(path):
+    if "positive" in os.path.basename(path):
         pos_neg = 'positive'
-    elif "neg" and not "subneg" in os.path.basename(path):
+    elif "negative" in os.path.basename(path):
         pos_neg = 'negative'
     elif "subneg" in os.path.basename(path): # relative clauses change which statement is correct based on obj or sub extracted
-        pos_neg = "subneg_objpos"
+        pos_neg = 'subneg_objpos'
     elif "subpos" in os.path.basename(path):
-        pos_neg = "subpos_objneg"
-    # main or relative claus
+        pos_neg = 'subpos_objneg'
+    else:
+        pos_neg = None
+    # main or relative clause
     if "MC" in os.path.basename(path):
         clause = 'main_clause'
     elif "RC" in os.path.basename(path):
@@ -101,7 +111,7 @@ def probePreProcess(path):
 
     final_output = []
     for n in range(len(processed_text)):
-        temp = {'probe':processed_text[n],
+        temp = {'probe':processed_text[n].replace('\n', ''),
                         'pos_neg': pos_neg,
                         'clause': clause,
                         'probe_n': n,}
@@ -128,3 +138,31 @@ def customHanning(M, floor):
     custom_hanning_window = [a - b*np.cos(2 * x * np.pi /(M-1)) for x in range(M)]
 
     return custom_hanning_window
+
+def instructionDelivery(text_list, bottom_text):
+    """
+    etc
+
+    """
+    counter = 0
+    while counter < len(text_list):
+        message1.setText(text_list[counter])
+        if counter == 0:
+            message2.setText(bottom_text[0])
+        elif counter in range(1, (len(text_list) - 1)):
+            message2.setText(bottom_text[1])
+        else: 
+            message2.setText(bottom_text[2])
+        #display instructions and wait
+        message1.draw()
+        message2.draw() 
+        win.logOnFlip(level=logging.EXP, msg='Display Instructions{}'.format(counter+1))
+        win.flip()
+        #check for a keypress
+        thisKey = event.waitKeys()
+        if thisKey[0] in ['q','escape']:
+            core.quit()
+        elif thisKey[0] == 'backspace':
+            counter -= 1
+        else:
+            counter += 1

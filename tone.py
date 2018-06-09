@@ -94,9 +94,9 @@ tone_accent = tone_accent * hannVec
 ################################################
 
 # tile tones to the desired length
-meter = np.concatenate((tone_accent,tone_nonaccent),)
+meter = np.concatenate((tone_accent,tone_nonaccent, tone_nonaccent),)
 
-final_output = np.tile(meter, int(nTones/2))
+final_output = np.tile(meter, int(nTones/3))
 
 # initialise mixer module (it requires the sampling rate and num of channels)
 pygame.mixer.init(frequency=SAMPLERATE, channels=NCHANNELS)
@@ -105,7 +105,7 @@ pygame.mixer.init(frequency=SAMPLERATE, channels=NCHANNELS)
 tone = pygame.mixer.Sound(final_output.astype('int16'))
 
 # open new wave file objects
-tonefile = wave.open('pure_tone.wav', 'w')
+tonefile = wave.open('ternary_beat.wav', 'w')
 
 # set parameters for pure tone
 tonefile.setframerate(SAMPLERATE)
