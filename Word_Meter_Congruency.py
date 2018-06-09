@@ -119,7 +119,7 @@ main_trials = [ {**main_condition_list[i][1], **main_probe_list[i][1]} for i in 
 assorted_trials = [ {**assorted_condition_list[i][1], **assorted_probe_list[i][1]} for i in range(len(assorted_condition_list)) ]
 all_trials = main_trials
 all_trials.extend(assorted_trials)
-all_trials = data.TrialHandler(trialList = all_trials[:], nReps = 1, method = 'random', extraInfo = expInfo, name = 'all_trials') 
+all_trials = data.TrialHandler(trialList = all_trials[:2], nReps = 1, method = 'random', extraInfo = expInfo, name = 'all_trials') 
 thisTrial = all_trials.trialList[0]  # so we can initialise stimuli with some values
 # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
 if thisTrial != None:
@@ -160,12 +160,18 @@ try:
     probe_text = visual.TextStim(win, pos=[0,0], color=FGC, alignHoriz='center', name='top_probe', text="placeholder")
     clock = core.Clock()
     trial_num = 0
+    GSI = visual.RatingScale(win, name='GSI', marker='triangle',
+                             textSize = 0.4, showValue = False, acceptText = 'confirm',
+                              size=1.5, pos=[0.0, -0.4], 
+                              choices=['Completely\n Disagree', 'Strongly\n Disagree',
+                                         'Disagree', 'Neither Agree\n or Disagree', 'Agree',
+                                          'Strongly\n Agree', 'Completely\n Agree'],
+                             tickHeight=-1)
 
     ################################################
     ############## START EXPERIMENT ################
     ################################################
     
-
     # ===== INSTRUCTIONS 1 ====== #
     counter = 0
     while counter < len(part1Intro):
@@ -231,7 +237,7 @@ try:
         frameN = -1
         beatDuration = len(sent_stim)*beat_freq + word_offset
 
-        ####====START MAIN TRIAL ROUTINE====####
+        ####====START PRACTISE TRIAL ROUTINE====####
         while continueRoutine: 
             # get current time
             t = trialClock.getTime()
@@ -296,7 +302,12 @@ try:
                 probe_resp.keys = theseKeys[-1]  # just the last key pressed
                 probe_resp.rt = probe_resp.clock.getTime()
                 # was this 'correct'?
-                if probe_resp.keys == 'y' and trial == 1:
+                if probe_resp.keys == 'y' and trial_num == 2:
+                    probe_resp.corr = 1
+                    feedback.setText("correct")
+                    feedback.draw()
+                    thing = False
+                elif probe_resp.keys == 'n' and not trial_num == 2:
                     probe_resp.corr = 1
                     feedback.setText("correct")
                     feedback.draw()
@@ -349,7 +360,7 @@ try:
             counter += 1
 
     # ===== LOG FILE ====== #
-    with open('log.txt', 'w') as log_file:
+    with open('data/{}trial_log.txt'.format(expInfo['participant']), 'w') as log_file:
         log_file.write('Trial\t' + 
                        'Beat\t' + 
                        'Sentence\t' + 
@@ -528,6 +539,59 @@ try:
         thisExp.saveAsWideText(filename+'.csv')
         thisExp.saveAsPickle(filename)
         logging.flush()
+
+    ################################################
+    ############## GSI QUESTIONNAIRE ################
+    ################################################
+    with open('data/{}questionnaire_log.txt'.format(expInfo['participant']), 'w') as log_file:
+        log_file.write('Question_num\t' +
+                       'Question\t' +
+                       'Response' + '\n')
+
+        quest_num = 1 # initialising counter 
+        for question in gsi_part1:
+            message1.setText(question)
+            while GSI.noResponse: 
+                message1.draw()
+                GSI.draw()
+                win.flip()
+            response = GSI.getRating()
+            #======WRITE DATA TO FILE======#    
+            log_file.write('\t'.join([str(quest_num),
+                            str( question.replace('\n','') ),
+                            str( response.replace('\n','') )]) + '\n')
+            
+            log_file.flush()
+            GSI.noResponse = True
+            GSI.response = None
+            quest_num += 1
+            core.wait(.2)
+        
+        quest_num = 1 # initialising counter 
+        for question in gsi_part2:
+            message1.setText(question)
+            GSI = visual.RatingScale(win, name='GSI', marker='triangle',
+                             textSize = 0.4, showValue = False, acceptText = 'confirm',
+                              size=1.5, pos=[0.0, -0.4], 
+                              choices= gsi_part2_scales[quest_num],
+                             tickHeight=-1)
+            while GSI.noResponse: 
+                message1.draw()
+                GSI.draw()
+                win.flip()
+            response = GSI.getRating()
+            #======WRITE DATA TO FILE======#    
+            log_file.write('\t'.join([str((quest_num + 31)),
+                            str( question.replace('\n','') ),
+                            str( response.replace('\n','') )]) + '\n')
+            
+            log_file.flush()
+            GSI.noResponse = True
+            GSI.response = None
+            quest_num += 1
+            core.wait(.2)
+            
+
 finally:
     win.close()
     core.quit()

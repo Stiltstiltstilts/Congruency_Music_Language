@@ -58,3 +58,14 @@ probe_ass_pos = fun.probePreProcess('Stimuli/Probes/Assorted_positive_probes.txt
 probe_ass_neg = fun.probePreProcess('Stimuli/Probes/Assorted_negative_probes.txt')
 
 prac_probes = fun.probePreProcess('Stimuli/Probes/Practice_trial_probes.txt')
+
+###===QUESTIONAIRE===###
+gsi_part1 = fun.instImport('Stimuli/GSI_1-31.txt')
+gsi_part2 = fun.instImport('Stimuli/GSI_32-38.txt')
+gsi_part2_scales = [['0','1', '2', '3', '4-5', '6-9', '10+'],
+                    ['0', '0.5', '1', '1.5', '2', '3-4', '5+'],
+                    ['0', '1', '2', '3', '4-6', '7-10', '11+'], 
+                    ['0', '0.5', '1', '2', '3', '4-6', '7+'], 
+                    ['0', '0.5', '1', '2', '3-5', '6-9', '10+'], 
+                    ['0', '1', '2', '3', '4', '5', '6+'],
+                    ['0-15mins', '15-30mins', '30-60mins', '60-90mins', '2hrs', '2-3hrs', '4+hours']]

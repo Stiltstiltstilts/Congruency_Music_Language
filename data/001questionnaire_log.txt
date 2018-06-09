@@ -1,0 +1,7 @@
+Question_num	Question	Response
+1	I spend a lot of my free time doing music-related activities.	Completely Agree
+2	I sometimes choose music that can trigger shivers down my spine.	Strongly Agree
+3	I enjoy writing about music, for example on blogs and forums.	Agree
+32	I engaged in regular, daily practice of a musical instrument (including voice) for ____ years.	1.5
+33	At the peak of my interest, I practiced ____ or more hours per day on my primary instrument.	4-6
+34	I have attended ____ live music events as an audience member in the past twelve months.	4-6

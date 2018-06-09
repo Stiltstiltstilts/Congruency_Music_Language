@@ -166,11 +166,3 @@ def instructionDelivery(text_list, bottom_text):
             counter -= 1
         else:
             counter += 1
-def testThang(x, message1):
-    """
-    """
-    message1.setText(x)
-    message1.draw()
-    win.flip
-
-    
