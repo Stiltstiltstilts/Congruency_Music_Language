@@ -47,6 +47,8 @@ obj_ext_incong3 = fun.sentencePreProcess('Stimuli/Sentences/Obj_extracted_incong
 
 assorted_cong2 = fun.sentencePreProcess('Stimuli/Sentences/Assorted_cong2.txt')
 
+prac_trials = fun.sentencePreProcess('Stimuli/Sentences/Practice_trials.txt')
+
 ###===PROBES===###
 probe_mc_pos = fun.probePreProcess('Stimuli/Probes/MC_positive_probes.txt')
 probe_mc_neg = fun.probePreProcess('Stimuli/Probes/MC_negative_probes.txt')
@@ -54,3 +56,5 @@ probe_rc_subpos_objneg = fun.probePreProcess('Stimuli/Probes/RC_subpos_objneg_pr
 probe_rc_subneg_objpos = fun.probePreProcess('Stimuli/Probes/RC_subneg_objpos_probes.txt')
 probe_ass_pos = fun.probePreProcess('Stimuli/Probes/Assorted_positive_probes.txt')
 probe_ass_neg = fun.probePreProcess('Stimuli/Probes/Assorted_negative_probes.txt')
+
+prac_probes = fun.probePreProcess('Stimuli/Probes/Practice_trial_probes.txt')

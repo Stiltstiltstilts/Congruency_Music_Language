@@ -5,6 +5,8 @@
 
 import os
 import numpy as np
+from psychopy import core, visual, event, data, logging
+from constants import *
 
 def instImport(path):
     """
@@ -45,11 +47,15 @@ def sentencePreProcess(path):
         beat_type = 'binary_beat'
     elif "3" in os.path.basename(path):
         beat_type = 'ternary_beat'
+    else:
+        beat_type = None
     # congruency
     if "cong" and not "incong" in os.path.basename(path):
         congruency = 'congruent'
     elif "incong" in os.path.basename(path):
         congruency = 'incongruent'
+    else:
+        congruency = None
     #obj/sub
     if "Obj" in os.path.basename(path):
         extraction = 'object extracted'
@@ -93,6 +99,8 @@ def probePreProcess(path):
         pos_neg = 'subneg_objpos'
     elif "subpos" in os.path.basename(path):
         pos_neg = 'subpos_objneg'
+    else:
+        pos_neg = None
     # main or relative clause
     if "MC" in os.path.basename(path):
         clause = 'main_clause'
@@ -130,3 +138,39 @@ def customHanning(M, floor):
     custom_hanning_window = [a - b*np.cos(2 * x * np.pi /(M-1)) for x in range(M)]
 
     return custom_hanning_window
+
+def instructionDelivery(text_list, bottom_text):
+    """
+    etc
+
+    """
+    counter = 0
+    while counter < len(text_list):
+        message1.setText(text_list[counter])
+        if counter == 0:
+            message2.setText(bottom_text[0])
+        elif counter in range(1, (len(text_list) - 1)):
+            message2.setText(bottom_text[1])
+        else: 
+            message2.setText(bottom_text[2])
+        #display instructions and wait
+        message1.draw()
+        message2.draw() 
+        win.logOnFlip(level=logging.EXP, msg='Display Instructions{}'.format(counter+1))
+        win.flip()
+        #check for a keypress
+        thisKey = event.waitKeys()
+        if thisKey[0] in ['q','escape']:
+            core.quit()
+        elif thisKey[0] == 'backspace':
+            counter -= 1
+        else:
+            counter += 1
+def testThang(x, message1):
+    """
+    """
+    message1.setText(x)
+    message1.draw()
+    win.flip
+
+    
