@@ -1,13 +1,14 @@
 Welcome to the experiment. Thank you for participating!
-During the first part of the experiment you will be presented with sentences one word at a time.
-These words will flash on the screen at the same time as an auditory tone.
+During the first part of the experiment you will be presented with sentences one/two words at a time.
+These words will flash on the screen at the same time as an auditory beat.
 After the sentence is presented, a statement will appear on the screen that tests your understanding of the sentence.
 For example, if the sentence was “The boy gave a flower to the girl”, this testing statement might be “The girl received a flower?” 
 You are to respond to this statement with either “yes” or “no”, indicating your answer by pressing the “y” or “n” key respectively.
 In the example given, the correct response would be “yes”, because the girl received a flower from the boy.
-Importantly, you are to respond as soon as you think you know the answer. Responses longer than three seconds will not be counted.
+Importantly, you are to respond as quickly as you can. 
+If you take longer than 5 seconds, you will be reminded to speed up on the next trial.
 Accuracy is still important, however, so do not go too quickly.
 You control when each trial starts, so feel free to take short breaks if required. And you are always welcome to ask the experimenter questions during these breaks if anything is unclear.
 It is very important that you feel confident in your understanding of the task and are giving it your full attention. Making mistakes is part of the experiment, though, so do not worry when this happens.
 Good science is made possible by good participants, so thank you in advance for your cooperation—we really appreciate it! 
-Press the space by to start a practice trial, just to test that everything makes sense. 
+Press the space by to start some practice trials (that don't count for the main experiment), just to test that everything makes sense. 

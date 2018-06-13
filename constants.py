@@ -32,6 +32,7 @@ os.chdir(_thisDir)
 ###===INSTRUCTIONS===###
 part1Intro = fun.instImport('Stimuli/Instructions/Part1.txt')
 part2Intro = fun.instImport('Stimuli/Instructions/Part2.txt')
+part3Intro = fun.instImport('Stimuli/Instructions/Part3.txt')
 bottom_text = fun.instImport('Stimuli/Instructions/bottom_text.txt')
 
 ###===SENTENCES===###

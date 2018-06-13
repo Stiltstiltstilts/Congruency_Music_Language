@@ -32,7 +32,7 @@ os.chdir(_thisDir)
 expName = 'MeterSyntax'
 # Define experiment info
 expInfo = {'session':'001', 'participant':'001',
-    'order':1, 'handedness':'', 'gender':'', 'native language': ''}
+    'handedness':'', 'gender':'', 'native language': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, title=expName,)
 if dlg.OK == False:
     core.quit()  # user pressed cancele
@@ -119,7 +119,7 @@ main_trials = [ {**main_condition_list[i][1], **main_probe_list[i][1]} for i in 
 assorted_trials = [ {**assorted_condition_list[i][1], **assorted_probe_list[i][1]} for i in range(len(assorted_condition_list)) ]
 all_trials = main_trials
 all_trials.extend(assorted_trials)
-all_trials = data.TrialHandler(trialList = all_trials[:2], nReps = 1, method = 'random', extraInfo = expInfo, name = 'all_trials') 
+all_trials = data.TrialHandler(trialList = all_trials[:], nReps = 1, method = 'random', extraInfo = expInfo, name = 'all_trials') 
 thisTrial = all_trials.trialList[0]  # so we can initialise stimuli with some values
 # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
 if thisTrial != None:
@@ -144,11 +144,11 @@ if thisPracTrial != None:
 ############## Run experiment ##################
 ################################################
 try: 
-    # Set up variables and trial objects etc
+    # ==== SETUP TRIAL OBJECTS ==== #
     message1 = visual.TextStim(win, pos=[0,+3], color=FGC, alignHoriz='center', name='topMsg', text="placeholder") 
     message2 = visual.TextStim(win, pos=[0,-3], color=FGC, alignHoriz='center', name='bottomMsg', text="placeholder") 
     fixation = visual.TextStim(win,  pos=[0,0], color=FGC, alignHoriz='center', text="+")
-    endMessage = visual.TextStim(win,  pos=[0,0], color=FGC, alignHoriz='center', text="The end!")
+    endMessage = visual.TextStim(win,  pos=[0,0], color=FGC, alignHoriz='center', text="The end! Thank you for participating :)")
     space_cont = visual.TextStim(win, pos=[0,0], color=FGC, text="Press space to continue")
     too_slow = visual.TextStim(win, pos=[0,0], color=FGC, text="Too slow: respond quicker next time")
     feedback = visual.TextStim(win, pos=[0,0], color=FGC, text="placeholder")
@@ -158,8 +158,6 @@ try:
             exec( '{} = visual.TextStim(win, pos=[0,0], color=FGC, text="placeholder")'.format('word' + '_' + str(i+1)) ) # create text objects
             exec( 'word_stim_list.extend([{}])'.format(str('word' + '_' + str(i+1))) ) # putting them in word_stim_list
     probe_text = visual.TextStim(win, pos=[0,0], color=FGC, alignHoriz='center', name='top_probe', text="placeholder")
-    clock = core.Clock()
-    trial_num = 0
     GSI = visual.RatingScale(win, name='GSI', marker='triangle',
                              textSize = 0.4, showValue = False, acceptText = 'confirm',
                               size=1.5, pos=[0.0, -0.4], 
@@ -167,6 +165,9 @@ try:
                                          'Disagree', 'Neither Agree\n or Disagree', 'Agree',
                                           'Strongly\n Agree', 'Completely\n Agree'],
                              tickHeight=-1)
+    # ==== OTHER TRIAL VARIABLES ==== #
+    clock = core.Clock()
+    trial_num = 0
 
     ################################################
     ############## START EXPERIMENT ################
@@ -533,7 +534,7 @@ try:
                 thisKey = event.waitKeys(keyList=['space'])
 
             thisExp.nextEntry()
-            core.wait(1)
+            core.wait(.5)
 
         # these shouldn't be strictly necessary (should auto-save)
         thisExp.saveAsWideText(filename+'.csv')
@@ -543,6 +544,30 @@ try:
     ################################################
     ############## GSI QUESTIONNAIRE ################
     ################################################
+    # ===== INSTRUCTIONS 3 ====== #
+    counter = 0
+    while counter < len(part3Intro):
+        message1.setText(part3Intro[counter])
+        if counter == 0:
+            message2.setText(bottom_text[0])
+        elif counter in range(1, (len(part3Intro) - 1)):
+            message2.setText(bottom_text[1])
+        else: 
+            message2.setText(bottom_text[2])
+        #display instructions and wait
+        message1.draw()
+        message2.draw() 
+        win.logOnFlip(level=logging.EXP, msg='Display Instructions%d'%(counter+1))
+        win.flip()
+        #check for a keypress
+        thisKey = event.waitKeys()
+        if thisKey[0] in ['q','escape']:
+            core.quit()
+        elif thisKey[0] == 'backspace':
+            counter -= 1
+        else:
+            counter += 1
+
     with open('data/{}questionnaire_log.txt'.format(expInfo['participant']), 'w') as log_file:
         log_file.write('Question_num\t' +
                        'Question\t' +
@@ -573,7 +598,7 @@ try:
             GSI = visual.RatingScale(win, name='GSI', marker='triangle',
                              textSize = 0.4, showValue = False, acceptText = 'confirm',
                               size=1.5, pos=[0.0, -0.4], 
-                              choices= gsi_part2_scales[quest_num],
+                              choices= gsi_part2_scales[quest_num - 1],
                              tickHeight=-1)
             while GSI.noResponse: 
                 message1.draw()
@@ -590,8 +615,8 @@ try:
             GSI.response = None
             quest_num += 1
             core.wait(.2)
-            
-
+    endMessage.draw()
+    win.flip()
 finally:
     win.close()
     core.quit()
