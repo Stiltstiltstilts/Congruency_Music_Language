@@ -1,0 +1,2 @@
+Trial	Beat	Sentence	Sentence_extraction	Congruency	Probe	Probe_clause	Response	Accuracy	RT
+1	binary_beat	['The', 'scout', 'that', 'the', 'coach', 'punched', 'had a', 'fight', 'with a', 'manager']	object extracted	congruent	The coach had a fight?	main_clause	y	0	2.2977530650023255

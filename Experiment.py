@@ -60,9 +60,9 @@ logging.console.setLevel(logging.WARNING)
 ################# Variables ####################
 ################################################
 ####====Auditory Stimuli====####
-binary_beat = sound.Sound('binary_beat.wav', secs=-1)
+binary_beat = sound.Sound('Stimuli/Tones/binary_beat.wav', secs=-1)
 binary_beat.setVolume(1)
-ternary_beat = sound.Sound('ternary_beat.wav', secs=-1)
+ternary_beat = sound.Sound('Stimuli/Tones/ternary_beat.wav', secs=-1)
 ternary_beat.setVolume(1)
 
 # setup window
@@ -167,7 +167,7 @@ try:
                                          'Disagree', 'Neither Agree\n or Disagree', 'Agree',
                                           'Strongly\n Agree', 'Completely\n Agree'],
                              tickHeight=-1)
-    response_keys = visual.TextStim(win, pos=[0,-5], height = .5, color=FGC, text="'y' 'n' or 'd'")
+    response_keys = visual.TextStim(win, pos=[0,-5], height = .5, color=FGC, text="respond:'y' 'n' or 'd'")
     # ==== OTHER TRIAL VARIABLES ==== #
     clock = core.Clock()
     trial_num = 0

@@ -61,8 +61,8 @@ probe_ass_neg = fun.probePreProcess('Stimuli/Probes/Assorted_negative_probes.txt
 prac_probes = fun.probePreProcess('Stimuli/Probes/Practice_trial_probes.txt')
 
 ###===QUESTIONAIRE===###
-gsi_part1 = fun.instImport('Stimuli/GSI_1-31.txt')
-gsi_part2 = fun.instImport('Stimuli/GSI_32-38.txt')
+gsi_part1 = fun.instImport('Stimuli/Questionnaire/GSI_1-31.txt')
+gsi_part2 = fun.instImport('Stimuli/Questionnaire/GSI_32-38.txt')
 gsi_part2_scales = [['0','1', '2', '3', '4-5', '6-9', '10+'],
                     ['0', '0.5', '1', '1.5', '2', '3-4', '5+'],
                     ['0', '1', '2', '3', '4-6', '7-10', '11+'], 
