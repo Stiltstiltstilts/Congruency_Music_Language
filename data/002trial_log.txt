@@ -1,0 +1,2 @@
+Trial	Beat	Sentence	Sentence_extraction	Congruency	Probe	Probe_clause	Response	Accuracy	RT
+1	ternary_beat	['The', 'hat', 'that', 'matched', 'the', 'skirt', 'had a', 'bow', 'in', 'the', 'back']	subject extracted	incongruent	The hat had a bow?	main_clause	d	0	2.5889646919968072

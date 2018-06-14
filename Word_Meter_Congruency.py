@@ -84,6 +84,7 @@ else:
 ########## Trial list construction #############
 ################################################
 ############ main sentences ############
+assert len(sub_ext_cong2) == len(sub_ext_incong2) == len(sub_ext_cong3) == len(sub_ext_incong3) == len(obj_ext_cong2) == len(obj_ext_incong2) == len(obj_ext_cong3) == len(obj_ext_incong3), "number of sentences not the same"
 main_conditions = [sub_ext_cong2, sub_ext_incong2, obj_ext_cong2, obj_ext_incong2,
                  sub_ext_cong3, sub_ext_incong3, obj_ext_cong3,  obj_ext_incong3]  # first half binary second half ternary
 nSentences = len(sub_ext_cong2) # should write an exception error check thing to check that all main conditions have same length...
@@ -93,6 +94,7 @@ shuffle(main_condition_index)  # randomise
 main_condition_list = [ (i, main_conditions[main_condition_index[i]][i]) for i in range(nSentences) ] #create list of tuples containing [0]index and [1] probes, in original order
 
 ############ main probes ############
+assert len(probe_mc_neg) == len(probe_mc_pos) == len(probe_rc_subneg_objpos) == len(probe_rc_subpos_objneg), "number of probes not the same"
 main_probes = [probe_mc_pos, probe_mc_neg,
                probe_rc_subpos_objneg, probe_rc_subneg_objpos]
 nProbes = len(probe_mc_pos) # how many probes
@@ -165,6 +167,7 @@ try:
                                          'Disagree', 'Neither Agree\n or Disagree', 'Agree',
                                           'Strongly\n Agree', 'Completely\n Agree'],
                              tickHeight=-1)
+    response_keys = visual.TextStim(win, pos=[0,-5], height = .5, color=FGC, text="'y' 'n' or 'd'")
     # ==== OTHER TRIAL VARIABLES ==== #
     clock = core.Clock()
     trial_num = 0
@@ -289,6 +292,7 @@ try:
         # 3.  display probe text e.g. "The boy helped the girl?" #####
         probe_text.tStart = t
         probe_text.setAutoDraw(True)
+        response_keys.setAutoDraw(True)
 
         ####====check for response====##### 
         probe_resp.tStart = t
@@ -297,9 +301,10 @@ try:
         thing = True
         while thing: 
             win.flip()
-            theseKeys = event.getKeys(keyList=['y', 'n'])
+            theseKeys = event.getKeys(keyList=['y', 'n', 'd'])
             if len(theseKeys) > 0:  # at least one key was pressed
                 probe_text.setAutoDraw(False)
+                response_keys.setAutoDraw(False)
                 probe_resp.keys = theseKeys[-1]  # just the last key pressed
                 probe_resp.rt = probe_resp.clock.getTime()
                 # was this 'correct'?
@@ -311,6 +316,11 @@ try:
                 elif probe_resp.keys == 'n' and not trial_num == 2:
                     probe_resp.corr = 1
                     feedback.setText("correct")
+                    feedback.draw()
+                    thing = False
+                elif probe_resp.keys == 'd':
+                    probe_resp.corr = 0
+                    feedback.setText("(don't know)")
                     feedback.draw()
                     thing = False
                 else:
@@ -464,6 +474,7 @@ try:
             # 3.  display probe text e.g. "The boy helped the girl?" #####
             probe_text.tStart = t
             probe_text.setAutoDraw(True)
+            response_keys.setAutoDraw(True)
 
             ####====check for response====##### 
             probe_resp.tStart = t
@@ -472,9 +483,10 @@ try:
             thing = True
             while thing: 
                 win.flip()
-                theseKeys = event.getKeys(keyList=['y', 'n'])
+                theseKeys = event.getKeys(keyList=['y', 'n', 'd'])
                 if len(theseKeys) > 0:  # at least one key was pressed
                     probe_text.setAutoDraw(False)
+                    response_keys.setAutoDraw(False)
                     probe_resp.keys = theseKeys[-1]  # just the last key pressed
                     probe_resp.rt = probe_resp.clock.getTime()
                     # was this 'correct'?
@@ -495,6 +507,10 @@ try:
                                                 )):
                         probe_resp.corr = 1
                         feedback.setText("correct")
+                        feedback.draw()
+                    elif probe_resp.keys == 'd':
+                        probe_resp.corr = 0
+                        feedback.setText("(don't know)")
                         feedback.draw()
                     else:
                         probe_resp.corr = 0
