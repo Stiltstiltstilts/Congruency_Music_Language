@@ -32,7 +32,7 @@ os.chdir(_thisDir)
 expName = 'MeterSyntax'
 # Define experiment info
 expInfo = {'session':'001', 'participant':'001',
-    'handedness':'', 'gender':'', 'native language': ''}
+    'handedness':'', 'gender':'', 'native language': '', 'age': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, title=expName,)
 if dlg.OK == False:
     core.quit()  # user pressed cancele
@@ -78,18 +78,17 @@ expInfo['frameRate'] = win.getActualFrameRate()
 if expInfo['frameRate'] != None:
     frameDur = 1.0 / round(expInfo['frameRate'])
 else:
-    frameDur = 1.0 / 60.0  # could not measure, so guess
+    frameDur = 1.0 / 60.0  # could not measure, so guess 60Hz
 
 ################################################
 ########## Trial list construction #############
 ################################################
 ############ main sentences ############
-assert len(sub_ext_cong2) == len(sub_ext_incong2) == len(sub_ext_cong3) == len(sub_ext_incong3) == len(obj_ext_cong2) == len(obj_ext_incong2) == len(obj_ext_cong3) == len(obj_ext_incong3), "number of sentences not the same"
-main_conditions = [sub_ext_cong2, sub_ext_incong2, obj_ext_cong2, obj_ext_incong2,
-                 sub_ext_cong3, sub_ext_incong3, obj_ext_cong3,  obj_ext_incong3]  # first half binary second half ternary
-nSentences = len(sub_ext_cong2) # should write an exception error check thing to check that all main conditions have same length...
-main_sentence_chunk_size = int(nSentences / len(main_conditions)) # chunk: how many sentences per condition
-main_condition_index = list(range(len(main_conditions))) * main_sentence_chunk_size # list of indexes for main_conditions, length of nProbes
+assert len(sub_cong) == len(obj_cong), "number of sentences not the same" # check that number of sentences between conditions match
+main_conditions = [sub_cong, sub_incong, obj_cong, obj_incong,]  
+nSentences = len(sub_cong) 
+main_sentence_chunk_size = int(nSentences / len(main_conditions)) # how many sentences per condition
+main_condition_index = list(range(len(main_conditions))) * main_sentence_chunk_size # list nSentences long of condition indicies
 shuffle(main_condition_index)  # randomise
 main_condition_list = [ (i, main_conditions[main_condition_index[i]][i]) for i in range(nSentences) ] #create list of tuples containing [0]index and [1] probes, in original order
 
@@ -106,7 +105,7 @@ main_probe_list = [ (i, main_probes[main_probe_index[i]][i]) for i in range(nPro
 trial_list = []  # initialising
 
 ############ Assorted sentences ############
-assorted_condition_list = [ (i, assorted_cong2[i]) for i in range(len(assorted_cong2)) ] 
+assorted_condition_list = [ (i, assorted[i]) for i in range(len(assorted)) ] 
 
 ############ Assorted probes ############
 assorted_probes = [probe_ass_neg, probe_ass_pos]
@@ -129,7 +128,7 @@ if thisTrial != None:
         exec('{} = thisTrial[paramName]'.format(paramName))
 
 ############ Practice trials ############
-prac_list = [ {**prac_trials[i], **prac_probes[i]} for i in range(len(prac_trials)) ]
+prac_list = [ {**prac[i], **prac_probes[i]} for i in range(len(prac)) ]
 for trial in range(len(prac_trials)):
     if trial <= 1:
         prac_list[trial]['beat_type'] = 'binary_beat'
@@ -493,8 +492,8 @@ try:
                     if probe_resp.keys == 'y' and (\
                                             pos_neg == 'positive' or \
                                                 ( \
-                                                (pos_neg == 'subneg_objpos' and clause == 'relative_clause' and extraction == 'object extracted') or \
-                                                (pos_neg == 'subpos_objneg' and clause == 'relative_clause' and extraction == 'subject extracted') \
+                                                (pos_neg == 'subneg_objpos' and clause == 'relative_clause' and extraction == 'object') or \
+                                                (pos_neg == 'subpos_objneg' and clause == 'relative_clause' and extraction == 'subject') \
                                                 )):
                         probe_resp.corr = 1
                         feedback.setText("correct")
@@ -502,8 +501,8 @@ try:
                     elif probe_resp.keys == 'n' and (\
                                                 pos_neg == 'negative' or \
                                                 ( \
-                                                (pos_neg == 'subpos_objneg' and clause == 'relative_clause' and extraction == 'object extracted') or \
-                                                (pos_neg == 'subneg_objpos' and clause == 'relative_clause' and extraction == 'subject extracted') \
+                                                (pos_neg == 'subpos_objneg' and clause == 'relative_clause' and extraction == 'object') or \
+                                                (pos_neg == 'subneg_objpos' and clause == 'relative_clause' and extraction == 'subject') \
                                                 )):
                         probe_resp.corr = 1
                         feedback.setText("correct")
