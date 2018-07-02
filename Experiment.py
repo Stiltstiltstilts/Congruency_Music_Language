@@ -84,23 +84,27 @@ else:
 ########## Trial list construction #############
 ################################################
 ############ main sentences ############
-assert len(sub_cong) == len(obj_cong), "number of sentences not the same" # check that number of sentences between conditions match
+assert len(sub_cong) == len(obj_cong), "number of sentences not the same" # check that number of sentences between conditions match. Incong conditions generated from same source hence not needed here.
 main_conditions = [sub_cong, sub_incong, obj_cong, obj_incong,]  
 nSentences = len(sub_cong) 
 main_sentence_chunk_size = int(nSentences / len(main_conditions)) # how many sentences per condition
 main_condition_index = list(range(len(main_conditions))) * main_sentence_chunk_size # list nSentences long of condition indicies
-shuffle(main_condition_index)  # randomise
-main_condition_list = [ (i, main_conditions[main_condition_index[i]][i]) for i in range(nSentences) ] #create list of tuples containing [0]index and [1] probes, in original order
+shuffle(main_condition_index)  # randomise 
+print(main_condition_index)
+main_condition_list = [ (main_conditions[main_condition_index[i]][i]) for i in range(nSentences) ] #create list of trial dictionaries (without probes) in original order
 
-############ main probes ############
+############ main probes + combine with main trials ############
 assert len(probe_mc_neg) == len(probe_mc_pos) == len(probe_rc_subneg_objpos) == len(probe_rc_subpos_objneg), "number of probes not the same"
 main_probes = [probe_mc_pos, probe_mc_neg,
-               probe_rc_subpos_objneg, probe_rc_subneg_objpos]
-nProbes = len(probe_mc_pos) # how many probes
-main_probe_chunk_size = int(nProbes / len(main_probes)) # chunk: how many sentences per probe
-main_probe_index = list(range(len(main_probes))) * main_probe_chunk_size # list of indexes for main_probes, length of nProbes
-shuffle(main_probe_index) # randomise
-main_probe_list = [ (i, main_probes[main_probe_index[i]][i]) for i in range(nProbes) ] #create list of tuples containing [0]index and [1] probes, in original order
+               probe_rc_subpos_objneg, probe_rc_subneg_objpos,]
+for main_cond in range(len(main_conditions)):   # iterate through main conditions
+    probe_list = list(range(len(main_probes))) * int((nSentences / len(main_probes)) / len(main_conditions))  
+    shuffle(probe_list)
+    probe_counter = 0
+    for sent_index in range(len(main_condition_list)):
+        if main_condition_index[sent_index] == main_cond:
+            main_condition_list[sent_index] = {**main_condition_list[sent_index], **main_probes[probe_list[probe_counter]] [main_condition_list[sent_index]['sent_number']]} 
+            probe_counter += 1
 
 trial_list = []  # initialising
 
@@ -113,10 +117,9 @@ n_ass_probes = len(probe_ass_neg)
 assorted_probe_chunk_size = int(n_ass_probes / len(assorted_probes))
 assorted_probe_index = list(range(len(assorted_probes))) * assorted_probe_chunk_size
 shuffle(assorted_probe_index)
-assorted_probe_list = [ (i,assorted_probes[assorted_probe_index[i]][i]) for i in range(len(assorted_cong2)) ] 
+assorted_probe_list = [ (i,assorted_probes[assorted_probe_index[i]][i]) for i in range(len(assorted)) ] 
 
 ############ Combining stuff ############
-main_trials = [ {**main_condition_list[i][1], **main_probe_list[i][1]} for i in range(len(main_condition_list)) ]
 assorted_trials = [ {**assorted_condition_list[i][1], **assorted_probe_list[i][1]} for i in range(len(assorted_condition_list)) ]
 all_trials = main_trials
 all_trials.extend(assorted_trials)
@@ -129,17 +132,18 @@ if thisTrial != None:
 
 ############ Practice trials ############
 prac_list = [ {**prac[i], **prac_probes[i]} for i in range(len(prac)) ]
-for trial in range(len(prac_trials)):
+for trial in range(len(prac)):
     if trial <= 1:
-        prac_list[trial]['beat_type'] = 'binary_beat'
+        prac_list[trial]['beat_type'] = 'binary'
     else:
-        prac_list[trial]['beat_type'] = 'ternary_beat'
+        prac_list[trial]['beat_type'] = 'ternary'
 prac_list = data.TrialHandler(trialList = prac_list[:], nReps = 1, method = 'sequential', extraInfo = expInfo, name = 'practice_trials')
 thisPracTrial = prac_list.trialList[0]  # so we can initialise stimuli with some values
 # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
 if thisPracTrial != None:
     for paramName in thisPracTrial:
         exec('{} = thisPracTrial[paramName]'.format(paramName))
+
 
 ################################################
 ############## Run experiment ##################
@@ -196,7 +200,7 @@ try:
         thisKey = event.waitKeys()
         if thisKey[0] in ['q','escape']:
             core.quit()
-        elif thisKey[0] == 'backspace':
+        elif thisKey[0] == 'backspace' and counter > 0:
             counter -= 1
         else:
             counter += 1
@@ -214,10 +218,10 @@ try:
         # initialize trial components list
         trialComponents = []
         # add auditory stimuli component
-        if beat_type == 'binary_beat':
+        if beat_type == 'binary':
             beat_stim = binary_beat
             word_offset = 7 * beat_freq
-        elif beat_type == 'ternary_beat':
+        elif beat_type == 'ternary':
             beat_stim = ternary_beat
             word_offset = 8 * beat_freq
         trialComponents.extend([beat_stim]) # add beat stim to trialComponents list
@@ -364,7 +368,7 @@ try:
         thisKey = event.waitKeys()
         if thisKey[0] in ['q','escape']:
             core.quit()
-        elif thisKey[0] == 'backspace':
+        elif thisKey[0] == 'backspace' and counter > 0:
             counter -= 1
         else:
             counter += 1
@@ -396,12 +400,18 @@ try:
             # initialize trial components list
             trialComponents = []
             # add auditory stimuli component
-            if beat_type == 'binary_beat':
+            if (beat_type == 'binary' and extraction == 'subject' and congruency == 'congruent') or extraction == 'assorted':
                 beat_stim = binary_beat
                 word_offset = 7 * beat_freq
-            elif beat_type == 'ternary_beat':
+            elif beat_type == 'binary' and extraction == 'subject' and congruency == 'incongruent':
+                beat_stim = binary_beat
+                word_offset = 8 * beat_freq
+            elif beat_type == 'ternary' and extraction == 'object' and congruency == 'congruent':
                 beat_stim = ternary_beat
                 word_offset = 8 * beat_freq
+            elif beat_type == 'ternary' and extraction == 'object' and congruency == 'incongruent':
+                beat_stim = ternary_beat
+                word_offset = 9 * beat_freq
             trialComponents.extend([beat_stim]) # add beat stim to trialComponents list
             # add text stimuli components
             for i in range(len(sent_stim)): # for i in range(len(trial['sent_stim'])):
@@ -632,6 +642,7 @@ try:
             core.wait(.2)
     endMessage.draw()
     win.flip()
+    core.wait(5)
 finally:
     win.close()
     core.quit()

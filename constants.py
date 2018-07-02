@@ -36,12 +36,12 @@ part3Intro = fun.instImport('Stimuli/Instructions/Part3.txt')
 bottom_text = fun.instImport('Stimuli/Instructions/bottom_text.txt')
 
 ###===SENTENCES===###
-sub_cong = fun.sentencePreProcess('Stimuli/Sentences/Subj_extracted.txt', 'congruent', 'binary_beat', 'subject extracted')
-sub_incong = fun.sentencePreProcess('Stimuli/Sentences/Subj_extracted.txt', 'incongruent', 'binary_beat', 'subject extracted') 
-obj_cong = fun.sentencePreProcess('Stimuli/Sentences/Obj_extracted.txt', 'congruent', 'ternary_beat', 'object extracted') 
-obj_incong = fun.sentencePreProcess('Stimuli/Sentences/Obj_extracted.txt', 'incongruent', 'ternary_beat', 'object extracted') 
-assorted = fun.sentencePreProcess('Stimuli/Sentences/Assorted.txt')
-prac = fun.sentencePreProcess('Stimuli/Sentences/Practice_trials.txt')
+sub_cong = fun.sentencePreProcess('Stimuli/Sentences/Subj_extracted.txt', 'congruent', 'binary', 'subject')
+sub_incong = fun.sentencePreProcess('Stimuli/Sentences/Subj_extracted.txt', 'incongruent', 'binary', 'subject') 
+obj_cong = fun.sentencePreProcess('Stimuli/Sentences/Obj_extracted.txt', 'congruent', 'ternary', 'object') 
+obj_incong = fun.sentencePreProcess('Stimuli/Sentences/Obj_extracted.txt', 'incongruent', 'ternary', 'object') 
+assorted = fun.sentencePreProcess('Stimuli/Sentences/Assorted.txt', 'other', 'binary', 'assorted')
+prac = fun.sentencePreProcess('Stimuli/Sentences/Practice_trials.txt', 'other', 'other', 'prac')
 
 ###===PROBES===###
 probe_mc_pos = fun.probePreProcess('Stimuli/Probes/MC_positive_probes.txt')

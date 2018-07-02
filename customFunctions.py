@@ -6,7 +6,6 @@
 import os
 import numpy as np
 from psychopy import core, visual, event, data, logging
-#from constants import *
 
 def instImport(path):
     """
@@ -111,30 +110,3 @@ def customHanning(M, floor):
 
     return custom_hanning_window
 
-def instructionDelivery(text_list, bottom_text):
-    """
-    etc
-
-    """
-    counter = 0
-    while counter < len(text_list):
-        message1.setText(text_list[counter])
-        if counter == 0:
-            message2.setText(bottom_text[0])
-        elif counter in range(1, (len(text_list) - 1)):
-            message2.setText(bottom_text[1])
-        else: 
-            message2.setText(bottom_text[2])
-        #display instructions and wait
-        message1.draw()
-        message2.draw() 
-        win.logOnFlip(level=logging.EXP, msg='Display Instructions{}'.format(counter+1))
-        win.flip()
-        #check for a keypress
-        thisKey = event.waitKeys()
-        if thisKey[0] in ['q','escape']:
-            core.quit()
-        elif thisKey[0] == 'backspace':
-            counter -= 1
-        else:
-            counter += 1

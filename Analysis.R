@@ -12,9 +12,12 @@ library(dplyr)
 library(ggplot2)
 setwd("Documents/GitHub/Congruency_Music_Language/data")
 
+
+any(is.na(VARIABLE))
+
 # eventually iterate through all datasets here with for loop
 
-trial_data <- read.delim("004trial_log.txt", sep = "\t", header = TRUE)
+trial_data <- read.delim("FUCKtrial_log.txt", sep = "\t", header = TRUE)
 
 trial_data$Sentence <- as.character(trial_data$Sentence)
 trial_data$Probe <- as.character(trial_data$Probe)
@@ -22,15 +25,15 @@ trial_data$Accuracy<- as.numeric(trial_data$Accuracy)
 
 
 obj_rc <- trial_data %>%
-    filter(Sentence_extraction == "object extracted", Probe_clause == "main_clause") %>%
+    filter(Sentence_extraction == "object", Probe_clause == "main_clause") %>%
     arrange(RT)
 
 obj_rc_incongruent <- trial_data %>%
-  filter(Sentence_extraction == "object extracted", Probe_clause == "main_clause", Congruency == "incongruent") %>%
+  filter(Sentence_extraction == "object", Probe_clause == "main_clause", Congruency == "incongruent") %>%
   arrange(RT)
 
 obj_rc_congruent <- trial_data %>%
-  filter(Sentence_extraction == "object extracted", Probe_clause == "main_clause", Congruency == "congruent") %>%
+  filter(Sentence_extraction == "object", Probe_clause == "main_clause", Congruency == "congruent") %>%
   arrange(RT)
 
 
