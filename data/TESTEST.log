@@ -1,2 +1,0 @@
-10.3382 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
-25.6975 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size

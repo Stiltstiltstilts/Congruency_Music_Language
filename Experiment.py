@@ -6,6 +6,7 @@
 from psychopy import core, visual, logging, gui, event, prefs, data
 import pyo
 prefs.general['audioLib'] = ['pyo']
+prefs.general['audioDevice'] = ['Built-in Output']
 from psychopy import sound
 from numpy.random import random, randint, normal, shuffle
 from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED,
@@ -41,17 +42,27 @@ expInfo['date'] = data.getDateStr()
 # Create filename for data file (absolute path + name)
 filename = _thisDir + os.sep + 'data/{0}'.format(expInfo['participant'])
 
-# An ExperimentHandler isn't essential but helps with data saving
-thisExp = data.ExperimentHandler(name=expName, version='',
-    extraInfo=expInfo, runtimeInfo=None,
-    originPath=None,
-    savePickle=True, saveWideText=True,
-    dataFileName=filename)
+with open('data/{}participant_info.txt'.format(expInfo['participant']), 'w') as log_file:
+    log_file.write('Session\t' +
+                    'Participant\t' +
+                    'Handedness\t' +
+                    'Gender\t' +
+                    'Native_language\t' +
+                    'Age\t' + '\n')
+ 
+    log_file.write('\t'.join([str(expInfo['session']),
+                            str(expInfo['participant']),
+                            str(expInfo['handedness']),
+                            str(expInfo['gender']),
+                            str(expInfo['native language']),
+                            str(expInfo['age'])]) + '\n')
+    log_file.flush()
+
 
 ################################################
 ################ Setup logfile #################
 ################################################
-# save a log file for detail verbose info
+# save a log file for detailed verbose info
 logFile = logging.LogFile(filename+'.log', level=logging.DATA)
 # this outputs to the screen, not a file
 logging.console.setLevel(logging.WARNING)
@@ -121,7 +132,7 @@ assorted_probe_list = [ (i,assorted_probes[assorted_probe_index[i]][i]) for i in
 
 ############ Combining stuff ############
 assorted_trials = [ {**assorted_condition_list[i][1], **assorted_probe_list[i][1]} for i in range(len(assorted_condition_list)) ]
-all_trials = main_trials
+all_trials = main_condition_list
 all_trials.extend(assorted_trials)
 all_trials = data.TrialHandler(trialList = all_trials[:], nReps = 1, method = 'random', extraInfo = expInfo, name = 'all_trials') 
 thisTrial = all_trials.trialList[0]  # so we can initialise stimuli with some values
@@ -558,12 +569,9 @@ try:
             while not 'space' in thisKey:
                 thisKey = event.waitKeys(keyList=['space'])
 
-            thisExp.nextEntry()
+            #thisExp.nextEntry()
             core.wait(.5)
 
-        # these shouldn't be strictly necessary (should auto-save)
-        thisExp.saveAsWideText(filename+'.csv')
-        thisExp.saveAsPickle(filename)
         logging.flush()
 
     ################################################

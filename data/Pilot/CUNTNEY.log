@@ -1,0 +1,360 @@
+26.0112 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+31.8622 	DATA 	Keypress: space
+34.4085 	DATA 	Keypress: space
+36.4080 	DATA 	Keypress: space
+37.4884 	DATA 	Keypress: space
+37.9205 	DATA 	Keypress: space
+38.5607 	DATA 	Keypress: space
+39.2807 	DATA 	Keypress: space
+39.7844 	DATA 	Keypress: space
+40.3273 	DATA 	Keypress: space
+40.7672 	DATA 	Keypress: space
+41.2731 	DATA 	Keypress: space
+41.8872 	DATA 	Keypress: space
+44.0725 	DATA 	Keypress: space
+46.9678 	DATA 	Keypress: space
+52.1677 	DATA 	Keypress: b
+65.2595 	DATA 	Keypress: n
+68.7754 	DATA 	Keypress: space
+78.8966 	DATA 	Keypress: y
+80.4079 	DATA 	Keypress: space
+92.9655 	DATA 	Keypress: n
+94.6563 	DATA 	Keypress: space
+110.1306 	DATA 	Keypress: y
+114.3279 	DATA 	Keypress: space
+133.7347 	DATA 	Mouse: Left button down, pos=(1027,989)
+133.8053 	DATA 	Mouse:  Left button up, pos=(1046,983)
+135.3537 	DATA 	Keypress: lcommand
+135.4782 	DATA 	Keypress: tab
+137.1272 	DATA 	Keypress: space
+138.4794 	DATA 	Keypress: space
+149.5467 	DATA 	Keypress: n
+151.8164 	DATA 	Keypress: space
+162.5552 	DATA 	Keypress: y
+163.9913 	DATA 	Keypress: space
+174.5319 	DATA 	Keypress: n
+176.9113 	DATA 	Keypress: space
+186.5579 	DATA 	Keypress: y
+188.4153 	DATA 	Keypress: space
+197.3676 	DATA 	Keypress: y
+198.8152 	DATA 	Keypress: space
+216.2836 	DATA 	Keypress: n
+223.1516 	DATA 	Keypress: space
+234.0680 	DATA 	Keypress: y
+235.4954 	DATA 	Keypress: space
+245.6084 	DATA 	Keypress: y
+247.2552 	DATA 	Keypress: space
+260.1038 	DATA 	Keypress: n
+261.5111 	DATA 	Keypress: space
+271.0291 	DATA 	Keypress: n
+272.4630 	DATA 	Keypress: space
+283.5391 	DATA 	Keypress: n
+285.7751 	DATA 	Keypress: space
+295.9987 	DATA 	Keypress: n
+297.9429 	DATA 	Keypress: space
+307.1923 	DATA 	Keypress: y
+308.7750 	DATA 	Keypress: space
+319.1029 	DATA 	Keypress: y
+320.6471 	DATA 	Keypress: space
+329.9929 	DATA 	Keypress: n
+331.6878 	DATA 	Keypress: space
+343.6894 	DATA 	Keypress: n
+345.5190 	DATA 	Keypress: space
+358.6166 	DATA 	Keypress: y
+360.0711 	DATA 	Keypress: space
+369.0262 	DATA 	Keypress: n
+370.3831 	DATA 	Keypress: space
+379.1841 	DATA 	Keypress: y
+380.7224 	DATA 	Keypress: space
+389.4086 	DATA 	Keypress: y
+390.9511 	DATA 	Keypress: space
+402.8732 	DATA 	Keypress: y
+404.5192 	DATA 	Keypress: space
+414.9643 	DATA 	Keypress: n
+416.8872 	DATA 	Keypress: space
+426.1398 	DATA 	Keypress: y
+427.5523 	DATA 	Keypress: space
+439.3838 	DATA 	Keypress: n
+445.4792 	DATA 	Keypress: space
+457.2653 	DATA 	Keypress: d
+459.5435 	DATA 	Keypress: space
+468.6080 	DATA 	Keypress: y
+470.2549 	DATA 	Keypress: space
+480.7208 	DATA 	Keypress: y
+482.5831 	DATA 	Keypress: space
+493.2119 	DATA 	Keypress: n
+494.8150 	DATA 	Keypress: space
+506.7729 	DATA 	Keypress: n
+508.7350 	DATA 	Keypress: space
+518.6001 	DATA 	Keypress: y
+520.0630 	DATA 	Keypress: space
+528.3906 	DATA 	Keypress: y
+530.0708 	DATA 	Keypress: space
+540.0840 	DATA 	Keypress: n
+541.7037 	DATA 	Keypress: space
+551.0087 	DATA 	Keypress: y
+552.4072 	DATA 	Keypress: space
+569.1747 	DATA 	Keypress: y
+573.0153 	DATA 	Keypress: space
+582.3849 	DATA 	Keypress: y
+584.0230 	DATA 	Keypress: space
+593.9110 	DATA 	Keypress: n
+597.9672 	DATA 	Keypress: space
+606.8403 	DATA 	Keypress: y
+608.3112 	DATA 	Keypress: space
+618.6475 	DATA 	Keypress: n
+620.1670 	DATA 	Keypress: space
+629.0744 	DATA 	Keypress: n
+630.6470 	DATA 	Keypress: space
+641.8505 	DATA 	Keypress: n
+643.7993 	DATA 	Keypress: space
+655.1449 	DATA 	Keypress: y
+656.8151 	DATA 	Keypress: space
+667.7062 	DATA 	Keypress: n
+669.3271 	DATA 	Keypress: space
+681.6168 	DATA 	Keypress: y
+683.0886 	DATA 	Keypress: space
+693.2262 	DATA 	Keypress: y
+694.9355 	DATA 	Keypress: space
+704.6368 	DATA 	Keypress: n
+707.8790 	DATA 	Keypress: space
+717.2647 	DATA 	Keypress: y
+718.6952 	DATA 	Keypress: space
+729.9428 	DATA 	Keypress: n
+731.3544 	DATA 	Keypress: space
+740.5676 	DATA 	Keypress: y
+741.9352 	DATA 	Keypress: space
+752.1600 	DATA 	Keypress: n
+754.0790 	DATA 	Keypress: space
+764.9027 	DATA 	Keypress: d
+766.7193 	DATA 	Keypress: space
+778.6484 	DATA 	Keypress: y
+780.7911 	DATA 	Keypress: space
+790.1398 	DATA 	Keypress: n
+791.6871 	DATA 	Keypress: space
+801.6663 	DATA 	Keypress: n
+811.1673 	DATA 	Keypress: space
+820.4988 	DATA 	Keypress: y
+822.5359 	DATA 	Keypress: space
+832.3585 	DATA 	Keypress: y
+834.0555 	DATA 	Keypress: space
+843.8346 	DATA 	Keypress: y
+847.4871 	DATA 	Keypress: space
+857.4133 	DATA 	Keypress: n
+858.9830 	DATA 	Keypress: space
+871.3401 	DATA 	Keypress: y
+872.9431 	DATA 	Keypress: space
+882.3339 	DATA 	Keypress: y
+883.6868 	DATA 	Keypress: space
+894.1599 	DATA 	Keypress: y
+895.7991 	DATA 	Keypress: space
+906.6197 	DATA 	Keypress: y
+908.1353 	DATA 	Keypress: space
+918.2117 	DATA 	Keypress: y
+919.5990 	DATA 	Keypress: space
+929.9222 	DATA 	Keypress: y
+931.4950 	DATA 	Keypress: space
+943.6844 	DATA 	Keypress: n
+945.3431 	DATA 	Keypress: space
+955.5100 	DATA 	Keypress: y
+958.5510 	DATA 	Keypress: space
+977.8966 	DATA 	Keypress: d
+980.7485 	DATA 	Keypress: space
+981.8601 	DATA 	Keypress: space
+991.7065 	DATA 	Keypress: n
+993.3190 	DATA 	Keypress: space
+1006.4854 	DATA 	Keypress: n
+1008.3510 	DATA 	Keypress: space
+1019.4787 	DATA 	Keypress: n
+1021.1191 	DATA 	Keypress: space
+1031.5064 	DATA 	Keypress: y
+1033.2796 	DATA 	Keypress: space
+1044.1836 	DATA 	Keypress: n
+1045.6870 	DATA 	Keypress: space
+1056.5610 	DATA 	Keypress: d
+1058.1029 	DATA 	Keypress: space
+1069.0696 	DATA 	Keypress: n
+1071.0871 	DATA 	Keypress: space
+1073.3764 	DATA 	Keypress: space
+1073.9272 	DATA 	Keypress: space
+1074.2875 	DATA 	Keypress: space
+1074.6458 	DATA 	Keypress: space
+1075.4686 	DATA 	Mouse: Left button down, pos=(1271,460)
+1075.5500 	DATA 	Mouse:  Left button up, pos=(1271,460)
+1076.1944 	DATA 	Mouse: Left button down, pos=(1282,320)
+1076.1954 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1076.1954 	DATA 	RatingScale GSI: rating RT=1.893
+1076.1954 	DATA 	RatingScale GSI: history=[(None, 0.0), ('Neither Agree\n or Disagree', 1.194), ('Neither Agree\n or Disagree', 1.893)]
+1076.2530 	DATA 	Mouse:  Left button up, pos=(1282,320)
+1076.6106 	DATA 	Mouse: Left button down, pos=(1278,324)
+1076.6114 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1076.6932 	DATA 	Mouse:  Left button up, pos=(1278,324)
+1076.7850 	DATA 	Mouse: Left button down, pos=(1278,324)
+1076.8411 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1076.8693 	DATA 	Mouse:  Left button up, pos=(1278,324)
+1077.1506 	DATA 	Mouse: Left button down, pos=(1278,325)
+1077.1522 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1077.2451 	DATA 	Mouse:  Left button up, pos=(1278,325)
+1077.4137 	DATA 	Mouse: Left button down, pos=(1278,325)
+1077.4144 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1077.5255 	DATA 	Mouse:  Left button up, pos=(1278,327)
+1077.7965 	DATA 	Mouse: Left button down, pos=(1278,327)
+1077.7977 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1077.9025 	DATA 	Mouse:  Left button up, pos=(1278,327)
+1078.2309 	DATA 	Mouse: Left button down, pos=(1278,326)
+1078.2324 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1078.3340 	DATA 	Mouse:  Left button up, pos=(1278,326)
+1078.6645 	DATA 	Mouse: Left button down, pos=(1278,326)
+1078.6654 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1078.7492 	DATA 	Mouse:  Left button up, pos=(1278,326)
+1079.0971 	DATA 	Mouse: Left button down, pos=(1279,325)
+1079.0980 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1079.1893 	DATA 	Mouse:  Left button up, pos=(1279,325)
+1079.4813 	DATA 	Mouse: Left button down, pos=(1277,327)
+1079.4822 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1079.5974 	DATA 	Mouse:  Left button up, pos=(1277,327)
+1079.9506 	DATA 	Mouse: Left button down, pos=(1277,327)
+1079.9516 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1080.0534 	DATA 	Mouse:  Left button up, pos=(1277,327)
+1080.5702 	DATA 	Mouse: Left button down, pos=(1280,330)
+1080.5725 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1080.6292 	DATA 	Mouse:  Left button up, pos=(1280,330)
+1081.1158 	DATA 	Mouse: Left button down, pos=(1282,326)
+1081.1166 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1081.1813 	DATA 	Mouse:  Left button up, pos=(1282,326)
+1081.6521 	DATA 	Mouse: Left button down, pos=(1280,326)
+1081.6544 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1081.7494 	DATA 	Mouse:  Left button up, pos=(1280,326)
+1082.1675 	DATA 	Mouse: Left button down, pos=(1280,324)
+1082.1688 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1082.2613 	DATA 	Mouse:  Left button up, pos=(1280,324)
+1082.8366 	DATA 	Mouse: Left button down, pos=(1280,324)
+1082.8378 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1082.9335 	DATA 	Mouse:  Left button up, pos=(1280,324)
+1083.4386 	DATA 	Mouse: Left button down, pos=(1279,326)
+1083.4407 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1083.5090 	DATA 	Mouse:  Left button up, pos=(1279,326)
+1083.9711 	DATA 	Mouse: Left button down, pos=(1278,326)
+1083.9726 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1084.0536 	DATA 	Mouse:  Left button up, pos=(1278,326)
+1084.1332 	DATA 	Mouse: Left button down, pos=(1278,326)
+1084.2074 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1084.2307 	DATA 	Mouse:  Left button up, pos=(1278,326)
+1084.3255 	DATA 	Mouse: Left button down, pos=(1278,326)
+1084.4053 	DATA 	Mouse:  Left button up, pos=(1278,326)
+1084.5031 	DATA 	Mouse: Left button down, pos=(1278,326)
+1084.5042 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1084.5812 	DATA 	Mouse:  Left button up, pos=(1278,326)
+1084.6775 	DATA 	Mouse: Left button down, pos=(1278,326)
+1084.7358 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1084.9413 	DATA 	Mouse:  Left button up, pos=(1278,326)
+1085.3568 	DATA 	Mouse: Left button down, pos=(1278,326)
+1085.3584 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1085.4370 	DATA 	Mouse:  Left button up, pos=(1278,326)
+1085.8379 	DATA 	Mouse: Left button down, pos=(1278,326)
+1085.8391 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1085.9335 	DATA 	Mouse:  Left button up, pos=(1278,326)
+1086.2388 	DATA 	Mouse: Left button down, pos=(1278,326)
+1086.2404 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1086.3414 	DATA 	Mouse:  Left button up, pos=(1278,326)
+1086.6557 	DATA 	Mouse: Left button down, pos=(1278,326)
+1086.6572 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1086.7416 	DATA 	Mouse:  Left button up, pos=(1278,326)
+1087.0377 	DATA 	Mouse: Left button down, pos=(1278,326)
+1087.0386 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1087.1655 	DATA 	Mouse:  Left button up, pos=(1278,326)
+1087.5267 	DATA 	Mouse: Left button down, pos=(1278,326)
+1087.5284 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1087.6453 	DATA 	Mouse:  Left button up, pos=(1278,326)
+1088.0243 	DATA 	Mouse: Left button down, pos=(1278,326)
+1088.0260 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1088.1491 	DATA 	Mouse:  Left button up, pos=(1278,326)
+1088.4918 	DATA 	Mouse: Left button down, pos=(1278,326)
+1088.4928 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1088.6049 	DATA 	Mouse:  Left button up, pos=(1278,326)
+1089.0211 	DATA 	Mouse: Left button down, pos=(1278,326)
+1089.0221 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1089.1335 	DATA 	Mouse:  Left button up, pos=(1278,326)
+1089.5568 	DATA 	Mouse: Left button down, pos=(1278,326)
+1089.5576 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1089.6610 	DATA 	Mouse:  Left button up, pos=(1278,326)
+1091.0594 	DATA 	Mouse: Left button down, pos=(1465,459)
+1091.1411 	DATA 	Mouse:  Left button up, pos=(1465,459)
+1091.5591 	DATA 	Mouse: Left button down, pos=(1299,321)
+1091.5616 	DATA 	RatingScale GSI: (mouse response) rating=4-5
+1091.5616 	DATA 	RatingScale GSI: rating RT=1.668
+1091.5616 	DATA 	RatingScale GSI: history=[(None, 0.0), ('4-5', 1.167), ('4-5', 1.668)]
+1091.6609 	DATA 	Mouse:  Left button up, pos=(1299,322)
+1092.1243 	DATA 	Mouse: Left button down, pos=(1296,413)
+1092.2077 	DATA 	Mouse:  Left button up, pos=(1295,418)
+1092.5745 	DATA 	Mouse: Left button down, pos=(1301,321)
+1092.5754 	DATA 	RatingScale GSI: (mouse response) rating=1.5
+1092.5754 	DATA 	RatingScale GSI: rating RT=0.748
+1092.5754 	DATA 	RatingScale GSI: history=[(None, 0.0), ('1.5', 0.298), ('1.5', 0.748)]
+1092.6689 	DATA 	Mouse:  Left button up, pos=(1301,321)
+1093.2742 	DATA 	Mouse: Left button down, pos=(1298,430)
+1093.3926 	DATA 	Mouse:  Left button up, pos=(1297,432)
+1093.8090 	DATA 	Mouse: Left button down, pos=(1311,308)
+1093.9095 	DATA 	RatingScale GSI: (mouse response) rating=3
+1093.9095 	DATA 	RatingScale GSI: rating RT=1.063
+1093.9095 	DATA 	RatingScale GSI: history=[(None, 0.0), ('3', 0.429), ('3', 1.063)]
+1093.9250 	DATA 	Mouse:  Left button up, pos=(1311,312)
+1094.7436 	DATA 	Mouse: Left button down, pos=(1457,472)
+1094.8608 	DATA 	Mouse:  Left button up, pos=(1457,471)
+1095.3100 	DATA 	Mouse: Left button down, pos=(1342,324)
+1095.3108 	DATA 	RatingScale GSI: (mouse response) rating=3
+1095.3108 	DATA 	RatingScale GSI: rating RT=1.133
+1095.3109 	DATA 	RatingScale GSI: history=[(None, 0.0), ('3', 0.567), ('3', 1.133)]
+1095.4129 	DATA 	Mouse:  Left button up, pos=(1342,325)
+1096.1769 	DATA 	Mouse: Left button down, pos=(1648,480)
+1096.2448 	DATA 	Mouse:  Left button up, pos=(1648,480)
+1096.7449 	DATA 	Mouse: Left button down, pos=(1328,340)
+1096.7458 	DATA 	RatingScale GSI: (mouse response) rating=6-9
+1096.7458 	DATA 	RatingScale GSI: rating RT=1.158
+1096.7458 	DATA 	RatingScale GSI: history=[(None, 0.0), ('6-9', 0.59), ('6-9', 1.158)]
+1096.8290 	DATA 	Mouse:  Left button up, pos=(1328,340)
+1097.7775 	DATA 	Mouse: Left button down, pos=(1396,461)
+1097.8630 	DATA 	Mouse:  Left button up, pos=(1403,459)
+1098.3787 	DATA 	Mouse: Left button down, pos=(1314,321)
+1098.3796 	DATA 	RatingScale GSI: (mouse response) rating=4
+1098.3796 	DATA 	RatingScale GSI: rating RT=1.373
+1098.3797 	DATA 	RatingScale GSI: history=[(None, 0.0), ('4', 0.772), ('4', 1.373)]
+1098.4691 	DATA 	Mouse:  Left button up, pos=(1314,322)
+1099.8140 	DATA 	Mouse: Left button down, pos=(1284,478)
+1099.8970 	DATA 	Mouse:  Left button up, pos=(1286,476)
+1100.3644 	DATA 	Mouse: Left button down, pos=(1292,324)
+1100.3654 	DATA 	RatingScale GSI: (mouse response) rating=60-90mins
+1100.3654 	DATA 	RatingScale GSI: rating RT=1.715
+1100.3655 	DATA 	RatingScale GSI: history=[(None, 0.0), ('60-90mins', 1.165), ('60-90mins', 1.715)]
+1100.4610 	DATA 	Mouse:  Left button up, pos=(1292,323)
