@@ -1,6 +1,0 @@
-Trial	Beat	Sentence	Sentence_extraction	Congruency	Probe	Probe_clause	Response	Accuracy	RT
-1	ternary_beat	['The', 'crook', 'that', 'warned', 'the', 'thief', 'fled the', 'town', 'the', 'next', 'morning']	subject extracted	incongruent	The thief fled the town?	main_clause	n	1	4.999687859002734
-2	ternary_beat	['The', 'dean', 'that heard', 'the', 'guard', 'made', 'a', 'call', 'about', 'the', 'matter']	subject extracted	congruent	The dean heard the guard?	relative_clause	n	0	10.564969975006534
-3	binary_beat	['The', 'girl', 'kicked the', 'ball', 'into the', 'window', 'but it', 'did', 'not', 'break']	other	congruent	The girl kicked the ball?	other	n	0	2.894181690993719
-4	binary_beat	['The', 'clerk', 'that', 'the', 'boss', 'liked', 'had a', 'desk', 'by the', 'window']	object extracted	congruent	The boss liked the clerk?	relative_clause	y	1	4.247579624003265
-5	binary_beat	['The', 'desk', 'that the', 'bed', 'scratched', 'was', 'too', 'old', 'to be', 'moved']	object extracted	incongruent	The bed scratched the desk?	relative_clause	n	0	5.618298307992518
