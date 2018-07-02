@@ -1,251 +1,467 @@
-10.7531 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
-6.4761 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
-11.5142 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
-16.5566 	DATA 	Mouse: Left button down, pos=(1392,329)
-16.6387 	DATA 	Mouse:  Left button up, pos=(1392,329)
-21.0419 	DATA 	Mouse: Left button down, pos=(1020,250)
-21.0436 	DATA 	RatingScale GSI: (mouse response) rating=Completely
+8.1206 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+12.4751 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+6.9613 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+6.1951 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+9.4613 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+8.1105 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+9.6761 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+9.5549 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
+15.2136 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+2.4484 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output']
+12.5622 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1440, 900]. Using actual size
+14.7350 	DATA 	Keypress: space
+15.6306 	DATA 	Keypress: backspace
+19.1338 	DATA 	Keypress: space
+24.9557 	DATA 	Keypress: space
+32.3661 	DATA 	Keypress: space
+35.5856 	DATA 	Keypress: space
+44.1908 	DATA 	Keypress: space
+53.3452 	DATA 	Keypress: space
+58.6730 	DATA 	Keypress: space
+62.1982 	DATA 	Keypress: space
+70.4369 	DATA 	Keypress: space
+81.6686 	DATA 	Keypress: space
+90.1898 	DATA 	Keypress: space
+120.4685 	DATA 	Keypress: space
+126.9731 	DATA 	Keypress: space
+130.9161 	DATA 	Keypress: space
+136.9516 	DATA 	Keypress: space
+143.4400 	DATA 	Keypress: space
+155.4353 	DATA 	Keypress: n
+157.8629 	DATA 	Keypress: space
+168.2193 	DATA 	Keypress: y
+171.0489 	DATA 	Keypress: space
+187.4375 	DATA 	Keypress: d
+196.5414 	DATA 	Keypress: space
+207.6413 	DATA 	Keypress: y
+212.0651 	DATA 	Keypress: space
+215.9394 	DATA 	Keypress: space
+221.8729 	DATA 	Keypress: space
+228.5555 	DATA 	Keypress: space
+239.8773 	DATA 	Keypress: space
+249.5702 	DATA 	Keypress: n
+252.2178 	DATA 	Keypress: space
+263.1397 	DATA 	Keypress: y
+267.2038 	DATA 	Keypress: space
+276.4418 	DATA 	Keypress: y
+278.5486 	DATA 	Keypress: space
+288.5414 	DATA 	Keypress: y
+291.9176 	DATA 	Keypress: space
+300.9241 	DATA 	Keypress: y
+303.2424 	DATA 	Keypress: space
+316.5826 	DATA 	Keypress: n
+318.6411 	DATA 	Keypress: space
+327.9123 	DATA 	Keypress: y
+329.4719 	DATA 	Keypress: space
+339.0091 	DATA 	Keypress: n
+340.6730 	DATA 	Keypress: space
+349.6542 	DATA 	Keypress: y
+351.4590 	DATA 	Keypress: space
+363.7253 	DATA 	Keypress: n
+366.6098 	DATA 	Keypress: space
+377.4450 	DATA 	Keypress: n
+379.2149 	DATA 	Keypress: space
+388.8255 	DATA 	Keypress: y
+391.3535 	DATA 	Keypress: space
+401.3426 	DATA 	Keypress: y
+404.7141 	DATA 	Keypress: space
+414.8282 	DATA 	Keypress: y
+415.6467 	DATA 	Keypress: space
+416.3495 	DATA 	Keypress: space
+426.6266 	DATA 	Keypress: n
+428.1007 	DATA 	Keypress: space
+440.8984 	DATA 	Keypress: d
+443.0434 	DATA 	Keypress: space
+452.8463 	DATA 	Keypress: y
+454.3311 	DATA 	Keypress: space
+465.0625 	DATA 	Keypress: n
+466.9732 	DATA 	Keypress: space
+477.5630 	DATA 	Keypress: y
+478.3803 	DATA 	Keypress: space
+480.1779 	DATA 	Keypress: space
+490.6825 	DATA 	Keypress: n
+491.7544 	DATA 	Keypress: space
+502.3458 	DATA 	Keypress: y
+505.5951 	DATA 	Keypress: space
+515.6472 	DATA 	Keypress: n
+517.6057 	DATA 	Keypress: space
+530.8228 	DATA 	Keypress: y
+533.6761 	DATA 	Keypress: space
+534.6641 	DATA 	Keypress: space
+544.4260 	DATA 	Keypress: n
+546.2050 	DATA 	Keypress: space
+556.0723 	DATA 	Keypress: d
+557.6961 	DATA 	Keypress: space
+567.1685 	DATA 	Keypress: y
+568.6929 	DATA 	Keypress: space
+580.4372 	DATA 	Keypress: y
+582.4325 	DATA 	Keypress: space
+593.1381 	DATA 	Keypress: n
+594.0428 	DATA 	Keypress: space
+595.2295 	DATA 	Keypress: space
+604.1004 	DATA 	Keypress: y
+604.9194 	DATA 	Keypress: space
+605.6519 	DATA 	Keypress: space
+615.5477 	DATA 	Keypress: y
+617.1325 	DATA 	Keypress: space
+628.8847 	DATA 	Keypress: y
+630.1144 	DATA 	Keypress: space
+641.0815 	DATA 	Keypress: n
+642.7491 	DATA 	Keypress: space
+653.8000 	DATA 	Keypress: y
+654.6179 	DATA 	Keypress: space
+655.3320 	DATA 	Keypress: space
+667.1518 	DATA 	Keypress: y
+668.7273 	DATA 	Keypress: space
+680.1200 	DATA 	Keypress: n
+681.4607 	DATA 	Keypress: space
+692.8708 	DATA 	Keypress: y
+693.9616 	DATA 	Keypress: space
+703.3168 	DATA 	Keypress: n
+704.8599 	DATA 	Keypress: space
+714.9125 	DATA 	Keypress: n
+716.5672 	DATA 	Keypress: space
+725.9754 	DATA 	Keypress: y
+726.7942 	DATA 	Keypress: space
+727.4829 	DATA 	Keypress: space
+737.4067 	DATA 	Keypress: n
+738.9812 	DATA 	Keypress: space
+748.7195 	DATA 	Keypress: n
+750.6708 	DATA 	Keypress: space
+760.3847 	DATA 	Keypress: y
+761.9296 	DATA 	Keypress: space
+771.4138 	DATA 	Keypress: y
+772.2331 	DATA 	Keypress: space
+772.8310 	DATA 	Keypress: space
+783.0280 	DATA 	Keypress: n
+784.6671 	DATA 	Keypress: space
+795.7962 	DATA 	Keypress: y
+797.4339 	DATA 	Keypress: space
+807.4767 	DATA 	Keypress: y
+808.4803 	DATA 	Keypress: space
+809.1932 	DATA 	Keypress: space
+819.8268 	DATA 	Keypress: d
+821.4908 	DATA 	Keypress: space
+832.4937 	DATA 	Keypress: y
+834.4886 	DATA 	Keypress: space
+843.6228 	DATA 	Keypress: n
+845.2276 	DATA 	Keypress: space
+856.7265 	DATA 	Keypress: n
+858.4088 	DATA 	Keypress: space
+868.4399 	DATA 	Keypress: n
+870.3777 	DATA 	Keypress: space
+882.4613 	DATA 	Keypress: n
+1002.7209 	DATA 	Keypress: space
+1013.2095 	DATA 	Keypress: y
+1017.6249 	DATA 	Keypress: space
+1026.4280 	DATA 	Keypress: n
+1028.3897 	DATA 	Keypress: space
+1039.5636 	DATA 	Keypress: n
+1041.7479 	DATA 	Keypress: space
+1052.1640 	DATA 	Keypress: y
+1053.9685 	DATA 	Keypress: space
+1064.3963 	DATA 	Keypress: n
+1065.2146 	DATA 	Keypress: space
+1065.7935 	DATA 	Keypress: space
+1079.3357 	DATA 	Keypress: y
+1080.1543 	DATA 	Keypress: space
+1082.1734 	DATA 	Keypress: space
+1082.9824 	DATA 	Keypress: space
+1092.8222 	DATA 	Keypress: y
+1094.3345 	DATA 	Keypress: space
+1104.3862 	DATA 	Keypress: y
+1106.3865 	DATA 	Keypress: space
+1115.1147 	DATA 	Keypress: n
+1116.8355 	DATA 	Keypress: space
+1126.7631 	DATA 	Keypress: n
+1127.8828 	DATA 	Keypress: space
+1138.7453 	DATA 	Keypress: y
+1139.6137 	DATA 	Keypress: space
+1140.3516 	DATA 	Keypress: space
+1150.5091 	DATA 	Keypress: y
+1151.3269 	DATA 	Keypress: space
+1152.0529 	DATA 	Keypress: space
+1160.7715 	DATA 	Keypress: n
+1162.5383 	DATA 	Keypress: space
+1171.9496 	DATA 	Keypress: n
+1172.9209 	DATA 	Keypress: space
+1173.5090 	DATA 	Keypress: space
+1185.6374 	DATA 	Keypress: n
+1186.7243 	DATA 	Keypress: space
+1195.5469 	DATA 	Keypress: y
+1196.5332 	DATA 	Keypress: space
+1197.0804 	DATA 	Keypress: space
+1206.4418 	DATA 	Keypress: y
+1207.9840 	DATA 	Keypress: space
+1217.1708 	DATA 	Keypress: n
+1291.3024 	DATA 	Mouse: Left button down, pos=(657,0)
+1291.3574 	DATA 	Mouse:  Left button up, pos=(657,0)
+1296.4242 	DATA 	Keypress: space
+1306.6772 	DATA 	Keypress: y
+1307.4958 	DATA 	Keypress: space
+1308.0620 	DATA 	Keypress: space
+1318.6759 	DATA 	Keypress: y
+1319.5160 	DATA 	Keypress: space
+1320.1647 	DATA 	Keypress: space
+1330.4573 	DATA 	Keypress: y
+1332.8751 	DATA 	Keypress: space
+1337.2402 	DATA 	Keypress: space
+1340.3099 	DATA 	Keypress: space
+1343.8302 	DATA 	Keypress: space
+1356.1264 	DATA 	Mouse: Left button down, pos=(407,278)
+1356.1269 	DATA 	Mouse:  Left button up, pos=(407,278)
+1357.0961 	DATA 	Mouse: Left button down, pos=(396,247)
+1357.1202 	DATA 	Mouse:  Left button up, pos=(396,247)
+1358.6176 	DATA 	Mouse: Left button down, pos=(390,298)
+1359.2019 	DATA 	Mouse:  Left button up, pos=(434,285)
+1359.9889 	DATA 	Mouse: Left button down, pos=(504,243)
+1360.0879 	DATA 	Mouse:  Left button up, pos=(504,243)
+1367.2905 	DATA 	Mouse: Left button down, pos=(398,238)
+1367.3071 	DATA 	Mouse:  Left button up, pos=(398,238)
+1368.4932 	DATA 	Mouse: Left button down, pos=(704,218)
+1368.4936 	DATA 	Mouse:  Left button up, pos=(704,218)
+1369.7972 	DATA 	Mouse: Left button down, pos=(724,208)
+1369.7978 	DATA 	Mouse:  Left button up, pos=(724,208)
+1373.5243 	DATA 	Mouse: Left button down, pos=(725,198)
+1373.5249 	DATA 	RatingScale GSI: (mouse response) rating=Completely
+ Disagree
+1373.5249 	DATA 	RatingScale GSI: rating RT=29.683
+1373.5249 	DATA 	RatingScale GSI: history=[(None, 0.0), ('Completely\n Disagree', 13.255), ('Strongly\n Disagree', 16.147), ('Completely\n Disagree', 23.449), ('Completely\n Disagree', 29.683)]
+1373.5373 	DATA 	Mouse:  Left button up, pos=(725,198)
+1378.6885 	DATA 	Mouse: Left button down, pos=(831,238)
+1378.6890 	DATA 	Mouse:  Left button up, pos=(831,238)
+1379.5737 	DATA 	Mouse: Left button down, pos=(831,225)
+1379.5902 	DATA 	Mouse:  Left button up, pos=(831,225)
+1392.0227 	DATA 	Mouse: Left button down, pos=(924,227)
+1392.1401 	DATA 	Mouse:  Left button up, pos=(924,227)
+1393.2772 	DATA 	Mouse: Left button down, pos=(728,203)
+1393.2778 	DATA 	RatingScale GSI: (mouse response) rating=Strongly
  Agree
-21.0436 	DATA 	RatingScale GSI: rating RT=7.497
-21.0436 	DATA 	RatingScale GSI: history=[(None, 0.0), ('Completely\n Agree', 3.011), ('Completely\n Agree', 7.497)]
-21.0802 	DATA 	RatingScale GSI: (mouse response) rating=Completely
- Agree
-21.1448 	DATA 	Mouse:  Left button up, pos=(1020,250)
-22.3563 	DATA 	Mouse: Left button down, pos=(1020,249)
-22.3572 	DATA 	RatingScale GSI: (mouse response) rating=Completely
- Agree
-8.6289 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
-13.3188 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
-16.6438 	DATA 	Mouse: Left button down, pos=(1372,352)
-16.7103 	DATA 	Mouse:  Left button up, pos=(1372,352)
-17.6926 	DATA 	Mouse: Left button down, pos=(966,246)
-17.6941 	DATA 	RatingScale GSI: (mouse response) rating=Completely
- Agree
-17.6941 	DATA 	RatingScale GSI: rating RT=2.251
-17.6942 	DATA 	RatingScale GSI: history=[(None, 0.0), ('Completely\n Agree', 1.201), ('Completely\n Agree', 2.251)]
-18.0190 	DATA 	Mouse:  Left button up, pos=(966,246)
-21.9238 	DATA 	Mouse: Left button down, pos=(1099,350)
-22.0059 	DATA 	Mouse:  Left button up, pos=(1099,350)
-23.0258 	DATA 	Mouse: Left button down, pos=(977,238)
-23.0273 	DATA 	RatingScale GSI: (mouse response) rating=Agree
-23.3371 	DATA 	Mouse:  Left button up, pos=(977,238)
-26.5578 	DATA 	Mouse: Left button down, pos=(811,337)
-26.6345 	DATA 	Mouse:  Left button up, pos=(811,337)
-27.1056 	DATA 	Mouse: Left button down, pos=(949,251)
-27.1066 	DATA 	RatingScale GSI: (mouse response) rating=Disagree
-27.4197 	DATA 	Mouse:  Left button up, pos=(949,251)
-11.7611 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
-16.8486 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
-18.2878 	WARNING 	t of last frame was 34.11ms (=1/29)
-18.4580 	WARNING 	t of last frame was 37.03ms (=1/27)
-18.5416 	WARNING 	t of last frame was 37.26ms (=1/26)
-18.6583 	WARNING 	t of last frame was 36.97ms (=1/27)
-18.7088 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
-22.1175 	DATA 	Mouse: Left button down, pos=(1388,347)
-22.1785 	DATA 	Mouse:  Left button up, pos=(1388,347)
-24.5002 	DATA 	Mouse: Left button down, pos=(962,245)
-24.5013 	DATA 	RatingScale GSI: (mouse response) rating=Completely
- Agree
-24.5013 	DATA 	RatingScale GSI: rating RT=4.489
-24.5013 	DATA 	RatingScale GSI: history=[(None, 0.0), ('Completely\n Agree', 2.107), ('Completely\n Agree', 4.489)]
-24.5981 	DATA 	Mouse:  Left button up, pos=(962,245)
-29.8952 	DATA 	Mouse: Left button down, pos=(964,330)
-29.9958 	DATA 	Mouse:  Left button up, pos=(964,330)
-31.3711 	DATA 	Mouse: Left button down, pos=(956,245)
-31.3723 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+1393.3561 	DATA 	Mouse:  Left button up, pos=(728,203)
+1397.9065 	DATA 	Mouse: Left button down, pos=(394,236)
+1398.0222 	DATA 	Mouse:  Left button up, pos=(394,236)
+1399.2259 	DATA 	Mouse: Left button down, pos=(730,200)
+1399.2266 	DATA 	RatingScale GSI: (mouse response) rating=Completely
+ Disagree
+1399.3310 	DATA 	Mouse:  Left button up, pos=(730,200)
+1406.6783 	DATA 	Mouse: Left button down, pos=(730,200)
+1406.6790 	DATA 	RatingScale GSI: (mouse response) rating=Completely
+ Disagree
+1406.8082 	DATA 	Mouse:  Left button up, pos=(730,200)
+1412.0598 	DATA 	Mouse: Left button down, pos=(832,229)
+1412.1773 	DATA 	Mouse:  Left button up, pos=(832,229)
+1413.7807 	DATA 	Mouse: Left button down, pos=(735,201)
+1413.7813 	DATA 	RatingScale GSI: (mouse response) rating=Agree
+1413.8817 	DATA 	Mouse:  Left button up, pos=(735,201)
+1419.1959 	DATA 	Mouse: Left button down, pos=(735,201)
+1419.1965 	DATA 	RatingScale GSI: (mouse response) rating=Agree
+1419.2922 	DATA 	Mouse:  Left button up, pos=(735,201)
+1428.1874 	DATA 	Mouse: Left button down, pos=(515,233)
+1428.3036 	DATA 	Mouse:  Left button up, pos=(515,233)
+1429.6901 	DATA 	Mouse: Left button down, pos=(723,198)
+1429.6908 	DATA 	RatingScale GSI: (mouse response) rating=Strongly
+ Disagree
+1429.8146 	DATA 	Mouse:  Left button up, pos=(723,198)
+1437.0265 	DATA 	Mouse: Left button down, pos=(604,233)
+1437.1439 	DATA 	Mouse:  Left button up, pos=(604,233)
+1439.3663 	DATA 	Mouse: Left button down, pos=(703,230)
+1439.4840 	DATA 	Mouse:  Left button up, pos=(703,230)
+1440.0520 	DATA 	Mouse: Left button down, pos=(709,205)
+1440.0529 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
  or Disagree
-31.4450 	DATA 	Mouse:  Left button up, pos=(956,245)
-32.3699 	DATA 	Mouse: Left button down, pos=(821,340)
-32.4534 	DATA 	Mouse:  Left button up, pos=(821,340)
-33.5420 	DATA 	Mouse: Left button down, pos=(970,243)
-33.5437 	DATA 	RatingScale GSI: (mouse response) rating=Disagree
-33.6371 	DATA 	Mouse:  Left button up, pos=(970,243)
-12.3666 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
-18.9477 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
-22.2169 	DATA 	Mouse: Left button down, pos=(1351,339)
-22.3101 	DATA 	Mouse:  Left button up, pos=(1351,339)
-22.8632 	DATA 	Mouse: Left button down, pos=(1031,243)
-22.8645 	DATA 	RatingScale GSI: (mouse response) rating=Completely
- Agree
-22.8645 	DATA 	RatingScale GSI: rating RT=1.695
-22.8645 	DATA 	RatingScale GSI: history=[(None, 0.0), ('Completely\n Agree', 1.048), ('Completely\n Agree', 1.695)]
-22.9563 	DATA 	Mouse:  Left button up, pos=(1030,242)
-24.1280 	DATA 	Mouse: Left button down, pos=(1236,332)
-24.1938 	DATA 	Mouse:  Left button up, pos=(1236,332)
-24.6616 	DATA 	Mouse: Left button down, pos=(1028,250)
-24.6625 	DATA 	RatingScale GSI: (mouse response) rating=Strongly
- Agree
-24.7237 	DATA 	Mouse:  Left button up, pos=(1028,250)
-25.6007 	DATA 	Mouse: Left button down, pos=(1096,351)
-25.6638 	DATA 	Mouse:  Left button up, pos=(1096,351)
-26.0954 	DATA 	Mouse: Left button down, pos=(1006,242)
-26.0962 	DATA 	RatingScale GSI: (mouse response) rating=Agree
-26.1892 	DATA 	Mouse:  Left button up, pos=(1005,242)
-11.2967 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
-23.9858 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
-28.4453 	DATA 	Mouse: Left button down, pos=(1372,342)
-28.5059 	DATA 	Mouse:  Left button up, pos=(1372,342)
-29.1778 	DATA 	Mouse: Left button down, pos=(943,245)
-29.1795 	DATA 	RatingScale GSI: (mouse response) rating=Completely
- Agree
-29.1796 	DATA 	RatingScale GSI: rating RT=2.865
-29.1796 	DATA 	RatingScale GSI: history=[(None, 0.0), ('Completely\n Agree', 2.132), ('Completely\n Agree', 2.865)]
-11.1040 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
-18.7753 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
-24.0550 	DATA 	Mouse: Left button down, pos=(1366,346)
-24.1012 	DATA 	Mouse:  Left button up, pos=(1367,347)
-25.7107 	DATA 	Mouse: Left button down, pos=(1014,256)
-25.7125 	DATA 	RatingScale GSI: (mouse response) rating=Completely
- Agree
-25.7125 	DATA 	RatingScale GSI: rating RT=4.636
-25.7126 	DATA 	RatingScale GSI: history=[(None, 0.0), ('Completely\n Agree', 2.98), ('Completely\n Agree', 4.636)]
-11.7061 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
-19.3071 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
-23.0260 	DATA 	Mouse: Left button down, pos=(1361,342)
-23.1111 	DATA 	Mouse:  Left button up, pos=(1361,342)
-23.8833 	DATA 	Mouse: Left button down, pos=(1024,244)
-23.8848 	DATA 	RatingScale GSI: (mouse response) rating=Completely
- Agree
-23.8848 	DATA 	RatingScale GSI: rating RT=2.047
-23.8848 	DATA 	RatingScale GSI: history=[(None, 0.0), ('Completely\n Agree', 1.189), ('Completely\n Agree', 2.047)]
-23.9738 	DATA 	Mouse:  Left button up, pos=(1024,244)
-25.7041 	DATA 	Mouse: Left button down, pos=(985,336)
-25.7566 	DATA 	Mouse:  Left button up, pos=(985,336)
-26.3027 	DATA 	Mouse: Left button down, pos=(984,261)
-26.3036 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+1440.1499 	DATA 	Mouse:  Left button up, pos=(709,205)
+1443.5449 	DATA 	Mouse: Left button down, pos=(517,239)
+1443.5947 	DATA 	Mouse:  Left button up, pos=(517,239)
+1445.8682 	DATA 	Mouse: Left button down, pos=(729,204)
+1445.8688 	DATA 	RatingScale GSI: (mouse response) rating=Strongly
+ Disagree
+1445.9939 	DATA 	Mouse:  Left button up, pos=(729,204)
+1449.6609 	DATA 	Mouse: Left button down, pos=(703,230)
+1449.7772 	DATA 	Mouse:  Left button up, pos=(703,230)
+1450.2962 	DATA 	Mouse: Left button down, pos=(708,201)
+1450.2968 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
  or Disagree
-26.3871 	DATA 	Mouse:  Left button up, pos=(984,261)
-27.2034 	DATA 	Mouse: Left button down, pos=(1112,351)
-27.2705 	DATA 	Mouse:  Left button up, pos=(1112,351)
-27.7376 	DATA 	Mouse: Left button down, pos=(977,238)
-27.7385 	DATA 	RatingScale GSI: (mouse response) rating=Agree
-27.8275 	DATA 	Mouse:  Left button up, pos=(977,238)
-12.0189 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
-20.0066 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
-25.3214 	DATA 	Mouse: Left button down, pos=(1365,342)
-25.3962 	DATA 	Mouse:  Left button up, pos=(1365,342)
-26.5172 	DATA 	Mouse: Left button down, pos=(925,249)
-26.5181 	DATA 	RatingScale GSI: (mouse response) rating=Completely
+1450.3728 	DATA 	Mouse:  Left button up, pos=(708,201)
+1456.3618 	DATA 	Mouse: Left button down, pos=(622,239)
+1456.4448 	DATA 	Mouse:  Left button up, pos=(622,239)
+1459.6042 	DATA 	Mouse: Left button down, pos=(736,203)
+1459.6048 	DATA 	RatingScale GSI: (mouse response) rating=Disagree
+1459.6968 	DATA 	Mouse:  Left button up, pos=(736,203)
+1467.2249 	DATA 	Mouse: Left button down, pos=(843,228)
+1467.3421 	DATA 	Mouse:  Left button up, pos=(843,228)
+1468.6452 	DATA 	Mouse: Left button down, pos=(746,201)
+1468.6458 	DATA 	RatingScale GSI: (mouse response) rating=Agree
+1468.7740 	DATA 	Mouse:  Left button up, pos=(746,201)
+1476.7664 	DATA 	Mouse: Left button down, pos=(518,238)
+1476.8510 	DATA 	Mouse:  Left button up, pos=(518,238)
+1478.2541 	DATA 	Mouse: Left button down, pos=(713,205)
+1478.2548 	DATA 	RatingScale GSI: (mouse response) rating=Strongly
+ Disagree
+1478.3439 	DATA 	Mouse:  Left button up, pos=(713,205)
+1484.4540 	DATA 	Mouse: Left button down, pos=(627,232)
+1484.5707 	DATA 	Mouse:  Left button up, pos=(627,232)
+1487.6450 	DATA 	Mouse: Left button down, pos=(704,203)
+1487.6457 	DATA 	RatingScale GSI: (mouse response) rating=Disagree
+1487.7509 	DATA 	Mouse:  Left button up, pos=(704,203)
+1495.0818 	DATA 	Mouse: Left button down, pos=(506,229)
+1495.1991 	DATA 	Mouse:  Left button up, pos=(506,229)
+1497.1543 	DATA 	Mouse: Left button down, pos=(718,204)
+1497.1549 	DATA 	RatingScale GSI: (mouse response) rating=Strongly
+ Disagree
+1497.2416 	DATA 	Mouse:  Left button up, pos=(718,204)
+1503.7559 	DATA 	Mouse: Left button down, pos=(1039,236)
+1503.8722 	DATA 	Mouse:  Left button up, pos=(1039,236)
+1505.3429 	DATA 	Mouse: Left button down, pos=(791,212)
+1505.3436 	DATA 	RatingScale GSI: (mouse response) rating=Completely
  Agree
-26.5181 	DATA 	RatingScale GSI: rating RT=4.375
-26.5181 	DATA 	RatingScale GSI: history=[(None, 0.0), ('Completely\n Agree', 3.179), ('Completely\n Agree', 4.375)]
-26.5768 	DATA 	Mouse:  Left button up, pos=(925,249)
-27.7523 	DATA 	Mouse: Left button down, pos=(1242,343)
-27.8354 	DATA 	Mouse:  Left button up, pos=(1242,343)
-28.2536 	DATA 	Mouse: Left button down, pos=(994,248)
-28.2553 	DATA 	RatingScale GSI: (mouse response) rating=Strongly
+1505.4148 	DATA 	Mouse:  Left button up, pos=(791,212)
+1511.2591 	DATA 	Mouse: Left button down, pos=(589,236)
+1511.3593 	DATA 	Mouse:  Left button up, pos=(589,236)
+1511.8607 	DATA 	Mouse: Left button down, pos=(675,213)
+1511.8614 	DATA 	RatingScale GSI: (mouse response) rating=Disagree
+1511.9348 	DATA 	Mouse:  Left button up, pos=(675,213)
+1517.2087 	DATA 	Mouse: Left button down, pos=(834,238)
+1517.2577 	DATA 	Mouse:  Left button up, pos=(834,238)
+1517.8930 	DATA 	Mouse: Left button down, pos=(770,213)
+1517.8936 	DATA 	RatingScale GSI: (mouse response) rating=Agree
+1518.0184 	DATA 	Mouse:  Left button up, pos=(770,213)
+1524.2098 	DATA 	Mouse: Left button down, pos=(623,231)
+1524.3269 	DATA 	Mouse:  Left button up, pos=(623,231)
+1525.5639 	DATA 	Mouse: Left button down, pos=(717,209)
+1525.5645 	DATA 	RatingScale GSI: (mouse response) rating=Disagree
+1525.6518 	DATA 	Mouse:  Left button up, pos=(717,209)
+1531.0782 	DATA 	Mouse: Left button down, pos=(923,245)
+1531.1781 	DATA 	Mouse:  Left button up, pos=(923,245)
+1532.2313 	DATA 	Mouse: Left button down, pos=(770,218)
+1532.2319 	DATA 	RatingScale GSI: (mouse response) rating=Strongly
  Agree
-28.3209 	DATA 	Mouse:  Left button up, pos=(994,248)
-28.7894 	DATA 	Mouse: Left button down, pos=(1101,338)
-28.8704 	DATA 	Mouse:  Left button up, pos=(1101,338)
-29.2907 	DATA 	Mouse: Left button down, pos=(999,232)
-29.3435 	DATA 	Mouse:  Left button up, pos=(999,232)
-29.6528 	DATA 	Mouse: Left button down, pos=(1000,241)
-29.6538 	DATA 	RatingScale GSI: (mouse response) rating=Agree
-29.7378 	DATA 	Mouse:  Left button up, pos=(1000,241)
-12.8929 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
-10.2806 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
-18.1259 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
-23.4475 	DATA 	Mouse: Left button down, pos=(1384,349)
-23.5311 	DATA 	Mouse:  Left button up, pos=(1384,349)
-23.9712 	DATA 	Mouse: Left button down, pos=(959,250)
-23.9723 	DATA 	RatingScale GSI: (mouse response) rating=Completely
- Agree
-23.9724 	DATA 	RatingScale GSI: rating RT=3.463
-23.9724 	DATA 	RatingScale GSI: history=[(None, 0.0), ('Completely\n Agree', 2.94), ('Completely\n Agree', 3.463)]
-24.0370 	DATA 	Mouse:  Left button up, pos=(959,250)
-24.8092 	DATA 	Mouse: Left button down, pos=(1121,331)
-24.8887 	DATA 	Mouse:  Left button up, pos=(1121,331)
-25.4262 	DATA 	Mouse: Left button down, pos=(996,252)
-25.4281 	DATA 	RatingScale GSI: (mouse response) rating=Agree
-25.4918 	DATA 	Mouse:  Left button up, pos=(996,252)
-25.9869 	DATA 	Mouse: Left button down, pos=(975,342)
-26.0870 	DATA 	Mouse:  Left button up, pos=(975,342)
-26.4709 	DATA 	Mouse: Left button down, pos=(972,242)
-26.4718 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+1532.3094 	DATA 	Mouse:  Left button up, pos=(770,218)
+1538.7319 	DATA 	Mouse: Left button down, pos=(810,238)
+1538.8320 	DATA 	Mouse:  Left button up, pos=(810,238)
+1540.1021 	DATA 	Mouse: Left button down, pos=(759,242)
+1540.1859 	DATA 	Mouse:  Left button up, pos=(759,242)
+1540.7041 	DATA 	Mouse: Left button down, pos=(747,223)
+1540.8036 	DATA 	Mouse:  Left button up, pos=(747,223)
+1541.6233 	DATA 	Mouse: Left button down, pos=(726,200)
+1541.6238 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
  or Disagree
-26.5637 	DATA 	Mouse:  Left button up, pos=(972,242)
-13.3028 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
-11.3845 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
-18.1834 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
-23.9858 	DATA 	Mouse: Left button down, pos=(1240,331)
-24.0526 	DATA 	Mouse:  Left button up, pos=(1240,332)
-24.6515 	DATA 	Mouse: Left button down, pos=(948,234)
-24.6526 	DATA 	RatingScale GSI: (mouse response) rating=Strongly
+1541.7024 	DATA 	Mouse:  Left button up, pos=(726,200)
+1546.4192 	DATA 	Mouse: Left button down, pos=(824,226)
+1546.4866 	DATA 	Mouse:  Left button up, pos=(824,226)
+1548.1239 	DATA 	Mouse: Left button down, pos=(750,201)
+1548.1245 	DATA 	RatingScale GSI: (mouse response) rating=Agree
+1548.2275 	DATA 	Mouse:  Left button up, pos=(750,201)
+1550.8801 	DATA 	Mouse: Left button down, pos=(744,239)
+1550.9651 	DATA 	Mouse:  Left button up, pos=(744,239)
+1551.9510 	DATA 	Mouse: Left button down, pos=(731,213)
+1551.9518 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1552.0048 	DATA 	Mouse:  Left button up, pos=(731,213)
+1557.4323 	DATA 	Mouse: Left button down, pos=(835,242)
+1557.5167 	DATA 	Mouse:  Left button up, pos=(835,242)
+1558.2847 	DATA 	Mouse: Left button down, pos=(756,208)
+1558.2854 	DATA 	RatingScale GSI: (mouse response) rating=Agree
+1558.3861 	DATA 	Mouse:  Left button up, pos=(756,208)
+1563.1482 	DATA 	Mouse: Left button down, pos=(936,234)
+1563.2475 	DATA 	Mouse:  Left button up, pos=(936,234)
+1564.0500 	DATA 	Mouse: Left button down, pos=(781,196)
+1564.0506 	DATA 	RatingScale GSI: (mouse response) rating=Strongly
  Agree
-24.6526 	DATA 	RatingScale GSI: rating RT=4.374
-24.6526 	DATA 	RatingScale GSI: history=[(None, 0.0), ('Strongly\n Agree', 3.708), ('Strongly\n Agree', 4.374)]
-24.6893 	DATA 	Mouse:  Left button up, pos=(948,234)
-25.0506 	DATA 	Mouse: Left button down, pos=(951,241)
-25.0524 	DATA 	RatingScale GSI: (mouse response) rating=Strongly
+1564.1258 	DATA 	Mouse:  Left button up, pos=(781,196)
+1568.4952 	DATA 	Mouse: Left button down, pos=(532,223)
+1568.5951 	DATA 	Mouse:  Left button up, pos=(532,223)
+1569.5645 	DATA 	Mouse: Left button down, pos=(712,204)
+1569.5654 	DATA 	RatingScale GSI: (mouse response) rating=Strongly
+ Disagree
+1569.6490 	DATA 	Mouse:  Left button up, pos=(712,204)
+1574.0267 	DATA 	Mouse: Left button down, pos=(1013,227)
+1574.1430 	DATA 	Mouse:  Left button up, pos=(1013,227)
+1575.0289 	DATA 	Mouse: Left button down, pos=(778,206)
+1575.0295 	DATA 	RatingScale GSI: (mouse response) rating=Completely
  Agree
-25.1014 	DATA 	Mouse:  Left button up, pos=(951,241)
-26.5495 	DATA 	Mouse: Left button down, pos=(955,259)
-26.5504 	DATA 	RatingScale GSI: (mouse response) rating=Strongly
+1575.1068 	DATA 	Mouse:  Left button up, pos=(778,206)
+1579.6414 	DATA 	Mouse: Left button down, pos=(923,233)
+1579.7077 	DATA 	Mouse:  Left button up, pos=(923,233)
+1580.4263 	DATA 	Mouse: Left button down, pos=(840,239)
+1580.4937 	DATA 	Mouse:  Left button up, pos=(840,239)
+1581.2789 	DATA 	Mouse: Left button down, pos=(737,199)
+1581.2796 	DATA 	RatingScale GSI: (mouse response) rating=Agree
+1581.3182 	DATA 	Mouse:  Left button up, pos=(737,199)
+1587.2608 	DATA 	Mouse: Left button down, pos=(718,246)
+1587.3448 	DATA 	Mouse:  Left button up, pos=(718,246)
+1588.2978 	DATA 	Mouse: Left button down, pos=(723,211)
+1588.2985 	DATA 	RatingScale GSI: (mouse response) rating=Neither Agree
+ or Disagree
+1588.3697 	DATA 	Mouse:  Left button up, pos=(723,211)
+1592.9600 	DATA 	Mouse: Left button down, pos=(522,228)
+1593.0439 	DATA 	Mouse:  Left button up, pos=(522,228)
+1593.8299 	DATA 	Mouse: Left button down, pos=(712,201)
+1593.8303 	DATA 	RatingScale GSI: (mouse response) rating=Strongly
+ Disagree
+1593.9098 	DATA 	Mouse:  Left button up, pos=(712,201)
+1597.8577 	DATA 	Mouse: Left button down, pos=(1012,229)
+1598.0072 	DATA 	Mouse:  Left button up, pos=(1012,229)
+1598.8599 	DATA 	Mouse: Left button down, pos=(739,198)
+1598.8603 	DATA 	RatingScale GSI: (mouse response) rating=Completely
  Agree
-26.6452 	DATA 	Mouse:  Left button up, pos=(955,259)
-28.8514 	DATA 	Mouse: Left button down, pos=(1369,353)
-28.9166 	DATA 	Mouse:  Left button up, pos=(1369,353)
-29.9522 	DATA 	Mouse: Left button down, pos=(976,233)
-29.9533 	DATA 	RatingScale GSI: (mouse response) rating=5+
-29.9533 	DATA 	RatingScale GSI: rating RT=3.119
-29.9533 	DATA 	RatingScale GSI: history=[(None, 0.0), ('5+', 2.018), ('5+', 3.119)]
-30.0242 	DATA 	Mouse:  Left button up, pos=(976,233)
-31.2501 	DATA 	Mouse: Left button down, pos=(1228,349)
-31.3328 	DATA 	Mouse:  Left button up, pos=(1228,349)
-31.7358 	DATA 	Mouse: Left button down, pos=(969,251)
-31.7373 	DATA 	RatingScale GSI: (mouse response) rating=7-10
-31.7373 	DATA 	RatingScale GSI: rating RT=1.475
-31.7373 	DATA 	RatingScale GSI: history=[(None, 0.0), ('7-10', 0.989), ('7-10', 1.475)]
-31.8024 	DATA 	Mouse:  Left button up, pos=(969,251)
-32.3489 	DATA 	Mouse: Left button down, pos=(973,346)
-32.4328 	DATA 	Mouse:  Left button up, pos=(973,346)
-32.8566 	DATA 	Mouse: Left button down, pos=(960,248)
-32.8575 	DATA 	RatingScale GSI: (mouse response) rating=2
-32.8575 	DATA 	RatingScale GSI: rating RT=0.836
-32.8576 	DATA 	RatingScale GSI: history=[(None, 0.0), ('2', 0.328), ('2', 0.836)]
-32.9320 	DATA 	Mouse:  Left button up, pos=(960,248)
-12.2106 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
-7.5182 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
-8.8639 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'HDMI']
-15.7891 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [1920, 1080]. Using actual size
-19.4447 	DATA 	Mouse: Left button down, pos=(1388,336)
-19.5199 	DATA 	Mouse:  Left button up, pos=(1388,336)
-20.0906 	DATA 	Mouse: Left button down, pos=(1033,249)
-20.0917 	DATA 	RatingScale GSI: (mouse response) rating=Completely
- Agree
-20.0917 	DATA 	RatingScale GSI: rating RT=2.183
-20.0918 	DATA 	RatingScale GSI: history=[(None, 0.0), ('Completely\n Agree', 1.537), ('Completely\n Agree', 2.183)]
-20.1649 	DATA 	Mouse:  Left button up, pos=(1033,249)
-20.7714 	DATA 	Mouse: Left button down, pos=(1236,347)
-20.8552 	DATA 	Mouse:  Left button up, pos=(1238,346)
-21.3892 	DATA 	Mouse: Left button down, pos=(968,245)
-21.3902 	DATA 	RatingScale GSI: (mouse response) rating=Strongly
- Agree
-21.4950 	DATA 	Mouse:  Left button up, pos=(967,244)
-21.9883 	DATA 	Mouse: Left button down, pos=(1106,348)
-22.0737 	DATA 	Mouse:  Left button up, pos=(1106,348)
-22.5245 	DATA 	Mouse: Left button down, pos=(971,240)
-22.5261 	DATA 	RatingScale GSI: (mouse response) rating=Agree
-22.6094 	DATA 	Mouse:  Left button up, pos=(971,240)
-23.8027 	DATA 	Mouse: Left button down, pos=(974,331)
-23.8885 	DATA 	Mouse:  Left button up, pos=(974,331)
-24.3741 	DATA 	Mouse: Left button down, pos=(972,250)
-24.3759 	DATA 	RatingScale GSI: (mouse response) rating=1.5
-24.3759 	DATA 	RatingScale GSI: rating RT=1.533
-24.3760 	DATA 	RatingScale GSI: history=[(None, 0.0), ('1.5', 0.961), ('1.5', 1.533)]
-24.4669 	DATA 	Mouse:  Left button up, pos=(972,250)
-24.9394 	DATA 	Mouse: Left button down, pos=(1112,347)
-25.0425 	DATA 	Mouse:  Left button up, pos=(1112,347)
-25.3743 	DATA 	Mouse: Left button down, pos=(1015,240)
-25.3757 	DATA 	RatingScale GSI: (mouse response) rating=4-6
-25.3757 	DATA 	RatingScale GSI: rating RT=0.668
-25.3757 	DATA 	RatingScale GSI: history=[(None, 0.0), ('4-6', 0.233), ('4-6', 0.668)]
-25.4662 	DATA 	Mouse:  Left button up, pos=(1015,240)
-26.0086 	DATA 	Mouse: Left button down, pos=(1255,364)
-26.1230 	DATA 	Mouse:  Left button up, pos=(1253,363)
-26.7233 	DATA 	Mouse: Left button down, pos=(1026,250)
-26.7250 	DATA 	RatingScale GSI: (mouse response) rating=4-6
-26.7251 	DATA 	RatingScale GSI: rating RT=1.026
-26.7251 	DATA 	RatingScale GSI: history=[(None, 0.0), ('4-6', 0.312), ('4-6', 1.026)]
-26.8311 	DATA 	Mouse:  Left button up, pos=(1025,249)
+1598.9557 	DATA 	Mouse:  Left button up, pos=(739,198)
+1612.2615 	DATA 	Mouse: Left button down, pos=(510,238)
+1612.3623 	DATA 	Mouse:  Left button up, pos=(510,238)
+1613.5985 	DATA 	Mouse: Left button down, pos=(712,210)
+1613.5993 	DATA 	RatingScale GSI: (mouse response) rating=1
+1613.5993 	DATA 	RatingScale GSI: rating RT=14.469
+1613.5993 	DATA 	RatingScale GSI: history=[(None, 0.0), ('1', 13.131), ('1', 14.469)]
+1613.6724 	DATA 	Mouse:  Left button up, pos=(712,210)
+1618.9948 	DATA 	Mouse: Left button down, pos=(503,246)
+1619.0791 	DATA 	Mouse:  Left button up, pos=(503,246)
+1620.3663 	DATA 	Mouse: Left button down, pos=(697,206)
+1620.3669 	DATA 	RatingScale GSI: (mouse response) rating=0.5
+1620.3669 	DATA 	RatingScale GSI: rating RT=6.506
+1620.3669 	DATA 	RatingScale GSI: history=[(None, 0.0), ('0.5', 5.135), ('0.5', 6.506)]
+1620.4325 	DATA 	Mouse:  Left button up, pos=(697,206)
+1629.9743 	DATA 	Mouse: Left button down, pos=(834,227)
+1630.0762 	DATA 	Mouse:  Left button up, pos=(834,227)
+1631.3959 	DATA 	Mouse: Left button down, pos=(740,201)
+1631.3967 	DATA 	RatingScale GSI: (mouse response) rating=4-6
+1631.3967 	DATA 	RatingScale GSI: rating RT=10.766
+1631.3967 	DATA 	RatingScale GSI: history=[(None, 0.0), ('4-6', 9.345), ('4-6', 10.766)]
+1631.4492 	DATA 	Mouse:  Left button up, pos=(740,201)
+1635.6732 	DATA 	Mouse: Left button down, pos=(400,238)
+1635.7246 	DATA 	Mouse:  Left button up, pos=(400,238)
+1637.0618 	DATA 	Mouse: Left button down, pos=(721,206)
+1637.0624 	DATA 	RatingScale GSI: (mouse response) rating=0
+1637.0624 	DATA 	RatingScale GSI: rating RT=5.411
+1637.0624 	DATA 	RatingScale GSI: history=[(None, 0.0), ('0', 4.022), ('0', 5.411)]
+1637.1582 	DATA 	Mouse:  Left button up, pos=(721,206)
+1651.6826 	DATA 	Mouse: Left button down, pos=(936,234)
+1651.8005 	DATA 	Mouse:  Left button up, pos=(936,234)
+1653.1548 	DATA 	Mouse: Left button down, pos=(827,236)
+1653.2215 	DATA 	Mouse:  Left button up, pos=(827,236)
+1654.2406 	DATA 	Mouse: Left button down, pos=(736,202)
+1654.2412 	DATA 	RatingScale GSI: (mouse response) rating=3-5
+1654.2412 	DATA 	RatingScale GSI: rating RT=16.916
+1654.2412 	DATA 	RatingScale GSI: history=[(None, 0.0), ('6-9', 14.357), ('3-5', 15.83), ('3-5', 16.916)]
+1654.3094 	DATA 	Mouse:  Left button up, pos=(736,202)
+1657.5167 	DATA 	Mouse: Left button down, pos=(399,233)
+1657.5985 	DATA 	Mouse:  Left button up, pos=(399,233)
+1659.5554 	DATA 	Mouse: Left button down, pos=(724,211)
+1659.5560 	DATA 	RatingScale GSI: (mouse response) rating=0
+1659.5561 	DATA 	RatingScale GSI: rating RT=5.060
+1659.5561 	DATA 	RatingScale GSI: history=[(None, 0.0), ('0', 3.022), ('0', 5.06)]
+1659.6973 	DATA 	Mouse:  Left button up, pos=(724,211)
+1670.5833 	DATA 	Mouse: Left button down, pos=(607,257)
+1670.7018 	DATA 	Mouse:  Left button up, pos=(607,257)
+1671.4876 	DATA 	Mouse: Left button down, pos=(741,196)
+1671.4882 	DATA 	RatingScale GSI: (mouse response) rating=30-60mins
+1671.4882 	DATA 	RatingScale GSI: rating RT=11.670
+1671.4882 	DATA 	RatingScale GSI: history=[(None, 0.0), ('30-60mins', 10.766), ('30-60mins', 11.67)]
+1671.5832 	DATA 	Mouse:  Left button up, pos=(741,196)
+15.4821 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+12.3827 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+22.1826 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+9.8384 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+16.5185 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+9.8615 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+14.1411 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size
+7.5652 	ERROR 	Requested audio device 'auto' that is not available on this hardware. The 'audioDevice' preference should be one of ['Built-in Output', 'Display Audio']
+12.3592 	WARNING 	User requested fullscreen with size [800 600], but screen is actually [2560, 1440]. Using actual size

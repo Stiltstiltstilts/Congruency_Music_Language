@@ -6,7 +6,6 @@
 import os
 import numpy as np
 from psychopy import core, visual, event, data, logging
-from constants import *
 
 def instImport(path):
     """
@@ -23,12 +22,15 @@ def instImport(path):
         processed_text = f.readlines()
     return processed_text
 
-def sentencePreProcess(path):
+def sentencePreProcess(path, congruency=None, beat_type=None, extraction=None):
     """
     stimPreProcess is a function for importing sentences from a text file, and then 1) making each sentence a list containing strings for each word, 
     and 2) converting underscores, which code for double words, into a space character within the string
         required inputs:
                         path: path of input file (as .txt)
+                        congruency: 'congruent' or 'incongruent'
+                        beat_type: 'binary_beat' or 'ternary_beat'
+                        extraction: 'subject' or 'object'
         outputs: 
                         Variable with processed data as a list
 
@@ -41,28 +43,6 @@ def sentencePreProcess(path):
         temp = rawText[n][:].replace('\n', '') # getting rid of the line break thing
         temp = temp.split(' ') # splitting the sentence up by spaces
         temp2.append(temp)
-    #Get other info  
-    # beat   
-    if "2" in os.path.basename(path):
-        beat_type = 'binary_beat'
-    elif "3" in os.path.basename(path):
-        beat_type = 'ternary_beat'
-    else:
-        beat_type = None
-    # congruency
-    if "cong" and not "incong" in os.path.basename(path):
-        congruency = 'congruent'
-    elif "incong" in os.path.basename(path):
-        congruency = 'incongruent'
-    else:
-        congruency = None
-    #obj/sub
-    if "Obj" in os.path.basename(path):
-        extraction = 'object extracted'
-    elif "Subj" in os.path.basename(path):
-        extraction = 'subject extracted'
-    else:
-        extraction = 'other'
     temp = []
     temp3 = []
     for sentence in range(0, len(temp2)): # iterate sentences
@@ -118,15 +98,6 @@ def probePreProcess(path):
         final_output.append(temp)
     return final_output
 
-
-def takeSecond(elem):
-    """ 
-    this is a function to pass as a key argument for sorting shit
-    """
-    return elem[0]
-
-
-
 def customHanning(M, floor):
     """ 
     this is a function to create a custom hanning window with a non-zero floor, specified by the variable 'floor'
@@ -139,30 +110,3 @@ def customHanning(M, floor):
 
     return custom_hanning_window
 
-def instructionDelivery(text_list, bottom_text):
-    """
-    etc
-
-    """
-    counter = 0
-    while counter < len(text_list):
-        message1.setText(text_list[counter])
-        if counter == 0:
-            message2.setText(bottom_text[0])
-        elif counter in range(1, (len(text_list) - 1)):
-            message2.setText(bottom_text[1])
-        else: 
-            message2.setText(bottom_text[2])
-        #display instructions and wait
-        message1.draw()
-        message2.draw() 
-        win.logOnFlip(level=logging.EXP, msg='Display Instructions{}'.format(counter+1))
-        win.flip()
-        #check for a keypress
-        thisKey = event.waitKeys()
-        if thisKey[0] in ['q','escape']:
-            core.quit()
-        elif thisKey[0] == 'backspace':
-            counter -= 1
-        else:
-            counter += 1
