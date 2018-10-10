@@ -2,14 +2,15 @@ Welcome to the experiment. Thank you for participating!
 This experiment is composed of a series of short trials, and then at the end, there will be a questionnaire.
 In each trial, you will read a sentence while listening to an auditory beat. The experiment then tests your understanding of this sentence by asking you a question.
 You respond to this question with either 'yes' or 'no', indicating your response with the 'y' and 'n' keys respectively.
-If you have no idea of the answer, either because you found the sentence hard, or your concentration lapsed. Don't worry. Press 'd' for "don't know".
+If you have no idea of the answer, either because you found the sentence hard, or your concentration lapsed. Press 'd' for "don't know" (if it would otherwise be a random guess)
 This is totally fine, it is natural for your concentration to go up and down during an experiment like this and it's important you don't just randomly guess an answer.
-For example, if the sentence was "The boy that the girl liked is wearing a hat" and the question was "the girl is wearing a hat", the correct response would be 'n'. Does this make sense?
-When the question appears on the screen, you are to respond as quickly as you can. 
+For example, if the sentence was "The boy that the girl liked is wearing a hat" and the question was "the girl is wearing a hat", the correct response would be 'n' because the sentence only says the boy is wearing a hat. Does this make sense?
+When the question appears on the screen, you are to respond as soon as you know the answer. 
 If you take longer than 5 seconds, you will be reminded to speed up on the next trial. Accuracy is still important, however, so do not go too quickly.
 And unlike reading this sentence, during the trial, the sentence will flash up on the screen one or two words at a time, synchronised to an auditory tone.
 You control when each trial starts, so feel free to take short breaks to keep your concentration high. And you are always welcome to ask the experimenter questions during these breaks if anything is unclear.
 It is very important that you feel confident in your understanding of the task and are giving it your full attention. Making mistakes is part of the experiment, though, so do not worry when this happens.
 Good science is made possible by good participants, so thank you in advance for your cooperation—we really appreciate it!
 During the trials, keep your index fingers resting on the 'y' and 'n' key ready to press the button. 
+During the trials, please do not mouth the words out loud. Instead, use your 'head voice' to imagine speaking the words rhythmically in time with the beat.
 Press the spacebar to start some practice trials (that don't count for the main experiment). Use these to make sure everything makes sense. 

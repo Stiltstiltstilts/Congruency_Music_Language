@@ -19,6 +19,10 @@ from constants import *
 
 GlobalClock = core.Clock()  # Track time since experiment starts
 
+
+#port = parallel.ParallelPort(address=0xd050) 
+#port.setData(0)
+
 ################################################
 ############### Basic checks ###################
 ################################################
@@ -36,7 +40,7 @@ expInfo = {'session':'001', 'participant':'001',
     'handedness':'', 'gender':'', 'native language': '', 'age': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, title=expName,)
 if dlg.OK == False:
-    core.quit()  # user pressed cancel
+    core.quit()  # user pressed cancele
 expInfo['date'] = data.getDateStr()
 
 # Create filename for data file (absolute path + name)
@@ -71,9 +75,9 @@ logging.console.setLevel(logging.WARNING)
 ################# Variables ####################
 ################################################
 ####====Auditory Stimuli====####
-binary_beat = sound.Sound('Stimuli/Tones/binary_beat.wav') # , secs=-1
+binary_beat = sound.Sound('Stimuli/Tones/binary_beat.wav', secs=-1)
 binary_beat.setVolume(1)
-ternary_beat = sound.Sound('Stimuli/Tones/ternary_beat.wav') #, secs=-1
+ternary_beat = sound.Sound('Stimuli/Tones/ternary_beat.wav', secs=-1)
 ternary_beat.setVolume(1)
 
 # setup window
@@ -84,7 +88,7 @@ win = visual.Window(fullscr=True,
 
 trialClock = core.Clock()
 
-# store frame rate of monitor if we can measure it ######### this isn't getting logged at the moment ##############
+# store frame rate of monitor if we can measure it
 expInfo['frameRate'] = win.getActualFrameRate()
 if expInfo['frameRate'] != None:
     frameDur = 1.0 / round(expInfo['frameRate'])
@@ -94,21 +98,17 @@ else:
 ################################################
 ########## Trial list construction #############
 ################################################
-
-############ stimuli checks ############
-assert len(sub_cong) == len(obj_cong) == sub_incong == obj_incong, "number of sentences not the same between conditions" # check that no. of sentences across conditions match.
-assert len(probe_mc_neg) == len(probe_mc_pos) == len(probe_rc_subneg_objpos) == len(probe_rc_subpos_objneg), "number of probes not the same" # check no. of probes same across conditions match
-assert len(sub_cong) == len(probe_mc_neg), "number of sentences not same as number of probes"
-
 ############ main sentences ############
+assert len(sub_cong) == len(obj_cong), "number of sentences not the same" # check that number of sentences between conditions match. Incong conditions generated from same source hence not needed here.
 main_conditions = [sub_cong, sub_incong, obj_cong, obj_incong,]  
 nSentences = len(sub_cong) 
 main_sentence_chunk_size = int(nSentences / len(main_conditions)) # how many sentences per condition
-main_condition_index = list( range(len(main_conditions)) ) * main_sentence_chunk_size # list nSentences long of condition indicies
+main_condition_index = list(range(len(main_conditions))) * main_sentence_chunk_size # list nSentences long of condition indicies
 shuffle(main_condition_index)  # randomise 
 main_condition_list = [ (main_conditions[main_condition_index[i]][i]) for i in range(nSentences) ] #create list of trial dictionaries (without probes) in original order
 
 ############ main probes + combine with main trials ############
+assert len(probe_mc_neg) == len(probe_mc_pos) == len(probe_rc_subneg_objpos) == len(probe_rc_subpos_objneg), "number of probes not the same"
 main_probes = [probe_mc_pos, probe_mc_neg,
                probe_rc_subpos_objneg, probe_rc_subneg_objpos,]
 for main_cond in range(len(main_conditions)):   # iterate through main conditions

@@ -18,11 +18,11 @@ import customFunctions as fun
 ################################################
 
 BASE_AMP = 10000 # amplitude of nonaccented tone... −32,768 to +32,767 range for 16bit
-ACCENT_AMP = 15000 # amplitude of accented tone... −32,768 to +32,767 range for 16bit
+ACCENT_AMP = 20000 # amplitude of accented tone... −32,768 to +32,767 range for 16bit
 SAMPLERATE = 48000  # Hz
 NCHANNELS = 1 # mono: sound played identically in both channels
-SOUNDLEN = 0.417 # 2.4Hz
-SOUNDFREQ = 333.3 # Hz... 333 is about Ab in pitch
+SOUNDLEN = 1/3    #
+SOUNDFREQ = 333 # Hz... 333 is about Ab in pitch
 
 finalDuration = 33 #seconds
 nTones = int(finalDuration/SOUNDLEN) # how many sounds per the total duration
@@ -57,17 +57,21 @@ sine_accent = sine * ACCENT_AMP
 tone_nonaccent = np.tile(sine_nonaccent, int(ncycles))
 tone_accent = np.tile(sine_accent, int(ncycles))
 
+print(len(tone_accent))
+print(nsamples)
+
+
 ################################################
 ############ Modulating Sine Tone ##############
 ################################################
 
 # Modulation variables
-rise_fall_ratio = 19 # rise_fall_ratio:1 ratio of rise and fall ramps
+rise_fall_ratio = 19  #(1/842)*16095 # rise_fall_ratio:1 ratio of rise and fall ramps
 window_floor = 0.2 # creating window between .2 and 1
 
 # calculate asymmetric Hanning vector (22ms rise and 394 fall)
-riseLen = nsamples / rise_fall_ratio #0.022 * SAMPLERATE
-fallLen = nsamples - riseLen         #.394 * SAMPLERATE
+riseLen = len(tone_accent) / rise_fall_ratio 
+fallLen = len(tone_accent) - riseLen         
 
 # create Hann vector for rise len * 2
 riseVec = fun.customHanning((riseLen * 2), window_floor)
@@ -94,7 +98,7 @@ tone_accent = tone_accent * hannVec
 ################################################
 
 # tile tones to the desired length
-meter = np.concatenate((tone_accent,tone_nonaccent, tone_nonaccent),)
+meter = np.concatenate((tone_accent, tone_nonaccent,tone_nonaccent),)
 
 final_output = np.tile(meter, int(nTones/3))
 
@@ -105,7 +109,7 @@ pygame.mixer.init(frequency=SAMPLERATE, channels=NCHANNELS)
 tone = pygame.mixer.Sound(final_output.astype('int16'))
 
 # open new wave file objects
-tonefile = wave.open('ternary_beat.wav', 'w')
+tonefile = wave.open('ternary_beat_louder.wav', 'w')
 
 # set parameters for pure tone
 tonefile.setframerate(SAMPLERATE)
