@@ -16,6 +16,7 @@ import sys
 #import itertools
 import numpy as np
 from constants import *
+from customFunctions import trialCreator
 
 GlobalClock = core.Clock()  # Track time since experiment starts
 
@@ -42,23 +43,6 @@ expInfo['date'] = data.getDateStr()
 # Create filename for data file (absolute path + name)
 filename = _thisDir + os.sep + 'data/{0}'.format(expInfo['participant'])
 
-with open('data/{}participant_info.txt'.format(expInfo['participant']), 'w') as log_file:
-    log_file.write('Session\t' +
-                    'Participant\t' +
-                    'Handedness\t' +
-                    'Gender\t' +
-                    'Native_language\t' +
-                    'Age\t' + '\n')
- 
-    log_file.write('\t'.join([str(expInfo['session']),
-                            str(expInfo['participant']),
-                            str(expInfo['handedness']),
-                            str(expInfo['gender']),
-                            str(expInfo['native language']),
-                            str(expInfo['age'])]) + '\n')
-    log_file.flush()
-
-
 ################################################
 ################ Setup logfile #################
 ################################################
@@ -84,68 +68,54 @@ win = visual.Window(fullscr=True,
 
 trialClock = core.Clock()
 
-# store frame rate of monitor if we can measure it ######### this isn't getting logged at the moment ##############
+# store frame rate of monitor if we can measure it
 expInfo['frameRate'] = win.getActualFrameRate()
 if expInfo['frameRate'] != None:
     frameDur = 1.0 / round(expInfo['frameRate'])
 else:
     frameDur = 1.0 / 60.0  # could not measure, so guess 60Hz
 
+with open('data/{}participant_info.txt'.format(expInfo['participant']), 'w') as log_file:
+    log_file.write('Session\t' +
+                    'Participant\t' +
+                    'Handedness\t' +
+                    'Gender\t' +
+                    'Native_language\t' +
+                    'Age\t' +
+                    'frameRate\t' + '\n')
+ 
+    log_file.write('\t'.join([str(expInfo['session']),
+                            str(expInfo['participant']),
+                            str(expInfo['handedness']),
+                            str(expInfo['gender']),
+                            str(expInfo['native language']),
+                            str(expInfo['age']),
+                            str(expInfo['frameRate'])]) + '\n')
+    log_file.flush()
+
 ################################################
 ########## Trial list construction #############
 ################################################
 
-############ stimuli checks ############
-assert len(sub_cong) == len(obj_cong) == sub_incong == obj_incong, "number of sentences not the same between conditions" # check that no. of sentences across conditions match.
-assert len(probe_mc_neg) == len(probe_mc_pos) == len(probe_rc_subneg_objpos) == len(probe_rc_subpos_objneg), "number of probes not the same" # check no. of probes same across conditions match
-assert len(sub_cong) == len(probe_mc_neg), "number of sentences not same as number of probes"
-
-############ main sentences ############
+# Main sentences
 main_conditions = [sub_cong, sub_incong, obj_cong, obj_incong,]  
-nSentences = len(sub_cong) 
-main_sentence_chunk_size = int(nSentences / len(main_conditions)) # how many sentences per condition
-main_condition_index = list( range(len(main_conditions)) ) * main_sentence_chunk_size # list nSentences long of condition indicies
-shuffle(main_condition_index)  # randomise 
-main_condition_list = [ (main_conditions[main_condition_index[i]][i]) for i in range(nSentences) ] #create list of trial dictionaries (without probes) in original order
+main_probes = [probe_mc_pos, probe_mc_neg, probe_rc_subpos_objneg, probe_rc_subneg_objpos,]
+sentence_list = trialCreator(main_conditions, main_probes) # using function in customFunctions.py script to randomise and assemble sentences and probes
 
-############ main probes + combine with main trials ############
-main_probes = [probe_mc_pos, probe_mc_neg,
-               probe_rc_subpos_objneg, probe_rc_subneg_objpos,]
-for main_cond in range(len(main_conditions)):   # iterate through main conditions
-    probe_list = list(range(len(main_probes))) * int((nSentences / len(main_probes)) / len(main_conditions))  
-    shuffle(probe_list)
-    probe_counter = 0
-    for sent_index in range(len(main_condition_list)):
-        if main_condition_index[sent_index] == main_cond:
-            main_condition_list[sent_index] = {**main_condition_list[sent_index], **main_probes[probe_list[probe_counter]] [main_condition_list[sent_index]['sent_number']]} 
-            probe_counter += 1
+# Assorted sentences
+assorted_conditions = [assorted,]
+assorted_probes = [probe_ass_neg, probe_ass_pos,]
+assorted_sentence_list = trialCreator(assorted_conditions, assorted_probes)
 
-trial_list = []  # initialising
-
-############ Assorted sentences ############
-assorted_condition_list = [ (i, assorted[i]) for i in range(len(assorted)) ] 
-
-############ Assorted probes ############
-assorted_probes = [probe_ass_neg, probe_ass_pos]
-n_ass_probes = len(probe_ass_neg)
-assorted_probe_chunk_size = int(n_ass_probes / len(assorted_probes))
-assorted_probe_index = list(range(len(assorted_probes))) * assorted_probe_chunk_size
-shuffle(assorted_probe_index)
-assorted_probe_list = [ (i,assorted_probes[assorted_probe_index[i]][i]) for i in range(len(assorted)) ] 
-
-############ Combining stuff ############
-assorted_trials = [ {**assorted_condition_list[i][1], **assorted_probe_list[i][1]} for i in range(len(assorted_condition_list)) ]
-all_trials = main_condition_list
-all_trials.extend(assorted_trials)
-all_trials = data.TrialHandler(trialList = all_trials[:], nReps = 1, method = 'random', extraInfo = expInfo, name = 'all_trials') 
+# Combining main and assorted trials into one list
+all_trials = sentence_list
+all_trials.extend(assorted_sentence_list)
+all_trials = data.TrialHandler(trialList = all_trials[:], nReps = 1, method = 'random', extraInfo = expInfo, name = 'all_trials')
 thisTrial = all_trials.trialList[0]  # so we can initialise stimuli with some values
-# abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
-if thisTrial != None:
-    for paramName in thisTrial:
-        exec('{} = thisTrial[paramName]'.format(paramName))
 
-############ Practice trials ############
+# Practice trials
 prac_list = [ {**prac[i], **prac_probes[i]} for i in range(len(prac)) ]
+print(prac_list)
 for trial in range(len(prac)):
     if trial <= 1:
         prac_list[trial]['beat_type'] = 'binary'
@@ -153,11 +123,6 @@ for trial in range(len(prac)):
         prac_list[trial]['beat_type'] = 'ternary'
 prac_list = data.TrialHandler(trialList = prac_list[:], nReps = 1, method = 'sequential', extraInfo = expInfo, name = 'practice_trials')
 thisPracTrial = prac_list.trialList[0]  # so we can initialise stimuli with some values
-# abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
-if thisPracTrial != None:
-    for paramName in thisPracTrial:
-        exec('{} = thisPracTrial[paramName]'.format(paramName))
-
 
 ################################################
 ############## Run experiment ##################
@@ -172,11 +137,12 @@ try:
     too_slow = visual.TextStim(win, pos=[0,0], color=FGC, text="Too slow: respond quicker next time")
     feedback = visual.TextStim(win, pos=[0,0], color=FGC, text="placeholder")
     introText = visual.TextStim(win, pos=[0,0], color=FGC, text="Placeholder")
+    probe_text = visual.TextStim(win, pos=[0,0], color=FGC, alignHoriz='center', name='top_probe', text="placeholder")
     word_stim_list = []
     for i in range(15): # setting up text_stimuli objects... 15 is the most words in the sent_stims
             exec( '{} = visual.TextStim(win, pos=[0,0], color=FGC, text="placeholder")'.format('word' + '_' + str(i+1)) ) # create text objects
             exec( 'word_stim_list.extend([{}])'.format(str('word' + '_' + str(i+1))) ) # putting them in word_stim_list
-    probe_text = visual.TextStim(win, pos=[0,0], color=FGC, alignHoriz='center', name='top_probe', text="placeholder")
+
     GSI = visual.RatingScale(win, name='GSI', marker='triangle',
                              textSize = 0.4, showValue = False, acceptText = 'confirm',
                               size=1.5, pos=[0.0, -0.4], 
@@ -194,7 +160,12 @@ try:
     ################################################
     
     # ===== INSTRUCTIONS 1 ====== #
-    counter = 0
+    
+    if expInfo['participant'] == "test":
+        counter = len(part1Intro) - 1
+    else:
+        counter = 0
+
     while counter < len(part1Intro):
         # === set top text === #
         message1.setText(part1Intro[counter]) 
@@ -219,15 +190,18 @@ try:
         else:
             counter += 1
 
+
+    # ===== PRACTICE TRIALS ====== #
     for thisPracTrial in prac_list:  
         trial_num += 1
-        ####====ABBREVIATE PARAMETER NAMES====####
+
+        # Abbeviate parameter names... e.g. thisPracTrial['beat_type'] becomes beat_type
         if thisPracTrial != None:
             for paramName in thisPracTrial:
                 exec('{} = thisPracTrial[paramName]'.format(paramName))
-        
-        probe_resp = event.BuilderKeyResponse()
 
+        probe_resp = event.BuilderKeyResponse()
+        
         ####====SETUP TRIAL COMPONENTS LIST====####
         # initialize trial components list
         trialComponents = []
@@ -239,25 +213,27 @@ try:
             beat_stim = ternary_beat
             word_offset = 8 * beat_freq
         trialComponents.extend([beat_stim]) # add beat stim to trialComponents list
-        # add text stimuli components
-        for i in range(len(sent_stim)): # for i in range(len(trial['sent_stim'])):
-            exec('trialComponents.extend([{}])'.format('word' + '_' + str(i+1)))
-            word_stim_list[i].setText(sent_stim[i])
         
+        # add text stimuli components
+        for i, word_in_sent in enumerate(sent_stim): 
+            exec('trialComponents.extend([{}])'.format('word' + '_' + str(i+1))) # add word variable to trialComponents
+            word_stim_list[i].setText(word_in_sent) # set the text of the word variable
         # set probe text for the trial
         probe_text.setText(probe)
 
         ####====BASIC ROUTINE CHECKS====####
         continueRoutine = True
         # keep track of which components have finished
+
         for thisComponent in trialComponents:
             if hasattr(thisComponent, 'status'):
                 thisComponent.status = NOT_STARTED
+
         t = 0
         trialClock.reset()  # clock
         frameN = -1
-        beatDuration = len(sent_stim)*beat_freq + word_offset
 
+        beatDuration = len(sent_stim)*beat_freq + word_offset
         ####====START PRACTISE TRIAL ROUTINE====####
         while continueRoutine: 
             # get current time
