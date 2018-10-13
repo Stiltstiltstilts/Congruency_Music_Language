@@ -6,6 +6,7 @@
 import os
 import numpy as np
 from psychopy import core, visual, event, data, logging
+from numpy.random import shuffle
 
 def instImport(path):
     """
@@ -25,7 +26,7 @@ def instImport(path):
 def sentencePreProcess(path, congruency=None, beat_type=None, extraction=None):
     """
     stimPreProcess is a function for importing sentences from a text file, and then 1) making each sentence a list containing strings for each word, 
-    and 2) converting underscores, which code for double words, into a space character within the string
+    and 2) converting underscores, which code for double words, into a space character within the string (e.g. "that_the" becomes "that the")
         required inputs:
                         path: path of input file (as .txt)
                         congruency: 'congruent' or 'incongruent'
@@ -35,26 +36,20 @@ def sentencePreProcess(path, congruency=None, beat_type=None, extraction=None):
                         Variable with processed data as a list
 
     """
-    temp2 = []
+    output_list = []
     with open(path, 'r') as f: #open stimuli file as object 
         rawText = f.readlines()
     # seperate the individual words and then turn underscore into spaces
-    for n in range(0, len(rawText)):
-        temp = rawText[n][:].replace('\n', '') # getting rid of the line break thing
-        temp = temp.split(' ') # splitting the sentence up by spaces
-        temp2.append(temp)
-    temp = []
-    temp3 = []
-    for sentence in range(0, len(temp2)): # iterate sentences
-        for word in range(0, len(temp2[sentence][:])): # iterate words
-            word_stim = temp2[sentence][word].replace('_', ' ') # cleaning off the underscore and turning it into space
-            temp.append(word_stim) 
-        stim_data = {'sent_stim':temp, 'beat_type':beat_type, 
-                    'congruency':congruency, 'extraction': extraction, 'sent_number': sentence,}
-        temp3.append(stim_data)
-        temp = []
+    for sent_idx, line in enumerate(rawText): # iterate over lines in raw 
+        sentence = line[:].replace('\n', '') # getting rid of the line break thing
+        sentence = sentence.split(' ') # splitting the sentence up by spaces
+        for word_idx, word in enumerate(sentence[:]): # iterate over words
+            sentence[word_idx] = word.replace('_', ' ') # cleaning off the underscore and turning it into space
+        stim_data = {'sent_stim':sentence, 'beat_type':beat_type, 
+                    'congruency':congruency, 'extraction': extraction, 'sent_number': sent_idx,}
+        output_list.append(stim_data)
 
-    return temp3
+    return output_list
 
 def probePreProcess(path):
     """
@@ -110,3 +105,60 @@ def customHanning(M, floor):
 
     return custom_hanning_window
 
+def check_lists_same_len(list_of_lists, message):
+    it = iter(list_of_lists)
+    the_len = len(next(it))
+    if not all(len(l) == the_len for l in it):
+        raise ValueError(message)
+    return None
+
+def trialCreator(condition_list, probe_condition_list):
+    ##### check same num of sentences for 1. sentences, and 2. probes #####
+    check_lists_same_len(condition_list, 'Not all conditions have same number of sentences!') 
+    check_lists_same_len(probe_condition_list, 'Not all conditions have the same number of probes!')
+
+    ################################################
+    ############### Sentences ######################
+    ################################################
+
+    ##### Determine no. sents per condition #####
+    n_sentences = len(condition_list[0]) 
+    n_conditions = len(condition_list)
+    sents_per_condition = n_sentences / n_conditions # how many sentences per condition
+    assert sents_per_condition.is_integer(), "num sentences does not divide evenly into conditions"
+    sents_per_condition = int(sents_per_condition) # convert to integer
+
+    ##### create indices for each condition, and randomise order #####
+    condition_idx_list = list(range(n_conditions)) * sents_per_condition # index list for n_conditions * trials_per_condition
+    shuffle(condition_idx_list)  # randomise e.g. [1 0 3 2...]
+
+    ##### return list of trial dictionaries (without probes) in original sentence order, but randomised conditions #####
+    sentence_list = [ (condition_list[condition_idx_list[i]][i]) for i in range(n_sentences) ]
+
+    ################################################
+    ################## Probes ######################
+    ################################################
+
+    ##### Determine no. probes per condition #####
+    n_probe_conditions = len(probe_condition_list) 
+    probes_per_condition = (n_sentences / n_probe_conditions) / n_conditions 
+    assert probes_per_condition.is_integer(), "num probes does not divide evenly into conditions"
+    probes_per_condition =  int(probes_per_condition)
+
+    # Create indices and randomise order
+    probe_idx_list = list(range(n_probe_conditions)) * probes_per_condition # index list for n_conditions * trials_per_condition .... 
+    
+    ################################################
+    ######### Combine sents and probes #############
+    ################################################
+    
+    for main_cond in range(len(condition_list)):   # iterate through main conditions (0-3)
+    # combine probes with main trials
+        shuffle(probe_idx_list)  # randomise probe indices e.g. [1 0 1 2...]
+        probe_counter = 0 # initialize probe counter
+        for sent_idx, cond_idx in enumerate(condition_idx_list):
+            if cond_idx == main_cond: # IF condition in list is same as condition iterator THEN 
+                sentence_list[sent_idx] = {**sentence_list[sent_idx], **probe_condition_list[probe_idx_list[probe_counter]] [sentence_list[sent_idx]['sent_number']]} # 
+                probe_counter += 1
+
+    return sentence_list
